@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>MobilityCorp</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">MobilityCorp</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Solution</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a>
+  <ul class="collapse">
+  <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link" data-scroll-target="#executive-summary"><span class="header-section-number">1.1</span> Executive Summary</a></li>
+  <li><a href="#team" id="toc-team" class="nav-link" data-scroll-target="#team"><span class="header-section-number">1.2</span> Team</a></li>
+  <li><a href="#glossary" id="toc-glossary" class="nav-link" data-scroll-target="#glossary"><span class="header-section-number">1.3</span> Glossary</a></li>
+  </ul></li>
+  <li><a href="#problem-analysis" id="toc-problem-analysis" class="nav-link" data-scroll-target="#problem-analysis"><span class="header-section-number">2</span> Problem Analysis</a>
+  <ul class="collapse">
+  <li><a href="#problem-definition-context" id="toc-problem-definition-context" class="nav-link" data-scroll-target="#problem-definition-context"><span class="header-section-number">2.1</span> Problem Definition &amp; Context</a></li>
+  <li><a href="#key-business-challenges" id="toc-key-business-challenges" class="nav-link" data-scroll-target="#key-business-challenges"><span class="header-section-number">2.2</span> Key Business Challenges</a>
+  <ul class="collapse">
+  <li><a href="#vehicle-availability-distribution" id="toc-vehicle-availability-distribution" class="nav-link" data-scroll-target="#vehicle-availability-distribution"><span class="header-section-number">2.2.1</span> Vehicle Availability &amp; Distribution</a></li>
+  <li><a href="#fleet-charging-maintenance" id="toc-fleet-charging-maintenance" class="nav-link" data-scroll-target="#fleet-charging-maintenance"><span class="header-section-number">2.2.2</span> Fleet Charging &amp; Maintenance</a></li>
+  <li><a href="#customer-retention-commuter-adoption" id="toc-customer-retention-commuter-adoption" class="nav-link" data-scroll-target="#customer-retention-commuter-adoption"><span class="header-section-number">2.2.3</span> Customer Retention &amp; Commuter Adoption</a></li>
+  </ul></li>
+  <li><a href="#key-objectives-success-metrics" id="toc-key-objectives-success-metrics" class="nav-link" data-scroll-target="#key-objectives-success-metrics"><span class="header-section-number">2.3</span> Key Objectives &amp; Success Metrics</a></li>
+  <li><a href="#business-technical-constraints" id="toc-business-technical-constraints" class="nav-link" data-scroll-target="#business-technical-constraints"><span class="header-section-number">2.4</span> Business &amp; Technical Constraints</a></li>
+  </ul></li>
+  <li><a href="#proposed-solution-architecture" id="toc-proposed-solution-architecture" class="nav-link" data-scroll-target="#proposed-solution-architecture"><span class="header-section-number">3</span> Proposed Solution &amp; Architecture</a>
+  <ul class="collapse">
+  <li><a href="#architectural-vision-guiding-principles" id="toc-architectural-vision-guiding-principles" class="nav-link" data-scroll-target="#architectural-vision-guiding-principles"><span class="header-section-number">3.1</span> Architectural Vision &amp; Guiding Principles</a></li>
+  <li><a href="#architecture-characteristics-the--ilities" id="toc-architecture-characteristics-the--ilities" class="nav-link" data-scroll-target="#architecture-characteristics-the--ilities"><span class="header-section-number">3.2</span> Architecture Characteristics (The “-ilities”)</a></li>
+  <li><a href="#system-context-diagram-c1" id="toc-system-context-diagram-c1" class="nav-link" data-scroll-target="#system-context-diagram-c1"><span class="header-section-number">3.3</span> System Context Diagram (C1)</a></li>
+  <li><a href="#container-diagram-c2" id="toc-container-diagram-c2" class="nav-link" data-scroll-target="#container-diagram-c2"><span class="header-section-number">3.4</span> Container Diagram (C2)</a></li>
+  <li><a href="#detailed-architecture-for-ai-use-cases" id="toc-detailed-architecture-for-ai-use-cases" class="nav-link" data-scroll-target="#detailed-architecture-for-ai-use-cases"><span class="header-section-number">3.5</span> Detailed Architecture for AI Use Cases</a>
+  <ul class="collapse">
+  <li><a href="#predictive-demand-fleet-rebalancing-an-ai-model-to-forecast-demand-and-optimize-vehicle-placement." id="toc-predictive-demand-fleet-rebalancing-an-ai-model-to-forecast-demand-and-optimize-vehicle-placement." class="nav-link" data-scroll-target="#predictive-demand-fleet-rebalancing-an-ai-model-to-forecast-demand-and-optimize-vehicle-placement."><span class="header-section-number">3.5.1</span> Predictive Demand &amp; Fleet Rebalancing: An AI model to forecast demand and optimize vehicle placement.</a></li>
+  <li><a href="#optimized-battery-management-a-system-to-prioritize-battery-swaps-and-route-maintenance-staff-efficiently." id="toc-optimized-battery-management-a-system-to-prioritize-battery-swaps-and-route-maintenance-staff-efficiently." class="nav-link" data-scroll-target="#optimized-battery-management-a-system-to-prioritize-battery-swaps-and-route-maintenance-staff-efficiently."><span class="header-section-number">3.5.2</span> Optimized Battery Management: A system to prioritize battery swaps and route maintenance staff efficiently.</a></li>
+  <li><a href="#smart-return-verification-using-image-analysis-to-confirm-proper-vehicle-returns-and-charging-connections." id="toc-smart-return-verification-using-image-analysis-to-confirm-proper-vehicle-returns-and-charging-connections." class="nav-link" data-scroll-target="#smart-return-verification-using-image-analysis-to-confirm-proper-vehicle-returns-and-charging-connections."><span class="header-section-number">3.5.3</span> Smart Return Verification: Using image analysis to confirm proper vehicle returns and charging connections.</a></li>
+  <li><a href="#personalized-commuter-experience-a-genai-powered-assistant-for-regular-users." id="toc-personalized-commuter-experience-a-genai-powered-assistant-for-regular-users." class="nav-link" data-scroll-target="#personalized-commuter-experience-a-genai-powered-assistant-for-regular-users."><span class="header-section-number">3.5.4</span> Personalized Commuter Experience: A GenAI-powered assistant for regular users.</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#architectural-decisions-rationale" id="toc-architectural-decisions-rationale" class="nav-link" data-scroll-target="#architectural-decisions-rationale"><span class="header-section-number">4</span> Architectural Decisions &amp; Rationale</a>
+  <ul class="collapse">
+  <li><a href="#architectural-decision-records-adrs" id="toc-architectural-decision-records-adrs" class="nav-link" data-scroll-target="#architectural-decision-records-adrs"><span class="header-section-number">4.1</span> Architectural Decision Records (ADRs)</a>
+  <ul class="collapse">
+  <li><a href="#adr-001-choice-of-event-driven-architecture" id="toc-adr-001-choice-of-event-driven-architecture" class="nav-link" data-scroll-target="#adr-001-choice-of-event-driven-architecture"><span class="header-section-number">4.1.1</span> ADR-001: Choice of Event-Driven Architecture</a></li>
+  <li><a href="#adr-002-selection-of-aiml-platform-for-demand-forecasting" id="toc-adr-002-selection-of-aiml-platform-for-demand-forecasting" class="nav-link" data-scroll-target="#adr-002-selection-of-aiml-platform-for-demand-forecasting"><span class="header-section-number">4.1.2</span> ADR-002: Selection of AI/ML Platform for Demand Forecasting</a></li>
+  <li><a href="#adr-003-strategy-for-handling-ai-model-uncertainty-and-validation" id="toc-adr-003-strategy-for-handling-ai-model-uncertainty-and-validation" class="nav-link" data-scroll-target="#adr-003-strategy-for-handling-ai-model-uncertainty-and-validation"><span class="header-section-number">4.1.3</span> ADR-003: Strategy for Handling AI Model Uncertainty and Validation</a></li>
+  <li><a href="#adr-004-approach-to-nfc-based-vehicle-interaction" id="toc-adr-004-approach-to-nfc-based-vehicle-interaction" class="nav-link" data-scroll-target="#adr-004-approach-to-nfc-based-vehicle-interaction"><span class="header-section-number">4.1.4</span> ADR-004: Approach to NFC-based Vehicle Interaction</a></li>
+  </ul></li>
+  <li><a href="#technology-stack-choices" id="toc-technology-stack-choices" class="nav-link" data-scroll-target="#technology-stack-choices"><span class="header-section-number">4.2</span> Technology Stack Choices</a></li>
+  </ul></li>
+  <li><a href="#productionizing-the-ai-powered-system" id="toc-productionizing-the-ai-powered-system" class="nav-link" data-scroll-target="#productionizing-the-ai-powered-system"><span class="header-section-number">5</span> Productionizing the AI-Powered System</a>
+  <ul class="collapse">
+  <li><a href="#dealing-with-uncertainty-non-determinism" id="toc-dealing-with-uncertainty-non-determinism" class="nav-link" data-scroll-target="#dealing-with-uncertainty-non-determinism"><span class="header-section-number">5.1</span> Dealing with Uncertainty &amp; Non-Determinism</a></li>
+  <li><a href="#monitoring-observability-and-fitness-functions" id="toc-monitoring-observability-and-fitness-functions" class="nav-link" data-scroll-target="#monitoring-observability-and-fitness-functions"><span class="header-section-number">5.2</span> Monitoring, Observability, and Fitness Functions</a></li>
+  <li><a href="#phased-implementation-roadmap" id="toc-phased-implementation-roadmap" class="nav-link" data-scroll-target="#phased-implementation-roadmap"><span class="header-section-number">5.3</span> Phased Implementation Roadmap</a></li>
+  </ul></li>
+  <li><a href="#final-thoughts" id="toc-final-thoughts" class="nav-link" data-scroll-target="#final-thoughts"><span class="header-section-number">6</span> Final Thoughts</a>
+  <ul class="collapse">
+  <li><a href="#how-we-used-generative-ai-as-a-collaborator" id="toc-how-we-used-generative-ai-as-a-collaborator" class="nav-link" data-scroll-target="#how-we-used-generative-ai-as-a-collaborator"><span class="header-section-number">6.1</span> How We Used Generative AI as a Collaborator</a></li>
+  <li><a href="#known-limitations-future-enhancements" id="toc-known-limitations-future-enhancements" class="nav-link" data-scroll-target="#known-limitations-future-enhancements"><span class="header-section-number">6.2</span> Known Limitations &amp; Future Enhancements</a></li>
+  <li><a href="#our-learnings" id="toc-our-learnings" class="nav-link" data-scroll-target="#our-learnings"><span class="header-section-number">6.3</span> Our Learnings</a></li>
+  </ul></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix"><span class="header-section-number">7</span> Appendix</a>
+  <ul class="collapse">
+  <li><a href="#full-deliverables-checklist" id="toc-full-deliverables-checklist" class="nav-link" data-scroll-target="#full-deliverables-checklist"><span class="header-section-number">7.1</span> Full Deliverables Checklist</a></li>
+  <li><a href="#detailed-data-schema" id="toc-detailed-data-schema" class="nav-link" data-scroll-target="#detailed-data-schema"><span class="header-section-number">7.2</span> Detailed Data Schema</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">MobilityCorp</h1>
+<p class="subtitle lead">Proposed Solution by VML Augmented Humans</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<!-- Add intro here -->
+<section id="executive-summary" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="executive-summary"><span class="header-section-number">1.1</span> Executive Summary</h2>
+<p><strong>Our Vision for MobilityCorp</strong> …</p>
+<!-- Add summary here -->
+</section>
+<section id="team" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="team"><span class="header-section-number">1.2</span> Team</h2>
+<ul>
+<li>Hari Khalsa</li>
+<li>Navya Bikkasani</li>
+<li>Brandon Sweatman</li>
+<li>Eric Black</li>
+</ul>
+</section>
+<section id="glossary" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="glossary"><span class="header-section-number">1.3</span> Glossary</h2>
+<!-- Add any terms or defintions here -->
+</section>
+</section>
+<section id="problem-analysis" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Problem Analysis</h1>
+<section id="problem-definition-context" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="problem-definition-context"><span class="header-section-number">2.1</span> Problem Definition &amp; Context</h2>
+</section>
+<section id="key-business-challenges" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="key-business-challenges"><span class="header-section-number">2.2</span> Key Business Challenges</h2>
+<section id="vehicle-availability-distribution" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="vehicle-availability-distribution"><span class="header-section-number">2.2.1</span> Vehicle Availability &amp; Distribution</h3>
+</section>
+<section id="fleet-charging-maintenance" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="fleet-charging-maintenance"><span class="header-section-number">2.2.2</span> Fleet Charging &amp; Maintenance</h3>
+</section>
+<section id="customer-retention-commuter-adoption" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3" class="anchored" data-anchor-id="customer-retention-commuter-adoption"><span class="header-section-number">2.2.3</span> Customer Retention &amp; Commuter Adoption</h3>
+</section>
+</section>
+<section id="key-objectives-success-metrics" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="key-objectives-success-metrics"><span class="header-section-number">2.3</span> Key Objectives &amp; Success Metrics</h2>
+</section>
+<section id="business-technical-constraints" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="business-technical-constraints"><span class="header-section-number">2.4</span> Business &amp; Technical Constraints</h2>
+</section>
+</section>
+<section id="proposed-solution-architecture" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Proposed Solution &amp; Architecture</h1>
+<section id="architectural-vision-guiding-principles" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="architectural-vision-guiding-principles"><span class="header-section-number">3.1</span> Architectural Vision &amp; Guiding Principles</h2>
+</section>
+<section id="architecture-characteristics-the--ilities" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="architecture-characteristics-the--ilities"><span class="header-section-number">3.2</span> Architecture Characteristics (The “-ilities”)</h2>
+</section>
+<section id="system-context-diagram-c1" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="system-context-diagram-c1"><span class="header-section-number">3.3</span> System Context Diagram (C1)</h2>
+</section>
+<section id="container-diagram-c2" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="container-diagram-c2"><span class="header-section-number">3.4</span> Container Diagram (C2)</h2>
+</section>
+<section id="detailed-architecture-for-ai-use-cases" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="detailed-architecture-for-ai-use-cases"><span class="header-section-number">3.5</span> Detailed Architecture for AI Use Cases</h2>
+<section id="predictive-demand-fleet-rebalancing-an-ai-model-to-forecast-demand-and-optimize-vehicle-placement." class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="predictive-demand-fleet-rebalancing-an-ai-model-to-forecast-demand-and-optimize-vehicle-placement."><span class="header-section-number">3.5.1</span> Predictive Demand &amp; Fleet Rebalancing: An AI model to forecast demand and optimize vehicle placement.</h3>
+</section>
+<section id="optimized-battery-management-a-system-to-prioritize-battery-swaps-and-route-maintenance-staff-efficiently." class="level3" data-number="3.5.2">
+<h3 data-number="3.5.2" class="anchored" data-anchor-id="optimized-battery-management-a-system-to-prioritize-battery-swaps-and-route-maintenance-staff-efficiently."><span class="header-section-number">3.5.2</span> Optimized Battery Management: A system to prioritize battery swaps and route maintenance staff efficiently.</h3>
+</section>
+<section id="smart-return-verification-using-image-analysis-to-confirm-proper-vehicle-returns-and-charging-connections." class="level3" data-number="3.5.3">
+<h3 data-number="3.5.3" class="anchored" data-anchor-id="smart-return-verification-using-image-analysis-to-confirm-proper-vehicle-returns-and-charging-connections."><span class="header-section-number">3.5.3</span> Smart Return Verification: Using image analysis to confirm proper vehicle returns and charging connections.</h3>
+</section>
+<section id="personalized-commuter-experience-a-genai-powered-assistant-for-regular-users." class="level3" data-number="3.5.4">
+<h3 data-number="3.5.4" class="anchored" data-anchor-id="personalized-commuter-experience-a-genai-powered-assistant-for-regular-users."><span class="header-section-number">3.5.4</span> Personalized Commuter Experience: A GenAI-powered assistant for regular users.</h3>
+</section>
+</section>
+</section>
+<section id="architectural-decisions-rationale" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Architectural Decisions &amp; Rationale</h1>
+<section id="architectural-decision-records-adrs" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="architectural-decision-records-adrs"><span class="header-section-number">4.1</span> Architectural Decision Records (ADRs)</h2>
+<section id="adr-001-choice-of-event-driven-architecture" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="adr-001-choice-of-event-driven-architecture"><span class="header-section-number">4.1.1</span> ADR-001: Choice of Event-Driven Architecture</h3>
+</section>
+<section id="adr-002-selection-of-aiml-platform-for-demand-forecasting" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="adr-002-selection-of-aiml-platform-for-demand-forecasting"><span class="header-section-number">4.1.2</span> ADR-002: Selection of AI/ML Platform for Demand Forecasting</h3>
+</section>
+<section id="adr-003-strategy-for-handling-ai-model-uncertainty-and-validation" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="adr-003-strategy-for-handling-ai-model-uncertainty-and-validation"><span class="header-section-number">4.1.3</span> ADR-003: Strategy for Handling AI Model Uncertainty and Validation</h3>
+</section>
+<section id="adr-004-approach-to-nfc-based-vehicle-interaction" class="level3" data-number="4.1.4">
+<h3 data-number="4.1.4" class="anchored" data-anchor-id="adr-004-approach-to-nfc-based-vehicle-interaction"><span class="header-section-number">4.1.4</span> ADR-004: Approach to NFC-based Vehicle Interaction</h3>
+</section>
+</section>
+<section id="technology-stack-choices" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="technology-stack-choices"><span class="header-section-number">4.2</span> Technology Stack Choices</h2>
+</section>
+</section>
+<section id="productionizing-the-ai-powered-system" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Productionizing the AI-Powered System</h1>
+<section id="dealing-with-uncertainty-non-determinism" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="dealing-with-uncertainty-non-determinism"><span class="header-section-number">5.1</span> Dealing with Uncertainty &amp; Non-Determinism</h2>
+</section>
+<section id="monitoring-observability-and-fitness-functions" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="monitoring-observability-and-fitness-functions"><span class="header-section-number">5.2</span> Monitoring, Observability, and Fitness Functions</h2>
+</section>
+<section id="phased-implementation-roadmap" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="phased-implementation-roadmap"><span class="header-section-number">5.3</span> Phased Implementation Roadmap</h2>
+</section>
+</section>
+<section id="final-thoughts" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Final Thoughts</h1>
+<section id="how-we-used-generative-ai-as-a-collaborator" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="how-we-used-generative-ai-as-a-collaborator"><span class="header-section-number">6.1</span> How We Used Generative AI as a Collaborator</h2>
+</section>
+<section id="known-limitations-future-enhancements" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="known-limitations-future-enhancements"><span class="header-section-number">6.2</span> Known Limitations &amp; Future Enhancements</h2>
+</section>
+<section id="our-learnings" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="our-learnings"><span class="header-section-number">6.3</span> Our Learnings</h2>
+</section>
+</section>
+<section id="appendix" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Appendix</h1>
+<section id="full-deliverables-checklist" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="full-deliverables-checklist"><span class="header-section-number">7.1</span> Full Deliverables Checklist</h2>
+</section>
+<section id="detailed-data-schema" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="detailed-data-schema"><span class="header-section-number">7.2</span> Detailed Data Schema</h2>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,12 +1,13 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "vml-augmented-humans"
+  title: "MobilityCorp"
   navbar:
     left:
       - href: index.qmd
-        text: Home
+        text: Solution
       - about.qmd
 
 format:

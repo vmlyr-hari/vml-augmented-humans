@@ -92,6 +92,8 @@ flowchart TB
         Forecast_Inventory
     end
 
+    Realtime_Context_Demand_Impacters
+
     Speculative_Models --> Model_Training
     Business_Models --> Model_Training
     Actual_Data --> Model_Training
@@ -115,14 +117,90 @@ flowchart TB
 
 Using Fleet status analysis to drive efficient servicing and reblancing.
 
+As MobilityCorp, we would like to ensure vechiles (supply) are avaiable where they are needed (demand).
+
+As MobilityCorp, we would like to optimize of our service technicians routes in order to maximize the efficiency of service runs.
+
+```{mermaid}
+flowchart TB
+    %% Predictive Indicators
+    %% Confidence == 1.0 is Acutal in Stock
+    %% Confidence == 0.85 is Likely Actual
+    Supply -- has --> Confidence_Score
+    Potential_Supply -- has --> Confidence_Score
+
+    %% Actual Reservations
+    Demand
+    
+    %% 
+    Hub_Capacity -- has --> Hub_Available_Capacity
+```
+
+Fleet rebalancing mechanisms
+
+* User incentivies to get customers to return vehicles to point with high demand
+* User disincentive, surcharges when returned to points with low demand
+* Service technician route optimization / task optimization
+    - Increase the weighting of the destination to be serviced based on n-criteria or multiple-goals to be achieved
+    - Optimal distance or multi-stop routing
+
 ```{mermaid}
 flowchart TB
     %% Realtime AI
-    BAR
+    Vehicle_Availability_Status
+    Vehicle_Availability_Status -- has --> Vechile_Charge_Status
+    Vehicle_Availability_Status -- has --> Vehicle_Fault_Status
+    Vehicle_Availability_Status -- has --> Vehicle_Servicing_Status
+
+    %% Where it's from
+    Vehicle_Hub_of_Origin
+    %% Forecast - WHere it is going -- might not always know this
+    Vehicle_Hub_InTransit_Destination
+    Vehicle_InTransit_Start_Time
+    Vehicle_InTransit_Approximate_Return_Time
+
+    %% Actual Inventory
+
 ```
 
+?? Can they cross state boundaries ?? Ans:  Depends on the operating laws of the areas.  U.S. right to travel would mean they can cross boudnaires.  In other areas it may be different.
 
 ### Optimized Battery Management: A system to prioritize battery swaps and route maintenance staff efficiently.
+
+- Incentivise return of a charged vehicle
+- Disincnetive with a service charge for charge-ups
+
+?? Will all vehicles have the same type of battery?  How interchangeable are batteries between different types of vehicles or models?
+
+?? How portable can battery management be made?  Anything that can only happen in a specifci physical location?
+
+AI use cases
+
+- Predicitive maintenance
+- Usage data analysis / changes in stats
+- Contextual modeling of environmental conditions
+- Real-time data analysis / monitoring / alerting
+    - Matching nearby technicians to maintenance need
+
+```{mermaid}
+flowchart TB
+    Realtime_Battery_Data
+
+    %% Key info for when the battery will need to be serviced, efficiency or degradation of battery over time, idle time
+    Vehicle_Battery_Usage_Model
+
+    %% COnditions that affect battery usage
+    Environmental_Conditions
+        Temperature
+        Weather
+    Battery_Usage_Load
+    %% Electronic Sensor Computer
+    ESC
+
+    Vehcile_Type
+    Vechicle_Configuration_Energy_Capacity
+```
+
 
 ### Smart Return Verification: Using image analysis to confirm proper vehicle returns and charging connections.
 
@@ -185,6 +263,36 @@ flowchart TD
 
 
 ### Personalized Commuter Experience: A GenAI-powered assistant for regular users.
+
+- Altruistic incentivization
+    - Track your carbon impact / savings
+- Efficiency of route __timeliness__
+- Attraction of route __smell the roses__
+
+Personal interest matching to destinations nearby. 
+- Suggestion coffee shops, delis, vegan restuarants
+
+Gamification of the experience.  
+- Points collection
+- N-destinations visited
+- Tour guide
+
+Onboard help and troubleshooting.
+
+Personalized experience
+- Voice + tone
+- Spoken Language
+- Driving directions / personalized responses
+
+Research - optimize destinations based on personal interests and our own fleet demand models (pulling in the incentives to return to our preferred desitnations)
+
+GenAi - targeted messages to return vehicle on time.  Or to extend the rental.
+
+Match destination to reservation data.  Upsells, etc.
+
+Personalized Photo Albums of their route. Feed the picture of the vehcile into AI to create a video greeting of the vehcile animated based on user profile.  "Thanks... So & so.. .was a blast!"  think Pixar aniamtion-sytle.
+
+Prompt to share on social media to bump up the brand.
 
 # Architectural Decisions & Rationale
 

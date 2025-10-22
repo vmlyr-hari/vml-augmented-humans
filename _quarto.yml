@@ -12,11 +12,14 @@ website:
 
 format:
   html:
+    mermaid:
+      theme: neutral
     theme:
       - cosmo
       - brand
     css: styles.css
     toc: true
+    
 
 
 

@@ -1,0 +1,205 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "MobilityCorp",
+    "section": "",
+    "text": "Our Vision for MobilityCorp …\n\n\n\n\n\nHari Khalsa\nNavya Bikkasani\nBrandon Sweatman\nEric Black"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This is a proposed solution for the O’Reilly Architectural Katas (Q4 2025).\nOur team is:\n\nHari Khalsa\nNavya Bikkasani\nBrandon Sweatman\nEric Black"
+  },
+  {
+    "objectID": "BUILDING.html",
+    "href": "BUILDING.html",
+    "title": "MobilityCorp",
+    "section": "",
+    "text": "This project is built with Quarto, a technical publishing system.\nTo use you must install Quarto CLI.\nhttps://quarto.org/\nrm README.md\nquarto render\nquarto render README.md\nquarto build"
+  },
+  {
+    "objectID": "index.html#problem-definition-context",
+    "href": "index.html#problem-definition-context",
+    "title": "MobilityCorp",
+    "section": "2.1 Problem Definition & Context",
+    "text": "2.1 Problem Definition & Context"
+  },
+  {
+    "objectID": "index.html#key-business-challenges",
+    "href": "index.html#key-business-challenges",
+    "title": "MobilityCorp",
+    "section": "2.2 Key Business Challenges",
+    "text": "2.2 Key Business Challenges\n\n2.2.1 Vehicle Availability & Distribution\n\n\n2.2.2 Fleet Charging & Maintenance\n\n\n2.2.3 Customer Retention & Commuter Adoption"
+  },
+  {
+    "objectID": "index.html#customer-retention-commuter-adoption",
+    "href": "index.html#customer-retention-commuter-adoption",
+    "title": "vml-augmented-humans",
+    "section": "2.3 2.2.3. Customer Retention & Commuter Adoption",
+    "text": "2.3 2.2.3. Customer Retention & Commuter Adoption"
+  },
+  {
+    "objectID": "index.html#key-objectives-success-metrics",
+    "href": "index.html#key-objectives-success-metrics",
+    "title": "MobilityCorp",
+    "section": "2.3 Key Objectives & Success Metrics",
+    "text": "2.3 Key Objectives & Success Metrics"
+  },
+  {
+    "objectID": "index.html#business-technical-constraints",
+    "href": "index.html#business-technical-constraints",
+    "title": "MobilityCorp",
+    "section": "2.4 Business & Technical Constraints",
+    "text": "2.4 Business & Technical Constraints"
+  },
+  {
+    "objectID": "index.html#architectural-vision-guiding-principles",
+    "href": "index.html#architectural-vision-guiding-principles",
+    "title": "MobilityCorp",
+    "section": "3.1 Architectural Vision & Guiding Principles",
+    "text": "3.1 Architectural Vision & Guiding Principles"
+  },
+  {
+    "objectID": "index.html#architecture-characteristics-the--ilities",
+    "href": "index.html#architecture-characteristics-the--ilities",
+    "title": "MobilityCorp",
+    "section": "3.2 Architecture Characteristics (The “-ilities”)",
+    "text": "3.2 Architecture Characteristics (The “-ilities”)"
+  },
+  {
+    "objectID": "index.html#system-context-diagram-c1",
+    "href": "index.html#system-context-diagram-c1",
+    "title": "MobilityCorp",
+    "section": "3.3 System Context Diagram (C1)",
+    "text": "3.3 System Context Diagram (C1)"
+  },
+  {
+    "objectID": "index.html#container-diagram-c2",
+    "href": "index.html#container-diagram-c2",
+    "title": "MobilityCorp",
+    "section": "3.4 Container Diagram (C2)",
+    "text": "3.4 Container Diagram (C2)"
+  },
+  {
+    "objectID": "index.html#detailed-architecture-for-ai-use-cases",
+    "href": "index.html#detailed-architecture-for-ai-use-cases",
+    "title": "MobilityCorp",
+    "section": "3.5 Detailed Architecture for AI Use Cases",
+    "text": "3.5 Detailed Architecture for AI Use Cases\n\n3.5.1 Predictive Demand & Fleet Rebalancing: An AI model to forecast demand and optimize vehicle placement.\n\n\n3.5.2 Optimized Battery Management: A system to prioritize battery swaps and route maintenance staff efficiently.\n\n\n3.5.3 Smart Return Verification: Using image analysis to confirm proper vehicle returns and charging connections.\n\n\n3.5.4 Personalized Commuter Experience: A GenAI-powered assistant for regular users."
+  },
+  {
+    "objectID": "index.html#architectural-decision-records-adrs",
+    "href": "index.html#architectural-decision-records-adrs",
+    "title": "MobilityCorp",
+    "section": "4.1 Architectural Decision Records (ADRs)",
+    "text": "4.1 Architectural Decision Records (ADRs)\n\n4.1.1 ADR-001: Choice of Event-Driven Architecture\n\n\n4.1.2 ADR-002: Selection of AI/ML Platform for Demand Forecasting\n\n\n4.1.3 ADR-003: Strategy for Handling AI Model Uncertainty and Validation\n\n\n4.1.4 ADR-004: Approach to NFC-based Vehicle Interaction"
+  },
+  {
+    "objectID": "index.html#technology-stack-choices",
+    "href": "index.html#technology-stack-choices",
+    "title": "MobilityCorp",
+    "section": "4.2 Technology Stack Choices",
+    "text": "4.2 Technology Stack Choices"
+  },
+  {
+    "objectID": "index.html#dealing-with-uncertainty-non-determinism",
+    "href": "index.html#dealing-with-uncertainty-non-determinism",
+    "title": "MobilityCorp",
+    "section": "5.1 Dealing with Uncertainty & Non-Determinism",
+    "text": "5.1 Dealing with Uncertainty & Non-Determinism"
+  },
+  {
+    "objectID": "index.html#monitoring-observability-and-fitness-functions",
+    "href": "index.html#monitoring-observability-and-fitness-functions",
+    "title": "MobilityCorp",
+    "section": "5.2 Monitoring, Observability, and Fitness Functions",
+    "text": "5.2 Monitoring, Observability, and Fitness Functions"
+  },
+  {
+    "objectID": "index.html#phased-implementation-roadmap",
+    "href": "index.html#phased-implementation-roadmap",
+    "title": "MobilityCorp",
+    "section": "5.3 Phased Implementation Roadmap",
+    "text": "5.3 Phased Implementation Roadmap"
+  },
+  {
+    "objectID": "index.html#how-we-used-generative-ai-as-a-collaborator",
+    "href": "index.html#how-we-used-generative-ai-as-a-collaborator",
+    "title": "MobilityCorp",
+    "section": "6.1 How We Used Generative AI as a Collaborator",
+    "text": "6.1 How We Used Generative AI as a Collaborator"
+  },
+  {
+    "objectID": "index.html#known-limitations-future-enhancements",
+    "href": "index.html#known-limitations-future-enhancements",
+    "title": "MobilityCorp",
+    "section": "6.2 Known Limitations & Future Enhancements",
+    "text": "6.2 Known Limitations & Future Enhancements"
+  },
+  {
+    "objectID": "index.html#our-learnings",
+    "href": "index.html#our-learnings",
+    "title": "MobilityCorp",
+    "section": "6.3 Our Learnings",
+    "text": "6.3 Our Learnings"
+  },
+  {
+    "objectID": "index.html#full-deliverables-checklist",
+    "href": "index.html#full-deliverables-checklist",
+    "title": "MobilityCorp",
+    "section": "7.1 Full Deliverables Checklist",
+    "text": "7.1 Full Deliverables Checklist"
+  },
+  {
+    "objectID": "index.html#detailed-data-schema",
+    "href": "index.html#detailed-data-schema",
+    "title": "MobilityCorp",
+    "section": "7.2 Detailed Data Schema",
+    "text": "7.2 Detailed Data Schema"
+  },
+  {
+    "objectID": "index.html#executive-summary",
+    "href": "index.html#executive-summary",
+    "title": "MobilityCorp",
+    "section": "",
+    "text": "Our Vision for MobilityCorp …"
+  },
+  {
+    "objectID": "index.html#glossary-of-terms",
+    "href": "index.html#glossary-of-terms",
+    "title": "MobilityCorp",
+    "section": "2.1 Glossary of Terms",
+    "text": "2.1 Glossary of Terms"
+  },
+  {
+    "objectID": "index.html#team",
+    "href": "index.html#team",
+    "title": "MobilityCorp",
+    "section": "",
+    "text": "Hari Khalsa\nNavya Bikkasani\nBrandon Sweatman\nEric Black"
+  },
+  {
+    "objectID": "sketches/brainstorm_2.html",
+    "href": "sketches/brainstorm_2.html",
+    "title": "Brainstorm 2",
+    "section": "",
+    "text": "RAW Notes from Brainstorm #2"
+  },
+  {
+    "objectID": "sketches/brainstorm_2.html#board-sketches",
+    "href": "sketches/brainstorm_2.html#board-sketches",
+    "title": "Brainstorm 2",
+    "section": "Board + Sketches",
+    "text": "Board + Sketches"
+  },
+  {
+    "objectID": "sketches/brainstorm_2.html#ai-summmary",
+    "href": "sketches/brainstorm_2.html#ai-summmary",
+    "title": "Brainstorm 2",
+    "section": "AI Summmary",
+    "text": "AI Summmary\nFrom WPP Open agent\nConsolidated Architecture Notes\n\nCore Entities & Concepts Actors: Customers: The end-users who rent the vehicles. MobilityCorp: The business entity, including staff who perform maintenance and vehicle distribution. Core Domain: Fleet: The collection of all vehicles, composed of different types: Electric Scooters eBikes Electric Cars Electric Vans Booking: The process of reserving a vehicle. Key distinctions: Cars/Vans: Booked up to 7 days in advance for a specific duration. Scooters/Bikes: Booked up to 30 minutes in advance, open-ended rental (up to 12 hours). Location: A critical concept. The primary business challenge is having the “right vehicle” in the “right place”. Vehicles must be returned to designated parking spots. The system needs to track specific GPS locations for all vehicles. A potential feature is to use location-based incentives to guide user behavior.\nKey Challenges & AI Opportunities The main business challenges revolve around prediction and optimization. AI can be applied to address these directly.\n\nThings to Predict:\nDemand/Usage: Where and when will customers want specific types of vehicles? This is the core problem of “the right vehicle in the right place.” Location: Predicting popular destinations and high-demand pickup zones. Energy/Charge: Predicting which vehicles will need battery swaps (scooters/bikes) or charging (cars/vans) and prioritizing maintenance routes. Return Behavior: Predicting if a vehicle will be returned late or to the wrong location. Proposed AI-Driven Solutions:\nDecision Model: An AI model that takes predictions (demand, energy) as input to make operational decisions, such as: Optimal vehicle distribution routes for staff. Dynamic pricing to incentivize rentals in low-demand areas or returns to high-demand areas. Prioritization of battery swaps. Customer Journey Enhancement: Predictive Booking: Offer to pre-book a vehicle for a user’s regular commute. Incentives: Proactively offer discounts for returning a vehicle to a location where demand is predicted to be high. Subscription Model: Leverage predictability to offer a subscription service, increasing revenue stability and customer loyalty. 3. System & Architectural Considerations High-Level Architecture: The system will interact with external Location-based Services (for mapping and GPS) and Payment Services. Data Pipeline: A robust data pipeline is essential. The flow will be: Historical Data -&gt; Prediction Model -&gt; Decision Model Human-in-the-Loop: Decisions, especially those related to logistics and maintenance, should be presented to staff via a Decision Support interface. The system suggests, the human confirms. Risks & Unknowns: The primary risk is the non-deterministic nature of AI. We must trust our process and data. Model drift: The predictive models must be continuously monitored and retrained as user behavior and city dynamics change. Data quality from the fleet is the foundation of the entire predictive system. Architectural Diagrams (Mermaid) Here are the diagrams based on the sketches, ready for embedding.\nSystem Context Diagram This diagram shows the MobilityCorp system in relation to its users and the external systems it depends on.\n\n\n\n\n\ngraph TD\nsubgraph \"MobilityCorp\"\n    A[Customer] -- Uses --&gt; B(Mobility Platform);\n    B -- Manages Fleet & Staff --&gt; C{AI Decision Engine};\n    C -- Provides Suggestions --&gt; D[Staff/Logistics];\n    B -- Processes Payments via --&gt; E(Payment Gateway);\n    B -- Uses Location Data from --&gt; F(Mapping & GPS Service);\nend\n\nstyle A fill:#a9d1f7,stroke:#333,stroke-width:2px\nstyle D fill:#a9d1f7,stroke:#333,stroke-width:2px\n\n\n\n\n\n\nFleet & Booking Model This diagram clarifies the relationship between the fleet, vehicle types, and booking rules.\n\n\n\n\n\ngraph TD\nFleet --&gt; Scooter;\nFleet --&gt; Bike;\nFleet --&gt; Car;\nFleet --&gt; Van;\n\nsubgraph Booking Rules\n    direction LR\n    Car ---|\"Book up to 7 days in advance&lt;br&gt;Fixed duration\"| Booking;\n    Van ---|\"Book up to 7 days in advance&lt;br&gt;Fixed duration\"| Booking;\n    Scooter ---|\"Book up to 30 mins in advance&lt;br&gt;Open-ended (max 12hr)\"| Booking;\n    Bike ---|\"Book up to 30 mins in advance&lt;br&gt;Open-ended (max 12hr)\"| Booking;\nend\n\nstyle Fleet fill:#f9f,stroke:#333,stroke-width:2px\n\n\n\n\n\n\nAI Prediction & Decision Flow This flowchart illustrates the core data pipeline for the AI-driven functionality.\n\n\n\n\n\ngraph TD\nA[Historical Data&lt;br&gt;- Ride history&lt;br&gt;- GPS locations&lt;br&gt;- Time of day/week] --&gt; B(Prediction Model);\nB -- Predicts --&gt; C[Future Demand];\nB -- Predicts --&gt; D[Vehicle Energy Needs];\nC --&gt; E{Decision Model};\nD --&gt; E{Decision Model};\nE -- Generates --&gt; F[Optimized Staff Routes];\nE -- Generates --&gt; G[Dynamic Pricing & Incentives];\n\nsubgraph \"Outputs\"\n    F --&gt; H(Staff Decision Support UI);\n    G --&gt; I(Customer App);\nend\n\n\n\n\n\n\nCustomer Journey Enhancement Loop This diagram shows how AI can be used to create a positive feedback loop to encourage repeat usage.\n\n\n\n\n\ngraph TD\nsubgraph \"AI-Enhanced Customer Journey\"\n    A(Detects Regular Commute Pattern) --&gt; B{Offer Predictive Booking};\n    B -- Accepted --&gt; C(Vehicle Reserved);\n    C --&gt; D(Successful Trip);\n    D --&gt; A;\n    B -- Declined --&gt; E{Offer Incentive for&lt;br&gt;Future Booking};\n    E --&gt; A;\nend"
+  }
+]

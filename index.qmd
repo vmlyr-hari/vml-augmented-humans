@@ -54,9 +54,135 @@ crossref:
 
 ### Predictive Demand & Fleet Rebalancing: An AI model to forecast demand and optimize vehicle placement.
 
+As a Customer, I would like a Bike, in order to commute to work.
+
+?? Overflow partnerships for customer service -- how to model this out ??
+
+```{mermaid}
+flowchart TB
+    subgraph Speculative_Models
+        Speculative_Inventroy
+        Speculative_Reservations
+        Speculative_Reservation_Events
+        Speculative_Inventory
+    end
+
+    %% What our business model supports
+    subgraph Business_Models
+        Hub_Size
+        Hub_Demand
+        Hub_Capcity
+        Actual_Inventory
+    end
+    
+    %% Historical Actuals
+    subgraph Actual_Data
+        Actual_Inventroy
+        Actual_Reservations
+        Actual_Reservation_Events
+        Actual_Inventory
+        Actual_Booked_Returns
+    end
+
+    %% Forecast
+    subgraph Forecast_Data
+        Forecast_Inventroy
+        Forecast_Reservations
+        Forecast_Reservation_Events
+        Forecast_Inventory
+    end
+
+    Speculative_Models --> Model_Training
+    Business_Models --> Model_Training
+    Actual_Data --> Model_Training
+
+    Forecast_Data --> Model_Simulation
+    Model_Simulation -- uses --> AI_Fleet_Demand_Prediction_Model
+
+    Model_Training("Model Training") --> AI_Fleet_Demand_Prediction_Model
+
+```
+
+Using predictive demand to support demand-generation or incentives.
+
+* Incentive user to Dropping at a hub with demand
+
+```{mermaid}
+flowchart TB
+    %% Realtime AI
+    FOO
+```
+
+Using Fleet status analysis to drive efficient servicing and reblancing.
+
+```{mermaid}
+flowchart TB
+    %% Realtime AI
+    BAR
+```
+
+
 ### Optimized Battery Management: A system to prioritize battery swaps and route maintenance staff efficiently.
 
 ### Smart Return Verification: Using image analysis to confirm proper vehicle returns and charging connections.
+
+Is to create a system which provides multiple-data poitns, checks and balances and different levels of details in order to increase resolution of the information available about the vechile condition at the point of return.   The burden of informaiton is distributed across actors in order to reduce gaming of the system, provide different data points and reduce burden on any one actor.
+
+**Customer Return**
+
+- Onboard help / agentic/real-time/embodied AI to get the vehcile to the right spot.
+- Opporutnity for gamification
+
+**Customer Intake/Outake Vehicle Condition Check**
+```{mermaid}
+flowchart TD
+    Customer -- uses --> App("Vehicle Rental App")
+    Customer --> App_Vehicle_Pickup("Picksup Vehicle")
+    Customer --> App_Vehicle_Dropoff("Drops off Vehicle")
+    App_Vehicle_Pickup --> Scan_Condition("Scan Condition of Vehcile")
+    App_Vehicle_Dropoff --> Scan_Condition("Scan Condition of Vehcile")
+    Scan_Condition --> AI_CV_Analyze_Intake
+    Scan_Condition --> AI_CV_Analyze_Location_Correctness
+    Scan_Condition --> Scan_Condition_Has_Error
+    Scan_Condition --> AI_CV_Analyze_Location_Realtime_Context
+    %% NOTE:  Ths is not quite right, readjust the conditions and processes
+    %% Realtime COntext is meant ot look for issues like traffic conditions, emergencies, etc.
+    AI_CV_Analyze_Location_Realtime_Context --> Scan_Condition_Has_Error{"Location_Error"}
+    Scan_Condition_Has_Error -- yes --> FOO
+    Scan_Condition_Has_Error -- no --> BAR
+    AI_CV_Analyze_Intake --> Logs_And_Sends_Report
+    Logs_And_Sends_Report --> Customer
+    Logs_And_Sends_Report --> Office_Staff
+    Logs_And_Sends_Report --> Maintenance_Staff
+    Office_Staff --> Register_Vehicle_Availability
+    Maintenance_Staff --> Perform_Maintnenace
+    Perform_Maintnenace --> Register_Vehicle_Availability
+
+    %% TODO expand on this whith the vehcile also rpeorting.
+    Identified_Vechile --> Connects_to_Network
+    %% GIS position data
+    %% OBDI output
+    %% Network attached device
+    %% Scans information and reports back
+
+    %% Vechile_Dropoff("Vehic)
+```
+
+Nomenclature -- use Equipment instead of Vehcile.
+A Vehcile is a type of Rentable Equipment
+
+?? Naming is hard.  Staff distinctions need clarification ??
+
+?? All self-service or staff-serviced ??
+
+```{mermaid}
+flowchart TD
+%% TODO moe
+    Staff --> Vehicle_Intake("Vehicle Intake App")
+    Vehicle_Intake --> Scan_Condition("Scan Condition of Vehcile")
+    Scan_Condition --> AI_CV_Analyze_Intake 
+```
+
 
 ### Personalized Commuter Experience: A GenAI-powered assistant for regular users.
 

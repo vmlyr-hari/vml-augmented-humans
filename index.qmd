@@ -1,11 +1,97 @@
 ---
-title: "vml-augmented-humans"
+title: "MobilityCorp"
+subtitle: "Proposed Solution by VML Augmented Humans"
+number-sections: true
+crossref: 
+    chapters: true
 ---
 
-This is a placeholder for our actual content.
+# Introduction
 
-```{mermaid}
-flowchart LR
-    id --> foo
+<!-- Add intro here -->
 
-```
+## Executive Summary
+
+**Our Vision for MobilityCorp** ...
+
+<!-- Add summary here -->
+
+## Team
+
+{{< include _team.qmd >}}
+
+## Glossary
+
+<!-- Add any terms or defintions here -->
+
+# Problem Analysis
+
+## Problem Definition & Context
+
+## Key Business Challenges
+
+### Vehicle Availability & Distribution
+
+### Fleet Charging & Maintenance
+
+### Customer Retention & Commuter Adoption
+
+## Key Objectives & Success Metrics
+
+## Business & Technical Constraints
+
+# Proposed Solution & Architecture
+
+## Architectural Vision & Guiding Principles
+
+## Architecture Characteristics (The "-ilities")
+
+## System Context Diagram (C1)
+
+## Container Diagram (C2)
+
+## Detailed Architecture for AI Use Cases
+
+### Predictive Demand & Fleet Rebalancing: An AI model to forecast demand and optimize vehicle placement.
+
+### Optimized Battery Management: A system to prioritize battery swaps and route maintenance staff efficiently.
+
+### Smart Return Verification: Using image analysis to confirm proper vehicle returns and charging connections.
+
+### Personalized Commuter Experience: A GenAI-powered assistant for regular users.
+
+# Architectural Decisions & Rationale
+
+## Architectural Decision Records (ADRs)
+
+### ADR-001: Choice of Event-Driven Architecture
+
+### ADR-002: Selection of AI/ML Platform for Demand Forecasting
+
+### ADR-003: Strategy for Handling AI Model Uncertainty and Validation
+
+### ADR-004: Approach to NFC-based Vehicle Interaction
+
+## Technology Stack Choices
+
+# Productionizing the AI-Powered System
+
+## Dealing with Uncertainty & Non-Determinism
+
+## Monitoring, Observability, and Fitness Functions
+
+## Phased Implementation Roadmap
+
+# Final Thoughts
+
+## How We Used Generative AI as a Collaborator
+
+## Known Limitations & Future Enhancements
+
+##  Our Learnings
+
+# Appendix
+
+## Full Deliverables Checklist
+
+## Detailed Data Schema

@@ -2,4 +2,10 @@
 title: "About"
 ---
 
-About this site
+This is a proposed solution for the O'Reilly Architectural Katas (Q4 2025).
+
+
+Our team is:
+
+{{< include _team.qmd >}}
+

@@ -1,6 +1,10 @@
 ---
 title: "Notes from Kata Kickoff"
 date-modified: 2025-10-12
+format:
+    html: default
+    pdf: 
+        mermaid-format: png
 ---
 
 <!-- _**Raw running notes from O'Reilly Architecture Katas Kickoff**_ -->

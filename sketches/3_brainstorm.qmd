@@ -2,6 +2,10 @@
 title: "Brainstorm 3"
 subtitle: "Raw Notes + AI Summarization"
 date-modified: 2025-10-21
+format:
+    html: default
+    # pdf: 
+    #     mermaid-format: png
 ---
 
 ## Board + Sketches

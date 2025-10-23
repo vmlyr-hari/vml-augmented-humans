@@ -1,11 +1,22 @@
+---
+title: "Scratch Notes"
+subtitle: "Showing AI-Generated Outline"
+date-modified: 2025-10-17
+format:
+    html: default
+    # pdf: 
+    #     mermaid-format: png
+---
+
+_This document shows an AI-Generated summary from the brief and some diagrams from our brainstorm._
 
 <!-- Summary/overeview -->
 
 # Problem definition
 
-<!-- Start AI from WPP Open query  -->
+_Start AI from WPP Open query_
 
-<!-- ## 1. Introduction & Business Context
+## 1. Introduction & Business Context
 
 MobilityCorp is a growing provider of short-term, "last-mile" transport solutions. Our fleet consists of electric scooters, e-bikes, and electric cars/vans. We operate primarily in dense city locations but are expanding our car and van services into suburban areas.
 
@@ -47,9 +58,9 @@ The proposed solution must detail how AI will be leveraged to:
 *   Improve vehicle availability and reliability.
 *   Potentially create new features that encourage regular use, such as personalized commute planning or dynamic pricing.
 
-Your team's proposal should present a comprehensive architectural vision that is robust, scalable, and considers the real-world constraints and uncertainties of implementing AI-driven systems. -->
+Your team's proposal should present a comprehensive architectural vision that is robust, scalable, and considers the real-world constraints and uncertainties of implementing AI-driven systems.
 
-<!-- End AI from WPP Open query -->
+_End AI from WPP Open query_
 
 
 The end-user, the custoemr

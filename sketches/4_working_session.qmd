@@ -1,6 +1,10 @@
 ---
 title: "Working Session Notes"
 date-modified: 2025-10-22
+format:
+    html: default
+    # pdf: 
+    #     mermaid-format: png
 ---
 
 _Note: For our working session we used this outline to frame our thinking.  Diagrams and notes are rough._

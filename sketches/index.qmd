@@ -1,0 +1,10 @@
+---
+title: "Sketches & Notes"
+listing: default
+format:
+    html: default
+    # pdf: 
+    #     mermaid-format: png
+---
+
+The following capture our brainstorm notes, AI summaries and 

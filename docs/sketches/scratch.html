@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>scratch – MobilityCorp</title>
+<title>Scratch Notes – MobilityCorp</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
 <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
 <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
@@ -119,64 +120,97 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#problem-definition" id="toc-problem-definition" class="nav-link active" data-scroll-target="#problem-definition">Problem definition</a></li>
+  <li><a href="#problem-definition" id="toc-problem-definition" class="nav-link active" data-scroll-target="#problem-definition">Problem definition</a>
+  <ul class="collapse">
+  <li><a href="#introduction-business-context" id="toc-introduction-business-context" class="nav-link" data-scroll-target="#introduction-business-context">1. Introduction &amp; Business Context</a></li>
+  <li><a href="#core-business-challenges" id="toc-core-business-challenges" class="nav-link" data-scroll-target="#core-business-challenges">2. Core Business Challenges</a></li>
+  <li><a href="#the-architectural-mandate" id="toc-the-architectural-mandate" class="nav-link" data-scroll-target="#the-architectural-mandate">3. The Architectural Mandate</a>
+  <ul class="collapse">
+  <li><a href="#enhance-the-solution-for-mobilitycorp-the-company" id="toc-enhance-the-solution-for-mobilitycorp-the-company" class="nav-link" data-scroll-target="#enhance-the-solution-for-mobilitycorp-the-company">Enhance the solution for MobilityCorp (the company):</a></li>
+  <li><a href="#enhance-the-solution-for-our-customers" id="toc-enhance-the-solution-for-our-customers" class="nav-link" data-scroll-target="#enhance-the-solution-for-our-customers">Enhance the solution for our customers:</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Scratch Notes</h1>
+<p class="subtitle lead">Showing AI-Generated Outline</p>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
+    
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">October 17, 2025</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><em>This document shows an AI-Generated summary from the brief and some diagrams from our brainstorm.</em></p>
 <!-- Summary/overeview -->
 <section id="problem-definition" class="level1">
 <h1>Problem definition</h1>
-<!-- Start AI from WPP Open query  -->
-<!-- ## 1. Introduction & Business Context
-
-MobilityCorp is a growing provider of short-term, "last-mile" transport solutions. Our fleet consists of electric scooters, e-bikes, and electric cars/vans. We operate primarily in dense city locations but are expanding our car and van services into suburban areas.
-
-Our current operating model is as follows:
-
-*   **Customer Interaction:** Customers use an NFC-capable smartphone app to sign up, locate, book, unlock, and lock vehicles.
-*   **Booking Logic:**
-*   **Cars & Vans:** Can be booked up to 7 days in advance for a specific duration.
-*   **Bikes & Scooters:** Can be booked up to 30 minutes in advance for an open-ended rental, lasting up to 12 hours.
-*   **Vehicle Management:** All vehicles are equipped with GPS trackers. Cars and vans can be remotely disabled if necessary.
-*   **Return Process:** Vehicles must be returned to designated parking spots. Cars and vans must be plugged into an EV charger. Customers are required to submit a photo of the returned vehicle as proof and can provide feedback on the vehicle's condition.
-*   **Billing:** Customers are charged per minute. Fines are automatically applied for returning a vehicle late or to an incorrect location.
-*   **Logistics & Maintenance:** Our staff perform manual battery swaps for bikes and scooters and redistribute vehicles across our network to meet demand.
-
-## 2. Core Business Challenges
-
-Despite our growth, we face significant operational inefficiencies and customer satisfaction issues that are hindering our potential. Our primary challenges are:
-
-1.  **Inefficient Vehicle Distribution:** Our most frequent customer complaint is that "the right vehicles aren't in the right places." We lack a systematic way to anticipate demand, leading to a poor customer experience and lost revenue. We need to move from a reactive to a predictive model for vehicle placement.
-
-2.  **Reactive Maintenance & Charging:** We struggle with vehicles running out of charge, particularly bikes and scooters that rely on manual battery swaps. Our staff's efforts are not optimized; we need a way to prioritize which vehicles and charging bays require service most urgently to maximize fleet availability.
-
-3.  **Ad-Hoc Customer Usage:** The majority of our customers use our services on an ad-hoc basis. We have a strategic goal to increase customer loyalty and transform our service into a reliable option for regular, daily commutes.
-
-## 3. The Architectural Mandate
-
-Our objective is to design a **new target architecture** for the MobilityCorp platform. The central requirement of this new architecture is the **strategic incorporation of Artificial Intelligence (AI)** to directly address the business challenges outlined above.
-
-The proposed solution must detail how AI will be leveraged to:
-
-### Enhance the solution for MobilityCorp (the company):
-
-*   Optimize vehicle distribution by predicting demand hotspots.
-*   Create intelligent routing and task prioritization for maintenance staff (e.g., battery swaps, vehicle redistribution).
-*   Provide analytics and insights into fleet performance and health.
-
-### Enhance the solution for our customers:
-
-*   Improve vehicle availability and reliability.
-*   Potentially create new features that encourage regular use, such as personalized commute planning or dynamic pricing.
-
-Your team's proposal should present a comprehensive architectural vision that is robust, scalable, and considers the real-world constraints and uncertainties of implementing AI-driven systems. -->
-<!-- End AI from WPP Open query -->
+<p><em>Start AI from WPP Open query</em></p>
+<section id="introduction-business-context" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-business-context">1. Introduction &amp; Business Context</h2>
+<p>MobilityCorp is a growing provider of short-term, “last-mile” transport solutions. Our fleet consists of electric scooters, e-bikes, and electric cars/vans. We operate primarily in dense city locations but are expanding our car and van services into suburban areas.</p>
+<p>Our current operating model is as follows:</p>
+<ul>
+<li><strong>Customer Interaction:</strong> Customers use an NFC-capable smartphone app to sign up, locate, book, unlock, and lock vehicles.</li>
+<li><strong>Booking Logic:</strong></li>
+<li><strong>Cars &amp; Vans:</strong> Can be booked up to 7 days in advance for a specific duration.</li>
+<li><strong>Bikes &amp; Scooters:</strong> Can be booked up to 30 minutes in advance for an open-ended rental, lasting up to 12 hours.</li>
+<li><strong>Vehicle Management:</strong> All vehicles are equipped with GPS trackers. Cars and vans can be remotely disabled if necessary.</li>
+<li><strong>Return Process:</strong> Vehicles must be returned to designated parking spots. Cars and vans must be plugged into an EV charger. Customers are required to submit a photo of the returned vehicle as proof and can provide feedback on the vehicle’s condition.</li>
+<li><strong>Billing:</strong> Customers are charged per minute. Fines are automatically applied for returning a vehicle late or to an incorrect location.</li>
+<li><strong>Logistics &amp; Maintenance:</strong> Our staff perform manual battery swaps for bikes and scooters and redistribute vehicles across our network to meet demand.</li>
+</ul>
+</section>
+<section id="core-business-challenges" class="level2">
+<h2 class="anchored" data-anchor-id="core-business-challenges">2. Core Business Challenges</h2>
+<p>Despite our growth, we face significant operational inefficiencies and customer satisfaction issues that are hindering our potential. Our primary challenges are:</p>
+<ol type="1">
+<li><p><strong>Inefficient Vehicle Distribution:</strong> Our most frequent customer complaint is that “the right vehicles aren’t in the right places.” We lack a systematic way to anticipate demand, leading to a poor customer experience and lost revenue. We need to move from a reactive to a predictive model for vehicle placement.</p></li>
+<li><p><strong>Reactive Maintenance &amp; Charging:</strong> We struggle with vehicles running out of charge, particularly bikes and scooters that rely on manual battery swaps. Our staff’s efforts are not optimized; we need a way to prioritize which vehicles and charging bays require service most urgently to maximize fleet availability.</p></li>
+<li><p><strong>Ad-Hoc Customer Usage:</strong> The majority of our customers use our services on an ad-hoc basis. We have a strategic goal to increase customer loyalty and transform our service into a reliable option for regular, daily commutes.</p></li>
+</ol>
+</section>
+<section id="the-architectural-mandate" class="level2">
+<h2 class="anchored" data-anchor-id="the-architectural-mandate">3. The Architectural Mandate</h2>
+<p>Our objective is to design a <strong>new target architecture</strong> for the MobilityCorp platform. The central requirement of this new architecture is the <strong>strategic incorporation of Artificial Intelligence (AI)</strong> to directly address the business challenges outlined above.</p>
+<p>The proposed solution must detail how AI will be leveraged to:</p>
+<section id="enhance-the-solution-for-mobilitycorp-the-company" class="level3">
+<h3 class="anchored" data-anchor-id="enhance-the-solution-for-mobilitycorp-the-company">Enhance the solution for MobilityCorp (the company):</h3>
+<ul>
+<li>Optimize vehicle distribution by predicting demand hotspots.</li>
+<li>Create intelligent routing and task prioritization for maintenance staff (e.g., battery swaps, vehicle redistribution).</li>
+<li>Provide analytics and insights into fleet performance and health.</li>
+</ul>
+</section>
+<section id="enhance-the-solution-for-our-customers" class="level3">
+<h3 class="anchored" data-anchor-id="enhance-the-solution-for-our-customers">Enhance the solution for our customers:</h3>
+<ul>
+<li>Improve vehicle availability and reliability.</li>
+<li>Potentially create new features that encourage regular use, such as personalized commute planning or dynamic pricing.</li>
+</ul>
+<p>Your team’s proposal should present a comprehensive architectural vision that is robust, scalable, and considers the real-world constraints and uncertainties of implementing AI-driven systems.</p>
+<p><em>End AI from WPP Open query</em></p>
 <p>The end-user, the custoemr</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
@@ -249,6 +283,8 @@ Your team's proposal should present a comprehensive architectural vision that is
 </div>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->

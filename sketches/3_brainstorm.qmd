@@ -1,0 +1,40 @@
+---
+title: "Brainstorm 3"
+subtitle: "Raw Notes + AI Summarization"
+date-modified: 2025-10-21
+format:
+    html: default
+    # pdf: 
+    #     mermaid-format: png
+---
+
+## Board + Sketches
+
+![Written Notes](1021_real_world_observations.png)
+
+## AI Summmary
+
+
+### Vehicle / Parking Example
+*   Parking, Reg.
+*   Auto-detect rental, like Turo?
+
+### Hertz AI
+*   20 mm. scratch
+*   Image recognition
+
+AI recog damage to car.
+
+
+## AI Summary - Generated Diagrams
+
+_Note: Generated diagram is so-so.  Reference the drawing for a better intent._
+
+```{mermaid}
+graph LR
+subgraph "Image Capture Process"
+    F[F] --- B[B] --- S1[S] --- S2[S]
+    S2 -- "picture taken by staff" --> P[ ]
+end
+RegBefore(reg. before) --> ImageCaptureProcess
+```

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>MobilityCorp</title>
+<title>Architecture Brainstorm 1 – MobilityCorp</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,12 +69,12 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <meta name="mermaid-theme" content="neutral">
-<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -84,9 +84,9 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">MobilityCorp</span>
     </a>
   </div>
@@ -97,11 +97,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Solution</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -120,28 +120,28 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a>
+  <li><a href="#board-sketches" id="toc-board-sketches" class="nav-link active" data-scroll-target="#board-sketches">Board + Sketches</a></li>
+  <li><a href="#ai-summmary" id="toc-ai-summmary" class="nav-link" data-scroll-target="#ai-summmary">AI Summmary</a>
   <ul class="collapse">
-  <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link" data-scroll-target="#executive-summary"><span class="header-section-number">1.1</span> Executive Summary</a></li>
-  <li><a href="#team" id="toc-team" class="nav-link" data-scroll-target="#team"><span class="header-section-number">1.2</span> Team</a></li>
-  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology"><span class="header-section-number">1.3</span> Methodology</a></li>
-  <li><a href="#diagrams" id="toc-diagrams" class="nav-link" data-scroll-target="#diagrams"><span class="header-section-number">1.4</span> Diagrams</a></li>
-  <li><a href="#glossary" id="toc-glossary" class="nav-link" data-scroll-target="#glossary"><span class="header-section-number">1.5</span> Glossary</a></li>
+  <li><a href="#order-data" id="toc-order-data" class="nav-link" data-scroll-target="#order-data">Order Data</a></li>
+  <li><a href="#user-understanding" id="toc-user-understanding" class="nav-link" data-scroll-target="#user-understanding">User Understanding</a></li>
+  <li><a href="#gamification" id="toc-gamification" class="nav-link" data-scroll-target="#gamification">Gamification</a></li>
+  <li><a href="#prediction-usage" id="toc-prediction-usage" class="nav-link" data-scroll-target="#prediction-usage">Prediction &amp; Usage</a></li>
+  <li><a href="#privacy-charge-management" id="toc-privacy-charge-management" class="nav-link" data-scroll-target="#privacy-charge-management">Privacy &amp; Charge Management</a></li>
+  <li><a href="#battery-usage-service-model" id="toc-battery-usage-service-model" class="nav-link" data-scroll-target="#battery-usage-service-model">Battery Usage &amp; Service Model</a></li>
+  <li><a href="#wireless-energy" id="toc-wireless-energy" class="nav-link" data-scroll-target="#wireless-energy">Wireless energy</a></li>
+  <li><a href="#network-repair-infrastructure" id="toc-network-repair-infrastructure" class="nav-link" data-scroll-target="#network-repair-infrastructure">Network &amp; Repair Infrastructure</a></li>
+  <li><a href="#ai-vehicle-capabilities" id="toc-ai-vehicle-capabilities" class="nav-link" data-scroll-target="#ai-vehicle-capabilities">AI &amp; Vehicle Capabilities</a></li>
+  <li><a href="#system-integrations-incentives" id="toc-system-integrations-incentives" class="nav-link" data-scroll-target="#system-integrations-incentives">System Integrations &amp; Incentives</a></li>
+  <li><a href="#rewards-feedback" id="toc-rewards-feedback" class="nav-link" data-scroll-target="#rewards-feedback">Rewards &amp; Feedback</a></li>
+  <li><a href="#ai---trip-planning" id="toc-ai---trip-planning" class="nav-link" data-scroll-target="#ai---trip-planning">AI - Trip Planning</a></li>
   </ul></li>
-  <li><a href="#mobilitycorp" id="toc-mobilitycorp" class="nav-link" data-scroll-target="#mobilitycorp"><span class="header-section-number">2</span> MobilityCorp</a></li>
-  <li><a href="#ask" id="toc-ask" class="nav-link" data-scroll-target="#ask"><span class="header-section-number">3</span> Ask</a></li>
-  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution"><span class="header-section-number">4</span> Solution</a>
+  <li><a href="#ai-summary---generated-diagrams" id="toc-ai-summary---generated-diagrams" class="nav-link" data-scroll-target="#ai-summary---generated-diagrams">AI Summary - Generated Diagrams</a>
   <ul class="collapse">
-  <li><a href="#approach" id="toc-approach" class="nav-link" data-scroll-target="#approach"><span class="header-section-number">4.1</span> Approach</a>
-  <ul class="collapse">
-  <li><a href="#a-tiered-architecture" id="toc-a-tiered-architecture" class="nav-link" data-scroll-target="#a-tiered-architecture"><span class="header-section-number">4.1.1</span> A Tiered Architecture</a></li>
+  <li><a href="#hub-spoke-locations" id="toc-hub-spoke-locations" class="nav-link" data-scroll-target="#hub-spoke-locations">Hub &amp; Spoke Locations</a></li>
+  <li><a href="#modeling-battery-usage-incentives" id="toc-modeling-battery-usage-incentives" class="nav-link" data-scroll-target="#modeling-battery-usage-incentives">Modeling Battery Usage &amp; Incentives</a></li>
+  <li><a href="#useful-entities" id="toc-useful-entities" class="nav-link" data-scroll-target="#useful-entities">Useful Entities</a></li>
   </ul></li>
-  <li><a href="#system-context" id="toc-system-context" class="nav-link" data-scroll-target="#system-context"><span class="header-section-number">4.2</span> System Context</a>
-  <ul class="collapse">
-  <li><a href="#customer" id="toc-customer" class="nav-link" data-scroll-target="#customer"><span class="header-section-number">4.2.1</span> Customer</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#footnotes-references" id="toc-footnotes-references" class="nav-link" data-scroll-target="#footnotes-references"><span class="header-section-number">5</span> Footnotes &amp; References</a></li>
   </ul>
 </nav>
     </div>
@@ -150,8 +150,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">MobilityCorp</h1>
-<p class="subtitle lead">Proposed Solution by VML Augmented Humans</p>
+<h1 class="title">Architecture Brainstorm 1</h1>
+<p class="subtitle lead">Raw Notes + AI Summarization</p>
 </div>
 
 
@@ -160,6 +160,12 @@ ul.task-list li input[type="checkbox"] {
 
     
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">October 17, 2025</p>
+    </div>
+  </div>
     
   </div>
   
@@ -168,231 +174,170 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!-- 
-Colors for C4 diagrams
-#0075bdff
-#009dffff
-#00c3ffff 
-
--->
+<section id="board-sketches" class="level2">
+<h2 class="anchored" data-anchor-id="board-sketches">Board + Sketches</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="assets/vml_augmented_humans_2.png" class="img-fluid figure-img"></p>
-<figcaption>VML Augmented Humans</figcaption>
+<p><img src="1017_sketches_0.png" class="img-fluid figure-img"></p>
+<figcaption>Written Notes</figcaption>
 </figure>
 </div>
-<p><strong>Note: This is effectively a Solution Design Sprint 0. Lot’s of conceptual ideas that need more detail and proving out.</strong></p>
-<section id="introduction" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
-<!-- Add intro here -->
-<section id="executive-summary" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="executive-summary"><span class="header-section-number">1.1</span> Executive Summary</h2>
-<!-- **Our Vision for MobilityCorp** ... -->
-<!-- Add summary here -->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="1017_sketches_1.png" class="img-fluid figure-img"></p>
+<figcaption>Written Notes</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="1017_sketches_2.png" class="img-fluid figure-img"></p>
+<figcaption>Written Notes</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="1017_sketches_3.png" class="img-fluid figure-img"></p>
+<figcaption>Written Notes</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="1017_sketches_4.png" class="img-fluid figure-img"></p>
+<figcaption>Written Notes</figcaption>
+</figure>
+</div>
 </section>
-<section id="team" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="team"><span class="header-section-number">1.2</span> Team</h2>
-<p>We are a team made up of people who make software for immersive experiences of all sizes. Our invididual roles use words like Solution Architect, DevOps Engineer, Creative Technologist, Immersive Developer, Full-Stack Developer, etcetera.</p>
+<section id="ai-summmary" class="level2">
+<h2 class="anchored" data-anchor-id="ai-summmary">AI Summmary</h2>
+<p><em>Notes transcribed using WPP Open, Gemini 2.5 Flash</em></p>
+<section id="order-data" class="level3">
+<h3 class="anchored" data-anchor-id="order-data">Order Data</h3>
 <ul>
-<li>Hari Khalsa</li>
-<li>Navya Bikkasani</li>
-<li>Brandon Sweatman</li>
-<li>Eric Black</li>
+<li>Procurement</li>
+<li>Suggestions to order in terms of most inventory</li>
 </ul>
 </section>
-<section id="methodology" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="methodology"><span class="header-section-number">1.3</span> Methodology</h2>
-<p>Our approach was to conduct a series of collaborative brainstorms, working effectively as a solution design sprint.</p>
+<section id="user-understanding" class="level3">
+<h3 class="anchored" data-anchor-id="user-understanding">User Understanding</h3>
 <ul>
-<li>Collaborative Brainstroms</li>
-<li>Discuss real-world examples of similar models</li>
-<li>AI used to parse our notes, generate starter diagrams and syntehsize information</li>
-<li>AI used to check our work for consistency</li>
-<li>Human brains used for creative ideation and solution design</li>
+<li>Knows your schedule</li>
+<li>Attitudinal</li>
+<li>Behavioral responses</li>
 </ul>
-<p>We didn’t get as far as hoped for the formal documentation. You can see the more raw outputs of our work and thinking in the <a href="./sketches/index.html">Sketches</a>.</p>
 </section>
-<section id="diagrams" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="diagrams"><span class="header-section-number">1.4</span> Diagrams</h2>
-<p>Our diagrams are created in a markdown-friendly format at this stage. While not perfect for diagramming, as developers this allows us to shif ideas more nimbly.</p>
-<p>Broadly speaking, we are using the C4 model for software diagrams. You may see some differences for expedience of writing in MermaidJS and Quarto-flavored markdown.</p>
+<section id="gamification" class="level3">
+<h3 class="anchored" data-anchor-id="gamification">Gamification</h3>
+<ul>
+<li>Feedback, prizes</li>
+<li><strong>Waze example:</strong> Seasonal gamification &amp; social interaction</li>
+<li><strong>Gamify:</strong></li>
+<li>Reward points for doing a quest… points.</li>
+<li>Coupons for future uses.</li>
+<li>A/B testing, customer loyalty, feedback.</li>
+</ul>
+</section>
+<section id="prediction-usage" class="level3">
+<h3 class="anchored" data-anchor-id="prediction-usage">Prediction &amp; Usage</h3>
+<ul>
+<li><strong>GPS:</strong> Can we predict where they are going?</li>
+<li>Frustration of “how long can go”</li>
+<li><strong>How do we know when/who want to use vehicles?</strong></li>
+<li>Usage - generally available</li>
+<li>Odds</li>
+<li>Assumptions</li>
+</ul>
+</section>
+<section id="privacy-charge-management" class="level3">
+<h3 class="anchored" data-anchor-id="privacy-charge-management">Privacy &amp; Charge Management</h3>
+<ul>
+<li>Privacy protection / Anonymization</li>
+<li>How long a charge lasts:</li>
+<li>Distance of travel</li>
+<li><code>n</code> days</li>
+<li><strong>Conceptual Diagram (Time/POI):</strong> A region or point of interest (POI) over a specific time window (e.g., 17-13).</li>
+</ul>
+</section>
+<section id="battery-usage-service-model" class="level3">
+<h3 class="anchored" data-anchor-id="battery-usage-service-model">Battery Usage &amp; Service Model</h3>
+<ul>
+<li>Expected battery usage &amp; actual battery usage data</li>
+</ul>
+</section>
+<section id="wireless-energy" class="level3">
+<h3 class="anchored" data-anchor-id="wireless-energy">Wireless energy</h3>
+<p>Question: How does Waze know when to go when it needs a charge?</p>
+</section>
+<section id="network-repair-infrastructure" class="level3">
+<h3 class="anchored" data-anchor-id="network-repair-infrastructure">Network &amp; Repair Infrastructure</h3>
+<ul>
+<li>Hot-swappable battery packs</li>
+<li>Company vans:</li>
+<li>Charging stations on board</li>
+<li>Repair stations</li>
+<li>(Grouped as: Mobile repair)</li>
+</ul>
+</section>
+<section id="ai-vehicle-capabilities" class="level3">
+<h3 class="anchored" data-anchor-id="ai-vehicle-capabilities">AI &amp; Vehicle Capabilities</h3>
+<ul>
+<li>Are vehicles self-driving?</li>
+<li>Opportunity for AI within device itself</li>
+<li>Moving, proven patterns in devices</li>
+<li><strong>Vehicle Types/Stages:</strong></li>
+<li>Scooter, Skateboard, Bike</li>
+<li>Beta, Dev, Test, Alpha, Pilot, Release (user groups/development stages)</li>
+</ul>
+</section>
+<section id="system-integrations-incentives" class="level3">
+<h3 class="anchored" data-anchor-id="system-integrations-incentives">System Integrations &amp; Incentives</h3>
+<ul>
+<li>Emergency chargers - nearby</li>
+<li>Emergency reserve</li>
+<li>Human honor system of doing things right</li>
+<li>Hardware-based efficiency/improvement for resilience</li>
+</ul>
+</section>
+<section id="rewards-feedback" class="level3">
+<h3 class="anchored" data-anchor-id="rewards-feedback">Rewards &amp; Feedback</h3>
+<ul>
+<li>Fines exist but are negative.</li>
+<li>Give a positive reward.</li>
+<li><strong>Point structure:</strong></li>
+<li>Generation, one-of-a-kind rewards</li>
+<li>Old school game - ping to get it right</li>
+<li>Value of knowing where you’ve been:</li>
+<li>Stats &amp; records.</li>
+<li><strong>Frequent flyer miles:</strong></li>
+<li>Points for correct behaviors</li>
+<li>Unlocks/incentives</li>
+<li><strong>Customer behavior / Psychology:</strong></li>
+<li>AI integration to respond to comments -&gt; give user feedback.</li>
+<li>Onboard AI to coach &amp; help user driving!</li>
+<li>Ask AI follow-up questions.</li>
+</ul>
+</section>
+<section id="ai---trip-planning" class="level3">
+<h3 class="anchored" data-anchor-id="ai---trip-planning">AI - Trip Planning</h3>
+<ul>
+<li>“I feel lucky…”</li>
+<li>Optimize for allowed/optimal destination.</li>
+</ul>
+</section>
+</section>
+<section id="ai-summary---generated-diagrams" class="level2">
+<h2 class="anchored" data-anchor-id="ai-summary---generated-diagrams">AI Summary - Generated Diagrams</h2>
+<section id="hub-spoke-locations" class="level3">
+<h3 class="anchored" data-anchor-id="hub-spoke-locations">Hub &amp; Spoke Locations</h3>
+<p><em>Note: This diagram is meant to show the Hub and Spoke model for pickup and return locations. Reference the drawing for a better intent.</em></p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
-<pre class="mermaid mermaid-js">flowchart TD
-
-%% Users
-User["End User"]
-Staff["Business User"]
-
-%% Components
-Data_Compute["Compute Artifact"]
-AI_Component["AI Component"]
-
-subgraph Boundary_or_Group["Boundary or Group"]
-    Component
-end
-
-style User fill:#0075bdff,color:#fff
-style Staff fill:#009dffff,color:#fff
-style Data_Compute fill:#e6f3ff
-style AI_Component fill:#f0e6ffff
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-<!-- #0075bdff
-#009dffff
-#00c3ffff 
-#f0e6ffff
- -->
-</section>
-<section id="glossary" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="glossary"><span class="header-section-number">1.5</span> Glossary</h2>
-</section>
-</section>
-<section id="mobilitycorp" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> MobilityCorp</h1>
-<p>MobilityCorp is a growing provider of short-term, “last-mile” transport solutions. They operate a fleet of electric vehicles, including scooters, e-bikes, cars, and vans. Their primary market is dense city locations, but they are expanding their car and van rental services into more suburban areas.</p>
-<p>MobilityCorp currently operates in the European Union (EU), but it’s safe to say the business model is intended to grow. Solutions should be locally effective and globally scaleable.</p>
-<!-- Their current operational model is as follows:
-
-Customer Interaction: Customers use an NFC-capable smartphone app to sign up, locate, book, and operate the vehicles.
-Booking & Rental:
-Cars and vans can be booked up to 7 days in advance for a specific duration.
-Bikes and scooters can be booked up to 30 minutes in advance for an open-ended rental, with a maximum duration of 12 hours.
-Vehicle Management: All vehicles are equipped with GPS trackers for location monitoring. Cars and vans can be remotely disabled if necessary.
-Payment: Customers are charged on a per-minute basis. Fines are automatically issued for late returns or for returning a vehicle to an incorrect location.
-Return Process: Vehicles must be returned to designated parking spots. Cars and vans need to be plugged into an EV charger. Customers are required to submit a photo of the returned vehicle as proof of return and can provide feedback on its condition.
-Logistics and Maintenance: The company employs staff to manually swap out batteries for bikes and scooters and to redistribute vehicles across the network to meet demand. -->
-</section>
-<section id="ask" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Ask</h1>
-<p>MobilityCorp has asked us to come up with a new architecture, incorporating AI functionality where appropriate to address business challenges:</p>
-<blockquote class="blockquote">
-<p>Our customers can’t find a vehicle when they need one, and our service crews are struggling to keep everything charged and maintained. We need a smarter system that tells us where to place our vehicles and how to run our operations more efficiently, so we can stop losing money and make our service reliable enough for daily use. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-</blockquote>
-<p>The solution should allow the business to:</p>
-<ul>
-<li>Know when customers will want to use vehicles</li>
-<li>Anticipate customer needs</li>
-<li>Anticiapte and optimize maintenance needs</li>
-<li>Grow our business
-<ul>
-<li>Increase use by existing customers</li>
-<li>Add new customers</li>
-</ul></li>
-</ul>
-</section>
-<section id="solution" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Solution</h1>
-<p>MobilityCorp’s core challenge is not a lack of data, but a lack of actionable data and forward-looking insight. To solve this, we propose an architecture enhanced with AI at key touchpoints in business processes and overall experience.</p>
-<section id="approach" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="approach"><span class="header-section-number">4.1</span> Approach</h2>
-<p>First, we will look at the overally systems to ensure they are setup in a API-forward, service-oriented approach that allows for evolution, portability and change over time. We aren’t showing the whole system, but the parts most pertinent to our current problem scope.</p>
-<section id="a-tiered-architecture" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="a-tiered-architecture"><span class="header-section-number">4.1.1</span> A Tiered Architecture</h3>
-<ul>
-<li>Our Users enage with our MobilityCorp through applications focused on their particular needs
-<ul>
-<li>Customer use a mobile app</li>
-<li>Staff or service technitions use a mobile app</li>
-<li>Administrative or office staff use an app</li>
-</ul></li>
-<li>Our Apps interface with services or APIs
-<ul>
-<li>Booking service</li>
-<li>Incentive service</li>
-<li>Fleet service</li>
-<li>Analytics service</li>
-<li>AI Vision Service <em>Used at multiple layers in the stack</em></li>
-<li>GenAI Service <em>Used in content creation workflows or, optionally, real-time for gamified elements.</em></li>
-</ul></li>
-<li>Data is collected in our data warehouse</li>
-<li>MobilityCorp’s Digital Twin is used as part of the Insights &amp; Analytics Tier</li>
-</ul>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">graph TD
-subgraph Users
-    Customer[Customer]
-    Staff["Maintenance Staff"]
-    Admin["Admin Staff"]
-end
-
-CDN_WAF["Proxy"]
-
-subgraph MobiltyCorpSystems["MobiltyCorp Platform"]
-
-    subgraph Engagement_Tier["Engagement Layer"]
-        Mobile_App["Mobile App"]
-        Staff_App["Staff App"]
-        Admin_App["Admin App"]
-    end
-
-    subgraph Services_Tier["Services Tier"]
-        Booking_Service["Booking Service"]
-        Incentive_Service["Incentive Service"]
-        Fleet_Service["Fleet Service"]
-        Analytics_Service["Analytics Service"]
-        AI_Vision_Service["AI Vision Service"]
-        AI_Gen_Service["GenAI Service*"]
-    end
-
-    subgraph Data_Insights_Tiers["Data Warehouse &amp; Insights"]
-        direction LR
-        subgraph Data_Warehouse
-        end
-
-        subgraph AI_Analytics_Tier["Insights &amp; Analytics Tier"]
-            Digital_Twin["`Digital Twin&lt;br&gt;(Simulation Engine)`"]
-            Demand_AI["Demand Forecasting AI"]
-            Maint_AI["Maintenance Optimization AI"]
-        end
-    end
-end
-
-Customer ~~~ CDN_WAF
-Staff    ~~~ CDN_WAF
-Admin    ~~~ CDN_WAF
-
-CDN_WAF ~~~ Mobile_App
-CDN_WAF ~~~ Staff_App
-CDN_WAF ~~~ Admin_App
-
-Mobile_App  ~~~ Services_Tier
-Staff_App   ~~~ Services_Tier
-Admin_App   ~~~ Services_Tier
-
-Services_Tier ~~~ Data_Warehouse
-%% Services_Tier -- sends data --&gt; AI_Analytics_Tier
-
-%% AI_Analytics_Tier -- sends data --&gt; Data_Warehouse
-Data_Warehouse ~~~ AI_Analytics_Tier
-
-Services_Tier ~~~ AI_Analytics_Tier
-
-%% Styling
-style Customer fill:#0075bdff,color:#fff
-style Admin fill:#009dffff,color:#fff
-style Staff fill:#009dffff,color:#fff
-
-%% Styling - AI Analytics Tier
-style AI_Analytics_Tier fill:#e6f3ff
-
-%% Styling - AI Components
-style AI_Vision_Service fill:#f0e6ffff
-style Digital_Twin fill:#f0e6ffff
-style Demand_AI fill:#f0e6ffff
-style Maint_AI fill:#f0e6ffff
-style AI_Gen_Service fill:#f0e6ffff
+<pre class="mermaid mermaid-js">    graph TD
+    SPORC1[SPORC] -- connects to --&gt; HUB[HUB]
+    HUB -- connects to --&gt; SPORC2[SPORC]
+    HUB -- connects to --&gt; SPORC3[SPORC]
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -400,46 +345,23 @@ style AI_Gen_Service fill:#f0e6ffff
 </div>
 </div>
 </section>
-</section>
-<section id="system-context" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="system-context"><span class="header-section-number">4.2</span> System Context</h2>
-<section id="customer" class="level3" data-number="4.2.1">
-<h3 data-number="4.2.1" class="anchored" data-anchor-id="customer"><span class="header-section-number">4.2.1</span> Customer</h3>
+<section id="modeling-battery-usage-incentives" class="level3">
+<h3 class="anchored" data-anchor-id="modeling-battery-usage-incentives">Modeling Battery Usage &amp; Incentives</h3>
+<p><em>Note: This diagram is meant to show how we can model expected energy usage and factor into incentives to return to a given charging destination. Reference the drawing for a better intent.</em></p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">graph TD
-Customer[Customer]
-Mobile_App["Mobile App"]
-
-subgraph Services_Tier["Services Tier"]
-    Booking_Service["Booking Service"]
-    Incentive_Service["Incentive Service"]
-    Fleet_Service["Fleet Service"]
-    Analytics_Service["Analytics Service"]
-    AI_Vision_Service["AI Vision Service"]
-    AI_Gen_Service["GenAI Service*"]
-end
-
-
-Customer --&gt; Mobile_App
-
-Mobile_App -- uses --&gt; Booking_Service
-Mobile_App -- uses --&gt; Incentive_Service
-Booking_Service -- uses --&gt; Fleet_Service
-
-Mobile_App -- sends data --&gt; Analytics_Service
-Mobile_App -. uses and embeds .-&gt; AI_Vision_Service
-Mobile_App -. uses or embeds .-&gt; AI_Gen_Service
-
-%% Styling
-style Customer fill:#0075bdff,color:#fff
-
-%% Styling - AI Components
-style AI_Vision_Service fill:#f0e6ffff
-style AI_Gen_Service fill:#f0e6ffff
+    A[C-Scooter] --&gt; DB(Database)
+    B[C-Bike] --&gt; DB
+    C[C-Car] --&gt; DB
+    D[C-Van] --&gt; DB
+    DB --&gt; SM["Service Model"]
+    SM --&gt; UI("Surging destination as a user incentive")
+    UI --&gt; L[Labs]
+    UI --&gt; S[Starbucks]
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -447,21 +369,30 @@ style AI_Gen_Service fill:#f0e6ffff
 </div>
 </div>
 </section>
-</section>
-</section>
-<section id="footnotes-references" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Footnotes &amp; References</h1>
+<section id="useful-entities" class="level3">
+<h3 class="anchored" data-anchor-id="useful-entities">Useful Entities</h3>
+<p><em>Note: This diagram captures the entities in a sketch, but not the intended concept. The idea in the drawing is leveraging a kiosk at point-of-return for further gamification. Reference the drawing for a better intent. Team discussion did note this idea is beyond the brief and doesn’t match the intended business model. </em></p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TD
+HUB_G[Hub] -- connected to --&gt; Google[Google]
+Vehicle[Vehicle] -- connected to --&gt; Phone[Phone]
+Phone -- connected to --&gt; Wallet[Wallet]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 
 
 </section>
+</section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>We used WPP Open to create an AI agent to speak as the voice of the customer.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

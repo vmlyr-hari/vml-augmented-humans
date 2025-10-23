@@ -1,19 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "MobilityCorp",
-    "section": "",
-    "text": "Our Vision for MobilityCorp …\n\n\n\n\n\nHari Khalsa\nNavya Bikkasani\nBrandon Sweatman\nEric Black"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "This is a proposed solution for the O’Reilly Architectural Katas (Q4 2025).\nOur team is:\n\nHari Khalsa\nNavya Bikkasani\nBrandon Sweatman\nEric Black"
-  },
-  {
     "objectID": "BUILDING.html",
     "href": "BUILDING.html",
     "title": "MobilityCorp",
@@ -21,192 +7,395 @@
     "text": "This project is built with Quarto, a technical publishing system.\nTo use you must install Quarto CLI.\nhttps://quarto.org/\nrm README.md\nquarto render\nquarto render README.md\nquarto build"
   },
   {
-    "objectID": "index.html#problem-definition-context",
-    "href": "index.html#problem-definition-context",
-    "title": "MobilityCorp",
-    "section": "2.1 Problem Definition & Context",
-    "text": "2.1 Problem Definition & Context"
+    "objectID": "adrs/adr_002.html",
+    "href": "adrs/adr_002.html",
+    "title": "ADR-002",
+    "section": "",
+    "text": "ADR-002: Strategy for Handling AI Model and Provider Uncertainty Status: Accepted Context: The field of AI is volatile. The best model or provider today may be superseded tomorrow. Relying on a single provider creates significant vendor lock-in risk. Furthermore, pricing models can change, and providers could potentially shut down. This uncertainty is a major architectural risk. Decision: We will implement an AI Abstraction Layer (Adapter Pattern) for all interactions with external AI/ML models. This layer will define a generic, internal interface for specific tasks (e.g., predict_demand(location, time), analyze_damage(image)). The concrete implementation of this interface will handle the specific API calls and data transformations for the currently selected provider (e.g., Google Gemini, OpenAI, or a self-hosted model). Consequences: Pros: Decouples our core business logic from specific AI implementations. Allows us to switch AI providers or models by only changing the adapter, minimizing code changes and risk. Facilitates A/B testing of different models. Cons: Adds a minor layer of complexity and potential latency to AI calls. Requires disciplined maintenance of the abstraction layer as new AI capabilities emerge."
   },
   {
-    "objectID": "index.html#key-business-challenges",
-    "href": "index.html#key-business-challenges",
-    "title": "MobilityCorp",
-    "section": "2.2 Key Business Challenges",
-    "text": "2.2 Key Business Challenges\n\n2.2.1 Vehicle Availability & Distribution\n\n\n2.2.2 Fleet Charging & Maintenance\n\n\n2.2.3 Customer Retention & Commuter Adoption"
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This is a proposed solution for the O’Reilly Architectural Katas (Q4 2025).\nThis work was done in a short series of lunches and some homework."
   },
   {
-    "objectID": "index.html#customer-retention-commuter-adoption",
-    "href": "index.html#customer-retention-commuter-adoption",
-    "title": "vml-augmented-humans",
-    "section": "2.3 2.2.3. Customer Retention & Commuter Adoption",
-    "text": "2.3 2.2.3. Customer Retention & Commuter Adoption"
+    "objectID": "about.html#team",
+    "href": "about.html#team",
+    "title": "About",
+    "section": "Team",
+    "text": "Team\nWe are a team made up of people who make software for immersive expereinces of all sizes.\nOur titles might use words like Solution Architect, DevOps Engineer, Creative Technologist, Immersive Developer, Full-Stack Developer, etcetera.\nOur team is:\n\nHari Khalsa\nNavya Bikkasani\nBrandon Sweatman\nEric Black"
   },
   {
-    "objectID": "index.html#key-objectives-success-metrics",
-    "href": "index.html#key-objectives-success-metrics",
-    "title": "MobilityCorp",
-    "section": "2.3 Key Objectives & Success Metrics",
-    "text": "2.3 Key Objectives & Success Metrics"
+    "objectID": "sketches/index.html",
+    "href": "sketches/index.html",
+    "title": "Sketches & Notes",
+    "section": "",
+    "text": "The following capture our brainstorm notes, AI summaries and\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nArchitecture Brainstorm 1\n\n\nRaw Notes + AI Summarization\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBrainstorm 2\n\n\nRaw Notes + AI Summarization\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBrainstorm 3\n\n\nRaw Notes + AI Summarization\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNotes from Kata Kickoff\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nScratch Notes\n\n\nShowing AI-Generated Outline\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWorking Session Notes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "index.html#business-technical-constraints",
-    "href": "index.html#business-technical-constraints",
-    "title": "MobilityCorp",
-    "section": "2.4 Business & Technical Constraints",
-    "text": "2.4 Business & Technical Constraints"
+    "objectID": "sketches/4_working_session.html",
+    "href": "sketches/4_working_session.html",
+    "title": "Working Session Notes",
+    "section": "",
+    "text": "Note: For our working session we used this outline to frame our thinking. Diagrams and notes are rough."
   },
   {
-    "objectID": "index.html#architectural-vision-guiding-principles",
-    "href": "index.html#architectural-vision-guiding-principles",
-    "title": "MobilityCorp",
-    "section": "3.1 Architectural Vision & Guiding Principles",
-    "text": "3.1 Architectural Vision & Guiding Principles"
+    "objectID": "sketches/4_working_session.html#executive-summary",
+    "href": "sketches/4_working_session.html#executive-summary",
+    "title": "Working Session Notes",
+    "section": "Executive Summary",
+    "text": "Executive Summary\nOur Vision for MobilityCorp …"
   },
   {
-    "objectID": "index.html#architecture-characteristics-the--ilities",
-    "href": "index.html#architecture-characteristics-the--ilities",
-    "title": "MobilityCorp",
-    "section": "3.2 Architecture Characteristics (The “-ilities”)",
-    "text": "3.2 Architecture Characteristics (The “-ilities”)"
+    "objectID": "sketches/4_working_session.html#team",
+    "href": "sketches/4_working_session.html#team",
+    "title": "Working Session Notes",
+    "section": "Team",
+    "text": "Team"
   },
   {
-    "objectID": "index.html#system-context-diagram-c1",
-    "href": "index.html#system-context-diagram-c1",
-    "title": "MobilityCorp",
-    "section": "3.3 System Context Diagram (C1)",
-    "text": "3.3 System Context Diagram (C1)"
+    "objectID": "sketches/4_working_session.html#methodology",
+    "href": "sketches/4_working_session.html#methodology",
+    "title": "Working Session Notes",
+    "section": "Methodology",
+    "text": "Methodology\nOur approach was to conduct a series of collaborative brainstorms as a team."
   },
   {
-    "objectID": "index.html#container-diagram-c2",
-    "href": "index.html#container-diagram-c2",
-    "title": "MobilityCorp",
-    "section": "3.4 Container Diagram (C2)",
-    "text": "3.4 Container Diagram (C2)"
+    "objectID": "sketches/4_working_session.html#glossary",
+    "href": "sketches/4_working_session.html#glossary",
+    "title": "Working Session Notes",
+    "section": "Glossary",
+    "text": "Glossary"
   },
   {
-    "objectID": "index.html#detailed-architecture-for-ai-use-cases",
-    "href": "index.html#detailed-architecture-for-ai-use-cases",
-    "title": "MobilityCorp",
-    "section": "3.5 Detailed Architecture for AI Use Cases",
-    "text": "3.5 Detailed Architecture for AI Use Cases\n\n3.5.1 Predictive Demand & Fleet Rebalancing: An AI model to forecast demand and optimize vehicle placement.\nAs a Customer, I would like a Bike, in order to commute to work.\n?? Overflow partnerships for customer service – how to model this out ??\n\n\n\n\n\nflowchart TB\n    subgraph Speculative_Models\n        Speculative_Inventroy\n        Speculative_Reservations\n        Speculative_Reservation_Events\n        Speculative_Inventory\n    end\n\n    %% What our business model supports\n    subgraph Business_Models\n        Hub_Size\n        Hub_Demand\n        Hub_Capcity\n        Actual_Inventory\n    end\n    \n    %% Historical Actuals\n    subgraph Actual_Data\n        Actual_Inventroy\n        Actual_Reservations\n        Actual_Reservation_Events\n        Actual_Inventory\n        Actual_Booked_Returns\n    end\n\n    %% Forecast\n    subgraph Forecast_Data\n        Forecast_Inventroy\n        Forecast_Reservations\n        Forecast_Reservation_Events\n        Forecast_Inventory\n    end\n\n    Realtime_Context_Demand_Impacters\n\n    Speculative_Models --&gt; Model_Training\n    Business_Models --&gt; Model_Training\n    Actual_Data --&gt; Model_Training\n\n    Forecast_Data --&gt; Model_Simulation\n    Model_Simulation -- uses --&gt; AI_Fleet_Demand_Prediction_Model\n\n    Model_Training(\"Model Training\") --&gt; AI_Fleet_Demand_Prediction_Model\n\n\n\n\n\n\n\nUsing predictive demand to support demand-generation or incentives.\n\nIncentive user to Dropping at a hub with demand\n\n\n\n\n\n\nflowchart TB\n    %% Realtime AI\n    FOO\n\n\n\n\n\n\nUsing Fleet status analysis to drive efficient servicing and reblancing.\nAs MobilityCorp, we would like to ensure vechiles (supply) are avaiable where they are needed (demand).\nAs MobilityCorp, we would like to optimize of our service technicians routes in order to maximize the efficiency of service runs.\n\n\n\n\n\nflowchart TB\n    %% Predictive Indicators\n    %% Confidence == 1.0 is Acutal in Stock\n    %% Confidence == 0.85 is Likely Actual\n    Supply -- has --&gt; Confidence_Score\n    Potential_Supply -- has --&gt; Confidence_Score\n\n    %% Actual Reservations\n    Demand\n    \n    %% \n    Hub_Capacity -- has --&gt; Hub_Available_Capacity\n\n\n\n\n\n\nFleet rebalancing mechanisms\n\nUser incentivies to get customers to return vehicles to point with high demand\nUser disincentive, surcharges when returned to points with low demand\nService technician route optimization / task optimization\n\nIncrease the weighting of the destination to be serviced based on n-criteria or multiple-goals to be achieved\nOptimal distance or multi-stop routing\n\n\n\n\n\n\n\nflowchart TB\n    %% Realtime AI\n    Vehicle_Availability_Status\n    Vehicle_Availability_Status -- has --&gt; Vechile_Charge_Status\n    Vehicle_Availability_Status -- has --&gt; Vehicle_Fault_Status\n    Vehicle_Availability_Status -- has --&gt; Vehicle_Servicing_Status\n\n    %% Where it's from\n    Vehicle_Hub_of_Origin\n    %% Forecast - WHere it is going -- might not always know this\n    Vehicle_Hub_InTransit_Destination\n    Vehicle_InTransit_Start_Time\n    Vehicle_InTransit_Approximate_Return_Time\n\n    %% Actual Inventory\n\n\n\n\n\n\n\n?? Can they cross state boundaries ?? Ans: Depends on the operating laws of the areas. U.S. right to travel would mean they can cross boudnaires. In other areas it may be different.\n\n\n3.5.2 Optimized Battery Management: A system to prioritize battery swaps and route maintenance staff efficiently.\n\nIncentivise return of a charged vehicle\nDisincnetive with a service charge for charge-ups\n\n?? Will all vehicles have the same type of battery? How interchangeable are batteries between different types of vehicles or models?\n?? How portable can battery management be made? Anything that can only happen in a specifci physical location?\nAI use cases\n\nPredicitive maintenance\nUsage data analysis / changes in stats\nContextual modeling of environmental conditions\nReal-time data analysis / monitoring / alerting\n\nMatching nearby technicians to maintenance need\n\n\n\n\n\n\n\nflowchart TB\n    Realtime_Battery_Data\n\n    %% Key info for when the battery will need to be serviced, efficiency or degradation of battery over time, idle time\n    Vehicle_Battery_Usage_Model\n\n    %% COnditions that affect battery usage\n    Environmental_Conditions\n        Temperature\n        Weather\n    Battery_Usage_Load\n    %% Electronic Sensor Computer\n    ESC\n\n    Vehcile_Type\n    Vechicle_Configuration_Energy_Capacity\n\n\n\n\n\n\n\n\n3.5.3 Smart Return Verification: Using image analysis to confirm proper vehicle returns and charging connections.\nIs to create a system which provides multiple-data poitns, checks and balances and different levels of details in order to increase resolution of the information available about the vechile condition at the point of return. The burden of informaiton is distributed across actors in order to reduce gaming of the system, provide different data points and reduce burden on any one actor.\nCustomer Return\n\nOnboard help / agentic/real-time/embodied AI to get the vehcile to the right spot.\nOpporutnity for gamification\n\nCustomer Intake/Outake Vehicle Condition Check\n\n\n\n\n\nflowchart TD\n    Customer -- uses --&gt; App(\"Vehicle Rental App\")\n    Customer --&gt; App_Vehicle_Pickup(\"Picksup Vehicle\")\n    Customer --&gt; App_Vehicle_Dropoff(\"Drops off Vehicle\")\n    App_Vehicle_Pickup --&gt; Scan_Condition(\"Scan Condition of Vehcile\")\n    App_Vehicle_Dropoff --&gt; Scan_Condition(\"Scan Condition of Vehcile\")\n    Scan_Condition --&gt; AI_CV_Analyze_Intake\n    Scan_Condition --&gt; AI_CV_Analyze_Location_Correctness\n    Scan_Condition --&gt; Scan_Condition_Has_Error\n    Scan_Condition --&gt; AI_CV_Analyze_Location_Realtime_Context\n    %% NOTE:  Ths is not quite right, readjust the conditions and processes\n    %% Realtime COntext is meant ot look for issues like traffic conditions, emergencies, etc.\n    AI_CV_Analyze_Location_Realtime_Context --&gt; Scan_Condition_Has_Error{\"Location_Error\"}\n    Scan_Condition_Has_Error -- yes --&gt; FOO\n    Scan_Condition_Has_Error -- no --&gt; BAR\n    AI_CV_Analyze_Intake --&gt; Logs_And_Sends_Report\n    Logs_And_Sends_Report --&gt; Customer\n    Logs_And_Sends_Report --&gt; Office_Staff\n    Logs_And_Sends_Report --&gt; Maintenance_Staff\n    Office_Staff --&gt; Register_Vehicle_Availability\n    Maintenance_Staff --&gt; Perform_Maintnenace\n    Perform_Maintnenace --&gt; Register_Vehicle_Availability\n\n    %% TODO expand on this whith the vehcile also rpeorting.\n    Identified_Vechile --&gt; Connects_to_Network\n    %% GIS position data\n    %% OBDI output\n    %% Network attached device\n    %% Scans information and reports back\n\n    %% Vechile_Dropoff(\"Vehic)\n\n\n\n\n\n\nNomenclature – use Equipment instead of Vehcile. A Vehcile is a type of Rentable Equipment\n?? Naming is hard. Staff distinctions need clarification ??\n?? All self-service or staff-serviced ??\n\n\n\n\n\nflowchart TD\n%% TODO moe\n    Staff --&gt; Vehicle_Intake(\"Vehicle Intake App\")\n    Vehicle_Intake --&gt; Scan_Condition(\"Scan Condition of Vehcile\")\n    Scan_Condition --&gt; AI_CV_Analyze_Intake \n\n\n\n\n\n\n\n\n3.5.4 Personalized Commuter Experience: A GenAI-powered assistant for regular users.\n\nAltruistic incentivization\n\nTrack your carbon impact / savings\n\nEfficiency of route timeliness\nAttraction of route smell the roses\n\nPersonal interest matching to destinations nearby. - Suggestion coffee shops, delis, vegan restuarants\nGamification of the experience.\n- Points collection - N-destinations visited - Tour guide\nOnboard help and troubleshooting.\nPersonalized experience - Voice + tone - Spoken Language - Driving directions / personalized responses\nResearch - optimize destinations based on personal interests and our own fleet demand models (pulling in the incentives to return to our preferred desitnations)\nGenAi - targeted messages to return vehicle on time. Or to extend the rental.\nMatch destination to reservation data. Upsells, etc.\nPersonalized Photo Albums of their route. Feed the picture of the vehcile into AI to create a video greeting of the vehcile animated based on user profile. “Thanks… So & so.. .was a blast!” think Pixar aniamtion-sytle.\nPrompt to share on social media to bump up the brand."
+    "objectID": "sketches/4_working_session.html#problem-definition-context",
+    "href": "sketches/4_working_session.html#problem-definition-context",
+    "title": "Working Session Notes",
+    "section": "Problem Definition & Context",
+    "text": "Problem Definition & Context"
   },
   {
-    "objectID": "index.html#architectural-decision-records-adrs",
-    "href": "index.html#architectural-decision-records-adrs",
-    "title": "MobilityCorp",
-    "section": "4.1 Architectural Decision Records (ADRs)",
-    "text": "4.1 Architectural Decision Records (ADRs)\n\n4.1.1 ADR-001: Choice of Event-Driven Architecture\n\n\n4.1.2 ADR-002: Selection of AI/ML Platform for Demand Forecasting\n\n\n4.1.3 ADR-003: Strategy for Handling AI Model Uncertainty and Validation\n\n\n4.1.4 ADR-004: Approach to NFC-based Vehicle Interaction"
+    "objectID": "sketches/4_working_session.html#key-business-challenges",
+    "href": "sketches/4_working_session.html#key-business-challenges",
+    "title": "Working Session Notes",
+    "section": "Key Business Challenges",
+    "text": "Key Business Challenges\n\nVehicle Availability & Distribution\n\n\nFleet Charging & Maintenance\n\n\nCustomer Retention & Commuter Adoption"
   },
   {
-    "objectID": "index.html#technology-stack-choices",
-    "href": "index.html#technology-stack-choices",
-    "title": "MobilityCorp",
-    "section": "4.2 Technology Stack Choices",
-    "text": "4.2 Technology Stack Choices"
+    "objectID": "sketches/4_working_session.html#key-objectives-success-metrics",
+    "href": "sketches/4_working_session.html#key-objectives-success-metrics",
+    "title": "Working Session Notes",
+    "section": "Key Objectives & Success Metrics",
+    "text": "Key Objectives & Success Metrics"
   },
   {
-    "objectID": "index.html#dealing-with-uncertainty-non-determinism",
-    "href": "index.html#dealing-with-uncertainty-non-determinism",
-    "title": "MobilityCorp",
-    "section": "5.1 Dealing with Uncertainty & Non-Determinism",
-    "text": "5.1 Dealing with Uncertainty & Non-Determinism"
+    "objectID": "sketches/4_working_session.html#business-technical-constraints",
+    "href": "sketches/4_working_session.html#business-technical-constraints",
+    "title": "Working Session Notes",
+    "section": "Business & Technical Constraints",
+    "text": "Business & Technical Constraints"
   },
   {
-    "objectID": "index.html#monitoring-observability-and-fitness-functions",
-    "href": "index.html#monitoring-observability-and-fitness-functions",
-    "title": "MobilityCorp",
-    "section": "5.2 Monitoring, Observability, and Fitness Functions",
-    "text": "5.2 Monitoring, Observability, and Fitness Functions"
+    "objectID": "sketches/4_working_session.html#architectural-vision-guiding-principles",
+    "href": "sketches/4_working_session.html#architectural-vision-guiding-principles",
+    "title": "Working Session Notes",
+    "section": "Architectural Vision & Guiding Principles",
+    "text": "Architectural Vision & Guiding Principles"
   },
   {
-    "objectID": "index.html#phased-implementation-roadmap",
-    "href": "index.html#phased-implementation-roadmap",
-    "title": "MobilityCorp",
-    "section": "5.3 Phased Implementation Roadmap",
-    "text": "5.3 Phased Implementation Roadmap"
+    "objectID": "sketches/4_working_session.html#architecture-characteristics-the--ilities",
+    "href": "sketches/4_working_session.html#architecture-characteristics-the--ilities",
+    "title": "Working Session Notes",
+    "section": "Architecture Characteristics (The “-ilities”)",
+    "text": "Architecture Characteristics (The “-ilities”)"
   },
   {
-    "objectID": "index.html#how-we-used-generative-ai-as-a-collaborator",
-    "href": "index.html#how-we-used-generative-ai-as-a-collaborator",
-    "title": "MobilityCorp",
-    "section": "6.1 How We Used Generative AI as a Collaborator",
-    "text": "6.1 How We Used Generative AI as a Collaborator"
+    "objectID": "sketches/4_working_session.html#system-context-diagram-c1",
+    "href": "sketches/4_working_session.html#system-context-diagram-c1",
+    "title": "Working Session Notes",
+    "section": "System Context Diagram (C1)",
+    "text": "System Context Diagram (C1)"
   },
   {
-    "objectID": "index.html#known-limitations-future-enhancements",
-    "href": "index.html#known-limitations-future-enhancements",
-    "title": "MobilityCorp",
-    "section": "6.2 Known Limitations & Future Enhancements",
-    "text": "6.2 Known Limitations & Future Enhancements"
+    "objectID": "sketches/4_working_session.html#container-diagram-c2",
+    "href": "sketches/4_working_session.html#container-diagram-c2",
+    "title": "Working Session Notes",
+    "section": "Container Diagram (C2)",
+    "text": "Container Diagram (C2)"
   },
   {
-    "objectID": "index.html#our-learnings",
-    "href": "index.html#our-learnings",
-    "title": "MobilityCorp",
-    "section": "6.3 Our Learnings",
-    "text": "6.3 Our Learnings"
+    "objectID": "sketches/4_working_session.html#detailed-architecture-for-ai-use-cases",
+    "href": "sketches/4_working_session.html#detailed-architecture-for-ai-use-cases",
+    "title": "Working Session Notes",
+    "section": "Detailed Architecture for AI Use Cases",
+    "text": "Detailed Architecture for AI Use Cases\n\nPredictive Demand & Fleet Rebalancing: An AI model to forecast demand and optimize vehicle placement.\nAs a Customer, I would like a Bike, in order to commute to work.\n?? Overflow partnerships for customer service – how to model this out ??\n\n\n\n\n\nflowchart TB\n    subgraph Speculative_Models\n        Speculative_Inventroy\n        Speculative_Reservations\n        Speculative_Reservation_Events\n        Speculative_Inventory\n    end\n\n    %% What our business model supports\n    subgraph Business_Models\n        Hub_Size\n        Hub_Demand\n        Hub_Capcity\n        Actual_Inventory\n    end\n    \n    %% Historical Actuals\n    subgraph Actual_Data\n        Actual_Inventroy\n        Actual_Reservations\n        Actual_Reservation_Events\n        Actual_Inventory\n        Actual_Booked_Returns\n    end\n\n    %% Forecast\n    subgraph Forecast_Data\n        Forecast_Inventroy\n        Forecast_Reservations\n        Forecast_Reservation_Events\n        Forecast_Inventory\n    end\n\n    Realtime_Context_Demand_Impacters\n\n    Speculative_Models --&gt; Model_Training\n    Business_Models --&gt; Model_Training\n    Actual_Data --&gt; Model_Training\n\n    Forecast_Data --&gt; Model_Simulation\n    Model_Simulation -- uses --&gt; AI_Fleet_Demand_Prediction_Model\n\n    Model_Training(\"Model Training\") --&gt; AI_Fleet_Demand_Prediction_Model\n\n\n\n\n\n\n\nUsing predictive demand to support demand-generation or incentives.\n\nIncentive user to Dropping at a hub with demand\n\n\n\n\n\n\nflowchart TB\n    %% Realtime AI\n    FOO\n\n\n\n\n\n\nUsing Fleet status analysis to drive efficient servicing and reblancing.\nAs MobilityCorp, we would like to ensure vechiles (supply) are avaiable where they are needed (demand).\nAs MobilityCorp, we would like to optimize of our service technicians routes in order to maximize the efficiency of service runs.\n\n\n\n\n\nflowchart TB\n    %% Predictive Indicators\n    %% Confidence == 1.0 is Acutal in Stock\n    %% Confidence == 0.85 is Likely Actual\n    Supply -- has --&gt; Confidence_Score\n    Potential_Supply -- has --&gt; Confidence_Score\n\n    %% Actual Reservations\n    Demand\n    \n    %% \n    Hub_Capacity -- has --&gt; Hub_Available_Capacity\n\n\n\n\n\n\nFleet rebalancing mechanisms\n\nUser incentivies to get customers to return vehicles to point with high demand\nUser disincentive, surcharges when returned to points with low demand\nService technician route optimization / task optimization\n\nIncrease the weighting of the destination to be serviced based on n-criteria or multiple-goals to be achieved\nOptimal distance or multi-stop routing\n\n\n\n\n\n\n\nflowchart TB\n    %% Realtime AI\n    Vehicle_Availability_Status\n    Vehicle_Availability_Status -- has --&gt; Vechile_Charge_Status\n    Vehicle_Availability_Status -- has --&gt; Vehicle_Fault_Status\n    Vehicle_Availability_Status -- has --&gt; Vehicle_Servicing_Status\n\n    %% Where it's from\n    Vehicle_Hub_of_Origin\n    %% Forecast - WHere it is going -- might not always know this\n    Vehicle_Hub_InTransit_Destination\n    Vehicle_InTransit_Start_Time\n    Vehicle_InTransit_Approximate_Return_Time\n\n    %% Actual Inventory\n\n\n\n\n\n\n\n?? Can they cross state boundaries ?? Ans: Depends on the operating laws of the areas. U.S. right to travel would mean they can cross boudnaires. In other areas it may be different.\n\n\nOptimized Battery Management: A system to prioritize battery swaps and route maintenance staff efficiently.\n\nIncentivise return of a charged vehicle\nDisincnetive with a service charge for charge-ups\n\n?? Will all vehicles have the same type of battery? How interchangeable are batteries between different types of vehicles or models?\n?? How portable can battery management be made? Anything that can only happen in a specifci physical location?\nAI use cases\n\nPredicitive maintenance\nUsage data analysis / changes in stats\nContextual modeling of environmental conditions\nReal-time data analysis / monitoring / alerting\n\nMatching nearby technicians to maintenance need\n\n\n\n\n\n\n\nflowchart TB\n    Realtime_Battery_Data\n\n    %% Key info for when the battery will need to be serviced, efficiency or degradation of battery over time, idle time\n    Vehicle_Battery_Usage_Model\n\n    %% COnditions that affect battery usage\n    Environmental_Conditions\n        Temperature\n        Weather\n    Battery_Usage_Load\n    %% Electronic Sensor Computer\n    ESC\n\n    Vehcile_Type\n    Vechicle_Configuration_Energy_Capacity\n\n\n\n\n\n\n\n\nSmart Return Verification: Using image analysis to confirm proper vehicle returns and charging connections.\nIs to create a system which provides multiple-data poitns, checks and balances and different levels of details in order to increase resolution of the information available about the vechile condition at the point of return. The burden of informaiton is distributed across actors in order to reduce gaming of the system, provide different data points and reduce burden on any one actor.\nCustomer Return\n\nOnboard help / agentic/real-time/embodied AI to get the vehcile to the right spot.\nOpporutnity for gamification\n\nCustomer Intake/Outake Vehicle Condition Check\n\n\n\n\n\nflowchart TD\n    Customer -- uses --&gt; App(\"Vehicle Rental App\")\n    Customer --&gt; App_Vehicle_Pickup(\"Picksup Vehicle\")\n    Customer --&gt; App_Vehicle_Dropoff(\"Drops off Vehicle\")\n    App_Vehicle_Pickup --&gt; Scan_Condition(\"Scan Condition of Vehcile\")\n    App_Vehicle_Dropoff --&gt; Scan_Condition(\"Scan Condition of Vehcile\")\n    Scan_Condition --&gt; AI_CV_Analyze_Intake\n    Scan_Condition --&gt; AI_CV_Analyze_Location_Correctness\n    Scan_Condition --&gt; Scan_Condition_Has_Error\n    Scan_Condition --&gt; AI_CV_Analyze_Location_Realtime_Context\n    %% NOTE:  Ths is not quite right, readjust the conditions and processes\n    %% Realtime COntext is meant ot look for issues like traffic conditions, emergencies, etc.\n    AI_CV_Analyze_Location_Realtime_Context --&gt; Scan_Condition_Has_Error{\"Location_Error\"}\n    Scan_Condition_Has_Error -- yes --&gt; FOO\n    Scan_Condition_Has_Error -- no --&gt; BAR\n    AI_CV_Analyze_Intake --&gt; Logs_And_Sends_Report\n    Logs_And_Sends_Report --&gt; Customer\n    Logs_And_Sends_Report --&gt; Office_Staff\n    Logs_And_Sends_Report --&gt; Maintenance_Staff\n    Office_Staff --&gt; Register_Vehicle_Availability\n    Maintenance_Staff --&gt; Perform_Maintnenace\n    Perform_Maintnenace --&gt; Register_Vehicle_Availability\n\n    %% TODO expand on this whith the vehcile also rpeorting.\n    Identified_Vechile --&gt; Connects_to_Network\n    %% GIS position data\n    %% OBDI output\n    %% Network attached device\n    %% Scans information and reports back\n\n    %% Vechile_Dropoff(\"Vehic)\n\n\n\n\n\n\nNomenclature – use Equipment instead of Vehcile. A Vehcile is a type of Rentable Equipment\n?? Naming is hard. Staff distinctions need clarification ??\n?? All self-service or staff-serviced ??\n\n\n\n\n\nflowchart TD\n%% TODO moe\n    Staff --&gt; Vehicle_Intake(\"Vehicle Intake App\")\n    Vehicle_Intake --&gt; Scan_Condition(\"Scan Condition of Vehcile\")\n    Scan_Condition --&gt; AI_CV_Analyze_Intake \n\n\n\n\n\n\n\n\nPersonalized Commuter Experience: A GenAI-powered assistant for regular users.\n\nAltruistic incentivization\n\nTrack your carbon impact / savings\n\nEfficiency of route timeliness\nAttraction of route smell the roses\n\nPersonal interest matching to destinations nearby. - Suggestion coffee shops, delis, vegan restuarants\nGamification of the experience.\n- Points collection - N-destinations visited - Tour guide\nOnboard help and troubleshooting.\nPersonalized experience - Voice + tone - Spoken Language - Driving directions / personalized responses\nResearch - optimize destinations based on personal interests and our own fleet demand models (pulling in the incentives to return to our preferred desitnations)\nGenAi - targeted messages to return vehicle on time. Or to extend the rental.\nMatch destination to reservation data. Upsells, etc.\nPersonalized Photo Albums of their route. Feed the picture of the vehcile into AI to create a video greeting of the vehcile animated based on user profile. “Thanks… So & so.. .was a blast!” think Pixar aniamtion-sytle.\nPrompt to share on social media to bump up the brand."
   },
   {
-    "objectID": "index.html#full-deliverables-checklist",
-    "href": "index.html#full-deliverables-checklist",
-    "title": "MobilityCorp",
-    "section": "7.1 Full Deliverables Checklist",
-    "text": "7.1 Full Deliverables Checklist"
+    "objectID": "sketches/4_working_session.html#architectural-decision-records-adrs",
+    "href": "sketches/4_working_session.html#architectural-decision-records-adrs",
+    "title": "Working Session Notes",
+    "section": "Architectural Decision Records (ADRs)",
+    "text": "Architectural Decision Records (ADRs)\n\nADR-001: Choice of Event-Driven Architecture\n\n\nADR-002: Selection of AI/ML Platform for Demand Forecasting\n\n\nADR-003: Strategy for Handling AI Model Uncertainty and Validation\n\n\nADR-004: Approach to NFC-based Vehicle Interaction"
   },
   {
-    "objectID": "index.html#detailed-data-schema",
-    "href": "index.html#detailed-data-schema",
+    "objectID": "sketches/4_working_session.html#technology-stack-choices",
+    "href": "sketches/4_working_session.html#technology-stack-choices",
+    "title": "Working Session Notes",
+    "section": "Technology Stack Choices",
+    "text": "Technology Stack Choices"
+  },
+  {
+    "objectID": "sketches/4_working_session.html#dealing-with-uncertainty-non-determinism",
+    "href": "sketches/4_working_session.html#dealing-with-uncertainty-non-determinism",
+    "title": "Working Session Notes",
+    "section": "Dealing with Uncertainty & Non-Determinism",
+    "text": "Dealing with Uncertainty & Non-Determinism"
+  },
+  {
+    "objectID": "sketches/4_working_session.html#monitoring-observability-and-fitness-functions",
+    "href": "sketches/4_working_session.html#monitoring-observability-and-fitness-functions",
+    "title": "Working Session Notes",
+    "section": "Monitoring, Observability, and Fitness Functions",
+    "text": "Monitoring, Observability, and Fitness Functions"
+  },
+  {
+    "objectID": "sketches/4_working_session.html#phased-implementation-roadmap",
+    "href": "sketches/4_working_session.html#phased-implementation-roadmap",
+    "title": "Working Session Notes",
+    "section": "Phased Implementation Roadmap",
+    "text": "Phased Implementation Roadmap"
+  },
+  {
+    "objectID": "sketches/4_working_session.html#how-we-used-generative-ai-as-a-collaborator",
+    "href": "sketches/4_working_session.html#how-we-used-generative-ai-as-a-collaborator",
+    "title": "Working Session Notes",
+    "section": "How We Used Generative AI as a Collaborator",
+    "text": "How We Used Generative AI as a Collaborator"
+  },
+  {
+    "objectID": "sketches/4_working_session.html#known-limitations-future-enhancements",
+    "href": "sketches/4_working_session.html#known-limitations-future-enhancements",
+    "title": "Working Session Notes",
+    "section": "Known Limitations & Future Enhancements",
+    "text": "Known Limitations & Future Enhancements"
+  },
+  {
+    "objectID": "sketches/4_working_session.html#our-learnings",
+    "href": "sketches/4_working_session.html#our-learnings",
+    "title": "Working Session Notes",
+    "section": "Our Learnings",
+    "text": "Our Learnings"
+  },
+  {
+    "objectID": "sketches/4_working_session.html#full-deliverables-checklist",
+    "href": "sketches/4_working_session.html#full-deliverables-checklist",
+    "title": "Working Session Notes",
+    "section": "Full Deliverables Checklist",
+    "text": "Full Deliverables Checklist"
+  },
+  {
+    "objectID": "sketches/4_working_session.html#detailed-data-schema",
+    "href": "sketches/4_working_session.html#detailed-data-schema",
+    "title": "Working Session Notes",
+    "section": "Detailed Data Schema",
+    "text": "Detailed Data Schema"
+  },
+  {
+    "objectID": "sketches/2_brainstorm.html",
+    "href": "sketches/2_brainstorm.html",
+    "title": "Brainstorm 2",
+    "section": "",
+    "text": "Written Notes\n\n\n\n\n\nWritten Notes\n\n\n\n\n\nWritten Notes\n\n\n\n\n\nWritten Notes\n\n\n\n\n\nWritten Notes\n\n\n\n\n\nWritten Notes\n\n\n\n\n\nWritten Notes\n\n\n\n\n\nWritten Notes"
+  },
+  {
+    "objectID": "sketches/2_brainstorm.html#board-sketches",
+    "href": "sketches/2_brainstorm.html#board-sketches",
+    "title": "Brainstorm 2",
+    "section": "",
+    "text": "Written Notes\n\n\n\n\n\nWritten Notes\n\n\n\n\n\nWritten Notes\n\n\n\n\n\nWritten Notes\n\n\n\n\n\nWritten Notes\n\n\n\n\n\nWritten Notes\n\n\n\n\n\nWritten Notes\n\n\n\n\n\nWritten Notes"
+  },
+  {
+    "objectID": "sketches/2_brainstorm.html#ai-summmary",
+    "href": "sketches/2_brainstorm.html#ai-summmary",
+    "title": "Brainstorm 2",
+    "section": "AI Summmary",
+    "text": "AI Summmary\nNotes transcribed using WPP Open, Gemini 2.5 Flash\n\nUsers & Vehicles\n\nCustomers\nBusiness Corp\nVehicle Types: Scooter, Bike, Car, Van\n\n\n\nFleet & Booking\n\nFleet:\nScooters\nBikes\nCars\nVans\nBooking:\n7-day radius\nOn-time\n\n\n\nLocation & Incentives\n\nThe “right place” -&gt; LOCATION\nDesignated parking spot\nA specific GPS\nLocation-based incentives\n\n\n\nData Models\n\nLocation table:\nGPS coords\nID\nlocation_supported_vehicle table:\nID\nlocation_probabilities table\n\n\n\nModels & AI Inputs\n\nMODELS:\nParking “state”\nTraffic\nBehavior\nSeasonal / Time\n\n\n\nThings to Predict\n\nLocation\nProximity to energy infrastructure\nEnergy usage\nDemand\nType of vehicle\nFleet servicing demand:\nCharge\nDefects\n“Fix” location\n\n\n\nData Flow for Prediction\n\nHistorical Data –&gt; Training Data\nTraining Data –&gt; Realtime Data\nRealtime Data –&gt; Historical Data\n\n\n\nChallenges\n\nCan we add infrastructure at points-of-interest?\nCan we add support/logistics to improve service?\n\n\n\nSystem Intelligence & Operations\n\nIntelligence: Mind, Training, Compute\nOperations: Logistics Operations\nCustomer: Usage, Customer\nFlow: Intelligence -&gt; Operations -&gt; Customer -&gt; Intelligence\n\n\n\nApp-Level Data & Behavior\n\nApp-level: “Where are you going?” (e.g., Work, Fun, Groceries)\nIncrease data points\nGives depth/dimensions to data\nSurface new probabilities\nData Categorization:\nWho -&gt; Customer\nWhere -&gt; Location\nWhat -&gt; Activity\nPre-event:\nMatching\nInterest/demand\nIncentives\nPost-event:\nAdditional inquiry for data to support tagging & quantitative data.\nIntent —-&gt; Actual behavior\n\n\n\nPredictability & Incentives\n\nUser -&gt; Intended User Behavior -&gt; Actual User Behavior\nDiagram (Potential for Missed Promises / Moral Hazard):\nTimeline with a section marked “Potential for missed promises” and “Potential for moral hazard”.\nWhat makes predictable?\nTrip Scenarios:\nA –&gt; B (Standard trip)\nA &lt;– ? B (Disincentivizes return to “correct” location, incentivizes “hoarding”)\nWhat kind of scooter?\n\n\n\nSystem Requirements & Risks\n\nFor the system to work, have to have a parking spot -&gt; NOT any spot, a specific/enabled destination with charging station.\nLogistics + Infrastructure -&gt; Limited capability in some metro areas.\nRisks & Unknowns &lt;- show this in our work.\n\n\n\nFleet Extension & Business Models\n\nExtend our fleet to last-last-last mile “concierge” valet to carry our groceries…\nUser Scenarios:\nPerson with basket on bike (riding)\nPerson walking\nPerson with scooter and box (scooting)\nCalculations:\nDistance\nMinimum minutes\nPath A to B:\nA – dotted line –&gt; B\nSubscription model -&gt; increase probability of demand (reduce fluctuating)\nCustomer (n?) &lt;-&gt; Vehicle (n?) -&gt; fixed n of vehicles"
+  },
+  {
+    "objectID": "sketches/2_brainstorm.html#ai-summary---generated-diagrams",
+    "href": "sketches/2_brainstorm.html#ai-summary---generated-diagrams",
+    "title": "Brainstorm 2",
+    "section": "AI Summary - Generated Diagrams",
+    "text": "AI Summary - Generated Diagrams\n\nData for AI\nNote: This diagram is fine. Reference the drawing since it is prettier.\n\n\n\n\n\ngraph TD\nFD[Fleet Data] --&gt; AI(AI)\nGD[GIS Data] --&gt; AI\nCD[Customer Data] --&gt; AI\n\n\n\n\n\n\n\n\nEvolving Data\nNote: This diagram adds some unintended relationships. Reference the drawing for a better intent.\n\n\n\n\n\ngraph LR\nHD[Historical Data] --&gt; TD[Training Data]\nTD --&gt; RD[Realtime Data]\nRD --&gt; HD\n\n\n\n\n\n\n\n\nData Sources for Modeling\nNote: This may be better represented as a sequence diagram. Reference the drawing for a better intent.\n\n\n\n\n\ngraph TD\nsubgraph Intelligence\n    MTC[Mind, Training, Compute]\nend\nsubgraph Operations\n    LO[Logistics Operations]\nend\nsubgraph Customer\n    UC[Usage, Customer]\nend\n\nMTC --&gt; LO\nLO --&gt; UC\nUC --&gt; MTC\n\n\n\n\n\n\n\n\nHuh?\nNote: This diagram doesn’t really represent anything in the conversation correctly.\n\n\n\n\n\ngraph LR\n    subgraph \"Timeline\"\n        A[ ] --- B[ ] --- C[ ] --- D[ ] --- E[ ] --- F[ ]\n    end\n    %% TODO fix syntax error if this is desired\n    %% style F fill:#f9f,stroke:#333,stroke-width:2px\n    %% note right of F: Potential for missed promises\n    %% note right of F: Potential for moral hazard\n\n\n\n\n\n\n\n\nRoute Mapping\nNote: This diagram is meant to show how routes vary and are not straightlines. In conversation we discussed predicting routes based on availabile data. Reference the drawing for a better intent.\n\n\n\n\n\ngraph LR\nA(A) -- dotted line --&gt; B(B)"
+  },
+  {
+    "objectID": "sketches/scratch.html",
+    "href": "sketches/scratch.html",
+    "title": "Scratch Notes",
+    "section": "",
+    "text": "This document shows an AI-Generated summary from the brief and some diagrams from our brainstorm."
+  },
+  {
+    "objectID": "sketches/scratch.html#introduction-business-context",
+    "href": "sketches/scratch.html#introduction-business-context",
+    "title": "Scratch Notes",
+    "section": "1. Introduction & Business Context",
+    "text": "1. Introduction & Business Context\nMobilityCorp is a growing provider of short-term, “last-mile” transport solutions. Our fleet consists of electric scooters, e-bikes, and electric cars/vans. We operate primarily in dense city locations but are expanding our car and van services into suburban areas.\nOur current operating model is as follows:\n\nCustomer Interaction: Customers use an NFC-capable smartphone app to sign up, locate, book, unlock, and lock vehicles.\nBooking Logic:\nCars & Vans: Can be booked up to 7 days in advance for a specific duration.\nBikes & Scooters: Can be booked up to 30 minutes in advance for an open-ended rental, lasting up to 12 hours.\nVehicle Management: All vehicles are equipped with GPS trackers. Cars and vans can be remotely disabled if necessary.\nReturn Process: Vehicles must be returned to designated parking spots. Cars and vans must be plugged into an EV charger. Customers are required to submit a photo of the returned vehicle as proof and can provide feedback on the vehicle’s condition.\nBilling: Customers are charged per minute. Fines are automatically applied for returning a vehicle late or to an incorrect location.\nLogistics & Maintenance: Our staff perform manual battery swaps for bikes and scooters and redistribute vehicles across our network to meet demand."
+  },
+  {
+    "objectID": "sketches/scratch.html#core-business-challenges",
+    "href": "sketches/scratch.html#core-business-challenges",
+    "title": "Scratch Notes",
+    "section": "2. Core Business Challenges",
+    "text": "2. Core Business Challenges\nDespite our growth, we face significant operational inefficiencies and customer satisfaction issues that are hindering our potential. Our primary challenges are:\n\nInefficient Vehicle Distribution: Our most frequent customer complaint is that “the right vehicles aren’t in the right places.” We lack a systematic way to anticipate demand, leading to a poor customer experience and lost revenue. We need to move from a reactive to a predictive model for vehicle placement.\nReactive Maintenance & Charging: We struggle with vehicles running out of charge, particularly bikes and scooters that rely on manual battery swaps. Our staff’s efforts are not optimized; we need a way to prioritize which vehicles and charging bays require service most urgently to maximize fleet availability.\nAd-Hoc Customer Usage: The majority of our customers use our services on an ad-hoc basis. We have a strategic goal to increase customer loyalty and transform our service into a reliable option for regular, daily commutes."
+  },
+  {
+    "objectID": "sketches/scratch.html#the-architectural-mandate",
+    "href": "sketches/scratch.html#the-architectural-mandate",
+    "title": "Scratch Notes",
+    "section": "3. The Architectural Mandate",
+    "text": "3. The Architectural Mandate\nOur objective is to design a new target architecture for the MobilityCorp platform. The central requirement of this new architecture is the strategic incorporation of Artificial Intelligence (AI) to directly address the business challenges outlined above.\nThe proposed solution must detail how AI will be leveraged to:\n\nEnhance the solution for MobilityCorp (the company):\n\nOptimize vehicle distribution by predicting demand hotspots.\nCreate intelligent routing and task prioritization for maintenance staff (e.g., battery swaps, vehicle redistribution).\nProvide analytics and insights into fleet performance and health.\n\n\n\nEnhance the solution for our customers:\n\nImprove vehicle availability and reliability.\nPotentially create new features that encourage regular use, such as personalized commute planning or dynamic pricing.\n\nYour team’s proposal should present a comprehensive architectural vision that is robust, scalable, and considers the real-world constraints and uncertainties of implementing AI-driven systems.\nEnd AI from WPP Open query\nThe end-user, the custoemr\n\n\n\n\n\nflowchart TD\n    customer\n    customer --&gt; mobile_app\n    mobile_app --&gt; reservation_backend\n\n\n\n\n\n\nThe data analysis and science activites\n\n\n\n\n\nflowchart TD\n    data_analyst\n    data_analyst -- accesses --&gt; data_dashboard\n    data_dashboard -- gets data from --&gt; data_warehouse\n\n    %% data_analyst -- prepares --&gt; usage_data\n    %% google_analytics --&gt; usage_data\n\n    \n    data_scientist\n    data_scientist -- models --&gt; training_data\n    data_scientist -- runs training --&gt; AI_compute\n\n    training_data -- gets data from --&gt; data_warehouse\n\n\n\n\n\n\nData sources for AI modeling and inference workloads\n\n\n\n\n\nflowchart TD\n    public_data\n\n    synthetic_data\n\n    usage_data\n\n    transactional_data\n\n    vision_data\n\n    gis_location_data\n\n    vehicle_data\n\n    inventory_data"
+  },
+  {
+    "objectID": "sketches/1_brainstorm.html",
+    "href": "sketches/1_brainstorm.html",
+    "title": "Architecture Brainstorm 1",
+    "section": "",
+    "text": "Written Notes\n\n\n\n\n\nWritten Notes\n\n\n\n\n\nWritten Notes\n\n\n\n\n\nWritten Notes\n\n\n\n\n\nWritten Notes"
+  },
+  {
+    "objectID": "sketches/1_brainstorm.html#board-sketches",
+    "href": "sketches/1_brainstorm.html#board-sketches",
+    "title": "Architecture Brainstorm 1",
+    "section": "",
+    "text": "Written Notes\n\n\n\n\n\nWritten Notes\n\n\n\n\n\nWritten Notes\n\n\n\n\n\nWritten Notes\n\n\n\n\n\nWritten Notes"
+  },
+  {
+    "objectID": "sketches/1_brainstorm.html#ai-summmary",
+    "href": "sketches/1_brainstorm.html#ai-summmary",
+    "title": "Architecture Brainstorm 1",
+    "section": "AI Summmary",
+    "text": "AI Summmary\nNotes transcribed using WPP Open, Gemini 2.5 Flash\n\nOrder Data\n\nProcurement\nSuggestions to order in terms of most inventory\n\n\n\nUser Understanding\n\nKnows your schedule\nAttitudinal\nBehavioral responses\n\n\n\nGamification\n\nFeedback, prizes\nWaze example: Seasonal gamification & social interaction\nGamify:\nReward points for doing a quest… points.\nCoupons for future uses.\nA/B testing, customer loyalty, feedback.\n\n\n\nPrediction & Usage\n\nGPS: Can we predict where they are going?\nFrustration of “how long can go”\nHow do we know when/who want to use vehicles?\nUsage - generally available\nOdds\nAssumptions\n\n\n\nPrivacy & Charge Management\n\nPrivacy protection / Anonymization\nHow long a charge lasts:\nDistance of travel\nn days\nConceptual Diagram (Time/POI): A region or point of interest (POI) over a specific time window (e.g., 17-13).\n\n\n\nBattery Usage & Service Model\n\nExpected battery usage & actual battery usage data\n\n\n\nWireless energy\nQuestion: How does Waze know when to go when it needs a charge?\n\n\nNetwork & Repair Infrastructure\n\nHot-swappable battery packs\nCompany vans:\nCharging stations on board\nRepair stations\n(Grouped as: Mobile repair)\n\n\n\nAI & Vehicle Capabilities\n\nAre vehicles self-driving?\nOpportunity for AI within device itself\nMoving, proven patterns in devices\nVehicle Types/Stages:\nScooter, Skateboard, Bike\nBeta, Dev, Test, Alpha, Pilot, Release (user groups/development stages)\n\n\n\nSystem Integrations & Incentives\n\nEmergency chargers - nearby\nEmergency reserve\nHuman honor system of doing things right\nHardware-based efficiency/improvement for resilience\n\n\n\nRewards & Feedback\n\nFines exist but are negative.\nGive a positive reward.\nPoint structure:\nGeneration, one-of-a-kind rewards\nOld school game - ping to get it right\nValue of knowing where you’ve been:\nStats & records.\nFrequent flyer miles:\nPoints for correct behaviors\nUnlocks/incentives\nCustomer behavior / Psychology:\nAI integration to respond to comments -&gt; give user feedback.\nOnboard AI to coach & help user driving!\nAsk AI follow-up questions.\n\n\n\nAI - Trip Planning\n\n“I feel lucky…”\nOptimize for allowed/optimal destination."
+  },
+  {
+    "objectID": "sketches/1_brainstorm.html#ai-summary---generated-diagrams",
+    "href": "sketches/1_brainstorm.html#ai-summary---generated-diagrams",
+    "title": "Architecture Brainstorm 1",
+    "section": "AI Summary - Generated Diagrams",
+    "text": "AI Summary - Generated Diagrams\n\nHub & Spoke Locations\nNote: This diagram is meant to show the Hub and Spoke model for pickup and return locations. Reference the drawing for a better intent.\n\n\n\n\n\n    graph TD\n    SPORC1[SPORC] -- connects to --&gt; HUB[HUB]\n    HUB -- connects to --&gt; SPORC2[SPORC]\n    HUB -- connects to --&gt; SPORC3[SPORC]\n\n\n\n\n\n\n\n\nModeling Battery Usage & Incentives\nNote: This diagram is meant to show how we can model expected energy usage and factor into incentives to return to a given charging destination. Reference the drawing for a better intent.\n\n\n\n\n\ngraph TD\n    A[C-Scooter] --&gt; DB(Database)\n    B[C-Bike] --&gt; DB\n    C[C-Car] --&gt; DB\n    D[C-Van] --&gt; DB\n    DB --&gt; SM[\"Service Model\"]\n    SM --&gt; UI(\"Surging destination as a user incentive\")\n    UI --&gt; L[Labs]\n    UI --&gt; S[Starbucks]\n\n\n\n\n\n\n\n\nUseful Entities\nNote: This diagram captures the entities in a sketch, but not the intended concept. The idea in the drawing is leveraging a kiosk at point-of-return for further gamification. Reference the drawing for a better intent. Team discussion did note this idea is beyond the brief and doesn’t match the intended business model. \n\n\n\n\n\ngraph TD\nHUB_G[Hub] -- connected to --&gt; Google[Google]\nVehicle[Vehicle] -- connected to --&gt; Phone[Phone]\nPhone -- connected to --&gt; Wallet[Wallet]"
+  },
+  {
+    "objectID": "sketches/0_kickoff_notes.html",
+    "href": "sketches/0_kickoff_notes.html",
+    "title": "Notes from Kata Kickoff",
+    "section": "",
+    "text": "Notes from O’Reilly kickoff.\nCustomers can cancel anytime\n?? dbl check ~15:00 how much of architecture to build out ??\neu gdpr multiple languages\ncity license constraints parking vs drop-off speed othe rules\nbike and scooters still work if without a charge should alert users to get to parking bay\ncars, vans booking should not be allowed to go ahead without charge\ntotal customers, avg rentals every EU country ea. country 5,000 bikes, 5,000 scooters, 200 cars, 200 vans\nhave hardware in vehicles that allows you to collect specific telemetry. you can define interface for hardware on vechile itelsf. e.g. smaple rate of gps.\nassume going up assume all across europe looking to grow\nsubscriptions - not main focus for us at the moment\nwould like to scale-up\ncapital investment is in vehciles ongoing cost to maintain\nwould like more vehicles to be used more often before we expand fleet\nuse more frequentyl,\nassume at any point can find a range on an ev charge\nvans and cars stop operating while you run out of charge\ncan suggest business model changes, such as incentives\nvans - 2-3 people mostly about carrying oround large items\nbikes + scooters – can be swapped onsite, no special locations\ncustomers book with a mobile app\ngoogle maps, wazyze - not neccesarily scope for us\nGPS used for tracking, not dependent on cell\nat the moment theft of vehcile is not the major issue\nonly worry about vehicle theft if it will solve these business problems\nassume you get sent a GPS sample rate at least every 30s\nhave to book a certain time\ncommunication is done via the mobile app, not via the vehicle\npay for time, not duration\ntrip sharing - out of scope, not focusing on now\nEU-only. Not in UK or Ireland.\nmultiple langes multiple currency\nno info about economic models (not made up).\ncost should come into play for the solution. esp. costs that could change in the future.\nb2c business\nai - patent violation concerns\ncan use a cloud provider or be model/cloud agnostic\nDeliverables\n\nOverview\nDiagrams - comprehensive and targeted view\nADRs for AI-related implementations, including trade-off analysis\n\nRisks - esp. related to AI\n\n\nDealing with uncertainty in AI - how are you building for change in the future,\n\nChanging provider\nPrice flucutation\nProvider shutting down\n\nDoes it work\n\nHow will you know if it is working\nVerifying functionality - GenAi is non-deterministic\nHow will you know if AI starts mis-behaving\n\n\nAndrew - Judge\nreally looking for is seeing train of thought, showing thinking.\nknowing why pickded it.\nbook facilitating software architecture\n\nGuyathri - Judge\nlooking forward to interesting AI solutions.\nlooking to add AI in meaningful ways for clients.\nassumptions being clearly called out callin gout risks protect business revenue pricing and practicalities\nbook fullstack testing\n\n? can we use genai to come up with architecture?\nnot going to judge, but purpose of this kata is to come up with ideas and practice.\nmight use genai to prep some of deliverables.\nnote methodology.\nADR should call out risks like vendor lock-in, risks of portability\nShould not be submitting proprietary info. Submission is a public repo."
+  },
+  {
+    "objectID": "sketches/3_brainstorm.html",
+    "href": "sketches/3_brainstorm.html",
+    "title": "Brainstorm 3",
+    "section": "",
+    "text": "Written Notes"
+  },
+  {
+    "objectID": "sketches/3_brainstorm.html#board-sketches",
+    "href": "sketches/3_brainstorm.html#board-sketches",
+    "title": "Brainstorm 3",
+    "section": "",
+    "text": "Written Notes"
+  },
+  {
+    "objectID": "sketches/3_brainstorm.html#ai-summmary",
+    "href": "sketches/3_brainstorm.html#ai-summmary",
+    "title": "Brainstorm 3",
+    "section": "AI Summmary",
+    "text": "AI Summmary\n\nVehicle / Parking Example\n\nParking, Reg.\nAuto-detect rental, like Turo?\n\n\n\nHertz AI\n\n20 mm. scratch\nImage recognition\n\nAI recog damage to car."
+  },
+  {
+    "objectID": "sketches/3_brainstorm.html#ai-summary---generated-diagrams",
+    "href": "sketches/3_brainstorm.html#ai-summary---generated-diagrams",
+    "title": "Brainstorm 3",
+    "section": "AI Summary - Generated Diagrams",
+    "text": "AI Summary - Generated Diagrams\nNote: Generated diagram is so-so. Reference the drawing for a better intent.\n\n\n\n\n\ngraph LR\nsubgraph \"Image Capture Process\"\n    F[F] --- B[B] --- S1[S] --- S2[S]\n    S2 -- \"picture taken by staff\" --&gt; P[ ]\nend\nRegBefore(reg. before) --&gt; ImageCaptureProcess"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "MobilityCorp",
-    "section": "7.2 Detailed Data Schema",
-    "text": "7.2 Detailed Data Schema"
+    "section": "",
+    "text": "VML Augmented Humans\nNote: This is effectively a Solution Design Sprint 0. Lot’s of conceptual ideas that need more detail and proving out."
   },
   {
     "objectID": "index.html#executive-summary",
     "href": "index.html#executive-summary",
     "title": "MobilityCorp",
-    "section": "",
-    "text": "Our Vision for MobilityCorp …"
-  },
-  {
-    "objectID": "index.html#glossary-of-terms",
-    "href": "index.html#glossary-of-terms",
-    "title": "MobilityCorp",
-    "section": "2.1 Glossary of Terms",
-    "text": "2.1 Glossary of Terms"
+    "section": "1.1 Executive Summary",
+    "text": "1.1 Executive Summary"
   },
   {
     "objectID": "index.html#team",
     "href": "index.html#team",
     "title": "MobilityCorp",
+    "section": "1.2 Team",
+    "text": "1.2 Team\nWe are a team made up of people who make software for immersive experiences of all sizes. Our invididual roles use words like Solution Architect, DevOps Engineer, Creative Technologist, Immersive Developer, Full-Stack Developer, etcetera.\n\nHari Khalsa\nNavya Bikkasani\nBrandon Sweatman\nEric Black"
+  },
+  {
+    "objectID": "index.html#methodology",
+    "href": "index.html#methodology",
+    "title": "MobilityCorp",
+    "section": "1.3 Methodology",
+    "text": "1.3 Methodology\nOur approach was to conduct a series of collaborative brainstorms, working effectively as a solution design sprint.\n\nCollaborative Brainstroms\nDiscuss real-world examples of similar models\nAI used to parse our notes, generate starter diagrams and syntehsize information\nAI used to check our work for consistency\nHuman brains used for creative ideation and solution design\n\nWe didn’t get as far as hoped for the formal documentation. You can see the more raw outputs of our work and thinking in the Sketches."
+  },
+  {
+    "objectID": "index.html#diagrams",
+    "href": "index.html#diagrams",
+    "title": "MobilityCorp",
+    "section": "1.4 Diagrams",
+    "text": "1.4 Diagrams\nOur diagrams are created in a markdown-friendly format at this stage. While not perfect for diagramming, as developers this allows us to shif ideas more nimbly.\nBroadly speaking, we are using the C4 model for software diagrams. You may see some differences for expedience of writing in MermaidJS and Quarto-flavored markdown.\n\n\n\n\n\nflowchart TD\n\n%% Users\nUser[\"End User\"]\nStaff[\"Business User\"]\n\n%% Components\nData_Compute[\"Compute Artifact\"]\nAI_Component[\"AI Component\"]\n\nsubgraph Boundary_or_Group[\"Boundary or Group\"]\n    Component\nend\n\nstyle User fill:#0075bdff,color:#fff\nstyle Staff fill:#009dffff,color:#fff\nstyle Data_Compute fill:#e6f3ff\nstyle AI_Component fill:#f0e6ffff"
+  },
+  {
+    "objectID": "index.html#glossary",
+    "href": "index.html#glossary",
+    "title": "MobilityCorp",
+    "section": "1.5 Glossary",
+    "text": "1.5 Glossary"
+  },
+  {
+    "objectID": "index.html#approach",
+    "href": "index.html#approach",
+    "title": "MobilityCorp",
+    "section": "4.1 Approach",
+    "text": "4.1 Approach\nFirst, we will look at the overally systems to ensure they are setup in a API-forward, service-oriented approach that allows for evolution, portability and change over time. We aren’t showing the whole system, but the parts most pertinent to our current problem scope.\n\n4.1.1 A Tiered Architecture\n\nOur Users enage with our MobilityCorp through applications focused on their particular needs\n\nCustomer use a mobile app\nStaff or service technitions use a mobile app\nAdministrative or office staff use an app\n\nOur Apps interface with services or APIs\n\nBooking service\nIncentive service\nFleet service\nAnalytics service\nAI Vision Service Used at multiple layers in the stack\nGenAI Service Used in content creation workflows or, optionally, real-time for gamified elements.\n\nData is collected in our data warehouse\nMobilityCorp’s Digital Twin is used as part of the Insights & Analytics Tier\n\n\n\n\n\n\ngraph TD\nsubgraph Users\n    Customer[Customer]\n    Staff[\"Maintenance Staff\"]\n    Admin[\"Admin Staff\"]\nend\n\nCDN_WAF[\"Proxy\"]\n\nsubgraph MobiltyCorpSystems[\"MobiltyCorp Platform\"]\n\n    subgraph Engagement_Tier[\"Engagement Layer\"]\n        Mobile_App[\"Mobile App\"]\n        Staff_App[\"Staff App\"]\n        Admin_App[\"Admin App\"]\n    end\n\n    subgraph Services_Tier[\"Services Tier\"]\n        Booking_Service[\"Booking Service\"]\n        Incentive_Service[\"Incentive Service\"]\n        Fleet_Service[\"Fleet Service\"]\n        Analytics_Service[\"Analytics Service\"]\n        AI_Vision_Service[\"AI Vision Service\"]\n        AI_Gen_Service[\"GenAI Service*\"]\n    end\n\n    subgraph Data_Insights_Tiers[\"Data Warehouse & Insights\"]\n        direction LR\n        subgraph Data_Warehouse\n        end\n\n        subgraph AI_Analytics_Tier[\"Insights & Analytics Tier\"]\n            Digital_Twin[\"`Digital Twin&lt;br&gt;(Simulation Engine)`\"]\n            Demand_AI[\"Demand Forecasting AI\"]\n            Maint_AI[\"Maintenance Optimization AI\"]\n        end\n    end\nend\n\nCustomer ~~~ CDN_WAF\nStaff    ~~~ CDN_WAF\nAdmin    ~~~ CDN_WAF\n\nCDN_WAF ~~~ Mobile_App\nCDN_WAF ~~~ Staff_App\nCDN_WAF ~~~ Admin_App\n\nMobile_App  ~~~ Services_Tier\nStaff_App   ~~~ Services_Tier\nAdmin_App   ~~~ Services_Tier\n\nServices_Tier ~~~ Data_Warehouse\n%% Services_Tier -- sends data --&gt; AI_Analytics_Tier\n\n%% AI_Analytics_Tier -- sends data --&gt; Data_Warehouse\nData_Warehouse ~~~ AI_Analytics_Tier\n\nServices_Tier ~~~ AI_Analytics_Tier\n\n%% Styling\nstyle Customer fill:#0075bdff,color:#fff\nstyle Admin fill:#009dffff,color:#fff\nstyle Staff fill:#009dffff,color:#fff\n\n%% Styling - AI Analytics Tier\nstyle AI_Analytics_Tier fill:#e6f3ff\n\n%% Styling - AI Components\nstyle AI_Vision_Service fill:#f0e6ffff\nstyle Digital_Twin fill:#f0e6ffff\nstyle Demand_AI fill:#f0e6ffff\nstyle Maint_AI fill:#f0e6ffff\nstyle AI_Gen_Service fill:#f0e6ffff"
+  },
+  {
+    "objectID": "index.html#system-context",
+    "href": "index.html#system-context",
+    "title": "MobilityCorp",
+    "section": "4.2 System Context",
+    "text": "4.2 System Context\n\n4.2.1 Customer\n\n\n\n\n\ngraph TD\nCustomer[Customer]\nMobile_App[\"Mobile App\"]\n\nsubgraph Services_Tier[\"Services Tier\"]\n    Booking_Service[\"Booking Service\"]\n    Incentive_Service[\"Incentive Service\"]\n    Fleet_Service[\"Fleet Service\"]\n    Analytics_Service[\"Analytics Service\"]\n    AI_Vision_Service[\"AI Vision Service\"]\n    AI_Gen_Service[\"GenAI Service*\"]\nend\n\n\nCustomer --&gt; Mobile_App\n\nMobile_App -- uses --&gt; Booking_Service\nMobile_App -- uses --&gt; Incentive_Service\nBooking_Service -- uses --&gt; Fleet_Service\n\nMobile_App -- sends data --&gt; Analytics_Service\nMobile_App -. uses and embeds .-&gt; AI_Vision_Service\nMobile_App -. uses or embeds .-&gt; AI_Gen_Service\n\n%% Styling\nstyle Customer fill:#0075bdff,color:#fff\n\n%% Styling - AI Components\nstyle AI_Vision_Service fill:#f0e6ffff\nstyle AI_Gen_Service fill:#f0e6ffff"
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "MobilityCorp",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nWe used WPP Open to create an AI agent to speak as the voice of the customer.↩︎"
+  },
+  {
+    "objectID": "adrs/adr_001.html",
+    "href": "adrs/adr_001.html",
+    "title": "ADR-001",
     "section": "",
-    "text": "Hari Khalsa\nNavya Bikkasani\nBrandon Sweatman\nEric Black"
+    "text": "ADR-001: Choice of Event-Driven Architecture (EDA) Status: Accepted Context: The MobilityCorp system must handle a high volume of asynchronous, real-time events from thousands of vehicles (GPS updates, battery status) and users (bookings, returns). A traditional synchronous, request-response architecture would create tight coupling between services, leading to cascading failures and difficulty scaling individual components. Decision: We will adopt an event-driven architecture using a central message broker (e.g., Apache Kafka, Google Pub/Sub, AWS Kinesis). Services will communicate by producing and consuming events. For example, when a ride ends, the Booking Service publishes a RideEnded event. The Payment Service consumes this to calculate the bill, and the Smart Return Service consumes it to trigger photo analysis. Consequences: Pros: Enhances scalability, resilience, and loose coupling. Services can be developed, deployed, and scaled independently. New services can easily be added to consume existing event streams without modifying producer services. Cons: Introduces complexity in managing eventual consistency, monitoring distributed transactions, and handling event schema evolution. Requires robust dead-letter queue and retry mechanisms."
   },
   {
-    "objectID": "sketches/brainstorm_2.html",
-    "href": "sketches/brainstorm_2.html",
-    "title": "Brainstorm 2",
+    "objectID": "adrs/adr_003.html",
+    "href": "adrs/adr_003.html",
+    "title": "ADR-003",
     "section": "",
-    "text": "RAW Notes from Brainstorm #2"
-  },
-  {
-    "objectID": "sketches/brainstorm_2.html#board-sketches",
-    "href": "sketches/brainstorm_2.html#board-sketches",
-    "title": "Brainstorm 2",
-    "section": "Board + Sketches",
-    "text": "Board + Sketches"
-  },
-  {
-    "objectID": "sketches/brainstorm_2.html#ai-summmary",
-    "href": "sketches/brainstorm_2.html#ai-summmary",
-    "title": "Brainstorm 2",
-    "section": "AI Summmary",
-    "text": "AI Summmary\nFrom WPP Open agent\nConsolidated Architecture Notes\n\nCore Entities & Concepts Actors: Customers: The end-users who rent the vehicles. MobilityCorp: The business entity, including staff who perform maintenance and vehicle distribution. Core Domain: Fleet: The collection of all vehicles, composed of different types: Electric Scooters eBikes Electric Cars Electric Vans Booking: The process of reserving a vehicle. Key distinctions: Cars/Vans: Booked up to 7 days in advance for a specific duration. Scooters/Bikes: Booked up to 30 minutes in advance, open-ended rental (up to 12 hours). Location: A critical concept. The primary business challenge is having the “right vehicle” in the “right place”. Vehicles must be returned to designated parking spots. The system needs to track specific GPS locations for all vehicles. A potential feature is to use location-based incentives to guide user behavior.\nKey Challenges & AI Opportunities The main business challenges revolve around prediction and optimization. AI can be applied to address these directly.\n\nThings to Predict:\nDemand/Usage: Where and when will customers want specific types of vehicles? This is the core problem of “the right vehicle in the right place.” Location: Predicting popular destinations and high-demand pickup zones. Energy/Charge: Predicting which vehicles will need battery swaps (scooters/bikes) or charging (cars/vans) and prioritizing maintenance routes. Return Behavior: Predicting if a vehicle will be returned late or to the wrong location. Proposed AI-Driven Solutions:\nDecision Model: An AI model that takes predictions (demand, energy) as input to make operational decisions, such as: Optimal vehicle distribution routes for staff. Dynamic pricing to incentivize rentals in low-demand areas or returns to high-demand areas. Prioritization of battery swaps. Customer Journey Enhancement: Predictive Booking: Offer to pre-book a vehicle for a user’s regular commute. Incentives: Proactively offer discounts for returning a vehicle to a location where demand is predicted to be high. Subscription Model: Leverage predictability to offer a subscription service, increasing revenue stability and customer loyalty. 3. System & Architectural Considerations High-Level Architecture: The system will interact with external Location-based Services (for mapping and GPS) and Payment Services. Data Pipeline: A robust data pipeline is essential. The flow will be: Historical Data -&gt; Prediction Model -&gt; Decision Model Human-in-the-Loop: Decisions, especially those related to logistics and maintenance, should be presented to staff via a Decision Support interface. The system suggests, the human confirms. Risks & Unknowns: The primary risk is the non-deterministic nature of AI. We must trust our process and data. Model drift: The predictive models must be continuously monitored and retrained as user behavior and city dynamics change. Data quality from the fleet is the foundation of the entire predictive system. Architectural Diagrams (Mermaid) Here are the diagrams based on the sketches, ready for embedding.\nSystem Context Diagram This diagram shows the MobilityCorp system in relation to its users and the external systems it depends on.\n\n\n\n\n\ngraph TD\nsubgraph \"MobilityCorp\"\n    A[Customer] -- Uses --&gt; B(Mobility Platform);\n    B -- Manages Fleet & Staff --&gt; C{AI Decision Engine};\n    C -- Provides Suggestions --&gt; D[Staff/Logistics];\n    B -- Processes Payments via --&gt; E(Payment Gateway);\n    B -- Uses Location Data from --&gt; F(Mapping & GPS Service);\nend\n\nstyle A fill:#a9d1f7,stroke:#333,stroke-width:2px\nstyle D fill:#a9d1f7,stroke:#333,stroke-width:2px\n\n\n\n\n\n\nFleet & Booking Model This diagram clarifies the relationship between the fleet, vehicle types, and booking rules.\n\n\n\n\n\ngraph TD\nFleet --&gt; Scooter;\nFleet --&gt; Bike;\nFleet --&gt; Car;\nFleet --&gt; Van;\n\nsubgraph Booking Rules\n    direction LR\n    Car ---|\"Book up to 7 days in advance&lt;br&gt;Fixed duration\"| Booking;\n    Van ---|\"Book up to 7 days in advance&lt;br&gt;Fixed duration\"| Booking;\n    Scooter ---|\"Book up to 30 mins in advance&lt;br&gt;Open-ended (max 12hr)\"| Booking;\n    Bike ---|\"Book up to 30 mins in advance&lt;br&gt;Open-ended (max 12hr)\"| Booking;\nend\n\nstyle Fleet fill:#f9f,stroke:#333,stroke-width:2px\n\n\n\n\n\n\nAI Prediction & Decision Flow This flowchart illustrates the core data pipeline for the AI-driven functionality.\n\n\n\n\n\ngraph TD\nA[Historical Data&lt;br&gt;- Ride history&lt;br&gt;- GPS locations&lt;br&gt;- Time of day/week] --&gt; B(Prediction Model);\nB -- Predicts --&gt; C[Future Demand];\nB -- Predicts --&gt; D[Vehicle Energy Needs];\nC --&gt; E{Decision Model};\nD --&gt; E{Decision Model};\nE -- Generates --&gt; F[Optimized Staff Routes];\nE -- Generates --&gt; G[Dynamic Pricing & Incentives];\n\nsubgraph \"Outputs\"\n    F --&gt; H(Staff Decision Support UI);\n    G --&gt; I(Customer App);\nend\n\n\n\n\n\n\nCustomer Journey Enhancement Loop This diagram shows how AI can be used to create a positive feedback loop to encourage repeat usage.\n\n\n\n\n\ngraph TD\nsubgraph \"AI-Enhanced Customer Journey\"\n    A(Detects Regular Commute Pattern) --&gt; B{Offer Predictive Booking};\n    B -- Accepted --&gt; C(Vehicle Reserved);\n    C --&gt; D(Successful Trip);\n    D --&gt; A;\n    B -- Declined --&gt; E{Offer Incentive for&lt;br&gt;Future Booking};\n    E --&gt; A;\nend"
-  },
-  {
-    "objectID": "sketches/scratch.html",
-    "href": "sketches/scratch.html",
-    "title": "Problem definition",
-    "section": "",
-    "text": "Problem definition\n\n\n\nThe end-user, the custoemr\n\n\n\n\n\nflowchart TD\n    customer\n    customer --&gt; mobile_app\n    mobile_app --&gt; reservation_backend\n\n\n\n\n\n\nThe data analysis and science activites\n\n\n\n\n\nflowchart TD\n    data_analyst\n    data_analyst -- accesses --&gt; data_dashboard\n    data_dashboard -- gets data from --&gt; data_warehouse\n\n    %% data_analyst -- prepares --&gt; usage_data\n    %% google_analytics --&gt; usage_data\n\n    \n    data_scientist\n    data_scientist -- models --&gt; training_data\n    data_scientist -- runs training --&gt; AI_compute\n\n    training_data -- gets data from --&gt; data_warehouse\n\n\n\n\n\n\nData sources for AI modeling and inference workloads\n\n\n\n\n\nflowchart TD\n    public_data\n\n    synthetic_data\n\n    usage_data\n\n    transactional_data\n\n    vision_data\n\n    gis_location_data\n\n    vehicle_data\n\n    inventory_data"
+    "text": "ADR-003: Approach to Smart Return Verification\nStatus: Accepted Context: MobilityCorp requires proof of a correctly completed return, including vehicle location, connection to an EV charger, and condition. Manual verification is not scalable. Decision: We will implement a Smart Return Service that uses computer vision to analyze the photo submitted by the user at the end of a rental. The service will perform a multi-step analysis: Image Authenticity: Check image metadata to ensure it’s a recent photo taken at the time of return. Location Verification: Use image recognition to confirm the vehicle is at a designated parking spot (e.g., by recognizing background landmarks or signage). Damage Detection: Compare the return photo against a pre-rental photo (if available) or a baseline “healthy” image of that vehicle model to flag significant new damage. Connection Check: For EVs, analyze the image to detect the presence of a charging cable connected to the vehicle’s port. Consequences: Pros: Automates a critical business process, reducing operational costs and enabling rapid scaling. Provides immediate feedback to the customer. Creates a data trail for dispute resolution. Risks & Mitigations: Accuracy: False positives/negatives (e.g., flagging a shadow as damage) can lead to poor customer experience. Mitigation: The system will generate a confidence score. Low-confidence results or flagged issues will be automatically routed to a human review queue. The models will be continuously retrained on this human-labeled data. Environmental Factors: Poor lighting, bad weather, or low-quality photos can impact accuracy. Mitigation: The mobile app will guide the user on how to take a good photo (e.g., “Please ensure the entire side of the car is visible”). The system will be trained on a diverse dataset including various lighting and weather conditions. Data Privacy: User-submitted photos are personal data and must be handled according to GDPR. Mitigation: All photos will be stored securely with strict access controls. We will implement data retention policies to automatically delete photos after a set period."
   }
 ]

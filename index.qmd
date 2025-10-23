@@ -4,328 +4,265 @@ subtitle: "Proposed Solution by VML Augmented Humans"
 number-sections: true
 crossref: 
     chapters: true
+format:
+    html: default
+    # pdf: 
+    #     mermaid-format: png
 ---
+
+<!-- 
+Colors for C4 diagrams
+#0075bdff
+#009dffff
+#00c3ffff 
+
+-->
+
+![VML Augmented Humans](assets/vml_augmented_humans_2.png)
+
+__Note: This is effectively a Solution Design Sprint 0.  Lot's of conceptual ideas that need more detail and proving out.__
 
 # Introduction
 
 <!-- Add intro here -->
 
+
+
 ## Executive Summary
 
-**Our Vision for MobilityCorp** ...
+<!-- **Our Vision for MobilityCorp** ... -->
 
 <!-- Add summary here -->
 
 ## Team
 
+We are a team made up of people who make software for immersive experiences of all sizes.   Our invididual roles use words like Solution Architect, DevOps Engineer, Creative Technologist, Immersive Developer, Full-Stack Developer, etcetera.  
+
 {{< include _team.qmd >}}
+
+## Methodology
+
+Our approach was to conduct a series of collaborative brainstorms, working effectively as a solution design sprint.  
+
+* Collaborative Brainstroms
+* Discuss real-world examples of similar models
+* AI used to parse our notes, generate starter diagrams and syntehsize information
+* AI used to check our work for consistency
+* Human brains used for creative ideation and solution design
+
+We didn't get as far as hoped for the formal documentation.  You can see the more raw outputs of our work and thinking in the [Sketches](sketches/index.qmd).
+
+## Diagrams
+
+Our diagrams are created in a markdown-friendly format at this stage.  While not perfect for diagramming, as developers this allows us to shif ideas more nimbly.
+
+Broadly speaking, we are using the C4 model for software diagrams.  You may see some differences for expedience of writing in MermaidJS and Quarto-flavored markdown.
+
+```{mermaid}
+flowchart TD
+
+%% Users
+User["End User"]
+Staff["Business User"]
+
+%% Components
+Data_Compute["Compute Artifact"]
+AI_Component["AI Component"]
+
+subgraph Boundary_or_Group["Boundary or Group"]
+    Component
+end
+
+style User fill:#0075bdff,color:#fff
+style Staff fill:#009dffff,color:#fff
+style Data_Compute fill:#e6f3ff
+style AI_Component fill:#f0e6ffff
+```
+
+<!-- #0075bdff
+#009dffff
+#00c3ffff 
+#f0e6ffff
+ -->
 
 ## Glossary
 
-<!-- Add any terms or defintions here -->
+# MobilityCorp  
 
-# Problem Analysis
+MobilityCorp is a growing provider of short-term, "last-mile" transport solutions. They operate a fleet of electric vehicles, including scooters, e-bikes, cars, and vans. Their primary market is dense city locations, but they are expanding their car and van rental services into more suburban areas.
 
-## Problem Definition & Context
+MobilityCorp currently operates in the European Union (EU), but it's safe to say the business model is intended to grow.  Solutions should be locally effective and globally scaleable.
 
-## Key Business Challenges
+<!-- Their current operational model is as follows:
 
-### Vehicle Availability & Distribution
+Customer Interaction: Customers use an NFC-capable smartphone app to sign up, locate, book, and operate the vehicles.
+Booking & Rental:
+Cars and vans can be booked up to 7 days in advance for a specific duration.
+Bikes and scooters can be booked up to 30 minutes in advance for an open-ended rental, with a maximum duration of 12 hours.
+Vehicle Management: All vehicles are equipped with GPS trackers for location monitoring. Cars and vans can be remotely disabled if necessary.
+Payment: Customers are charged on a per-minute basis. Fines are automatically issued for late returns or for returning a vehicle to an incorrect location.
+Return Process: Vehicles must be returned to designated parking spots. Cars and vans need to be plugged into an EV charger. Customers are required to submit a photo of the returned vehicle as proof of return and can provide feedback on its condition.
+Logistics and Maintenance: The company employs staff to manually swap out batteries for bikes and scooters and to redistribute vehicles across the network to meet demand. -->
 
-### Fleet Charging & Maintenance
 
-### Customer Retention & Commuter Adoption
+# Ask
 
-## Key Objectives & Success Metrics
+MobilityCorp has asked us to come up with a new architecture, incorporating AI functionality where appropriate to address business challenges:
 
-## Business & Technical Constraints
+> Our customers can't find a vehicle when they need one, and our service crews are struggling to keep everything charged and maintained. We need a smarter system that tells us where to place our vehicles and how to run our operations more efficiently, so we can stop losing money and make our service reliable enough for daily use. [^ai-customer]
 
-# Proposed Solution & Architecture
+The solution should allow the business to:
 
-## Architectural Vision & Guiding Principles
+* Know when customers will want to use vehicles
+* Anticipate customer needs
+* Anticiapte and optimize maintenance needs
+* Grow our business
+    - Increase use by existing customers 
+    - Add new customers
 
-## Architecture Characteristics (The "-ilities")
 
-## System Context Diagram (C1)
+# Solution
 
-## Container Diagram (C2)
+MobilityCorp's core challenge is not a lack of data, but a lack of actionable data and forward-looking insight.  To solve this, we propose an architecture enhanced with AI at key touchpoints in business processes and overall experience.
 
-## Detailed Architecture for AI Use Cases
+## Approach
 
-### Predictive Demand & Fleet Rebalancing: An AI model to forecast demand and optimize vehicle placement.
+First, we will look at the overally systems to ensure they are setup in a API-forward, service-oriented approach that allows for evolution, portability and change over time.  We aren't showing the whole system, but the parts most pertinent to our current problem scope.
 
-As a Customer, I would like a Bike, in order to commute to work.
 
-?? Overflow partnerships for customer service -- how to model this out ??
+
+### A Tiered Architecture
+
+* Our Users enage with our MobilityCorp through applications focused on their particular needs
+    - Customer use a mobile app
+    - Staff or service technitions use a mobile app
+    - Administrative or office staff use an app
+* Our Apps interface with services or APIs
+    - Booking service
+    - Incentive service
+    - Fleet service
+    - Analytics service
+    - AI Vision Service _Used at multiple layers in the stack_
+    - GenAI Service _Used in content creation workflows or, optionally, real-time for gamified elements._
+* Data is collected in our data warehouse
+* MobilityCorp's Digital Twin is used as part of the Insights & Analytics Tier
+
 
 ```{mermaid}
-flowchart TB
-    subgraph Speculative_Models
-        Speculative_Inventroy
-        Speculative_Reservations
-        Speculative_Reservation_Events
-        Speculative_Inventory
+graph TD
+subgraph Users
+    Customer[Customer]
+    Staff["Maintenance Staff"]
+    Admin["Admin Staff"]
+end
+
+CDN_WAF["Proxy"]
+
+subgraph MobiltyCorpSystems["MobiltyCorp Platform"]
+
+    subgraph Engagement_Tier["Engagement Layer"]
+        Mobile_App["Mobile App"]
+        Staff_App["Staff App"]
+        Admin_App["Admin App"]
     end
 
-    %% What our business model supports
-    subgraph Business_Models
-        Hub_Size
-        Hub_Demand
-        Hub_Capcity
-        Actual_Inventory
-    end
-    
-    %% Historical Actuals
-    subgraph Actual_Data
-        Actual_Inventroy
-        Actual_Reservations
-        Actual_Reservation_Events
-        Actual_Inventory
-        Actual_Booked_Returns
+    subgraph Services_Tier["Services Tier"]
+        Booking_Service["Booking Service"]
+        Incentive_Service["Incentive Service"]
+        Fleet_Service["Fleet Service"]
+        Analytics_Service["Analytics Service"]
+        AI_Vision_Service["AI Vision Service"]
+        AI_Gen_Service["GenAI Service*"]
     end
 
-    %% Forecast
-    subgraph Forecast_Data
-        Forecast_Inventroy
-        Forecast_Reservations
-        Forecast_Reservation_Events
-        Forecast_Inventory
+    subgraph Data_Insights_Tiers["Data Warehouse & Insights"]
+        direction LR
+        subgraph Data_Warehouse
+        end
+
+        subgraph AI_Analytics_Tier["Insights & Analytics Tier"]
+            Digital_Twin["`Digital Twin<br>(Simulation Engine)`"]
+            Demand_AI["Demand Forecasting AI"]
+            Maint_AI["Maintenance Optimization AI"]
+        end
     end
+end
 
-    Realtime_Context_Demand_Impacters
+Customer ~~~ CDN_WAF
+Staff    ~~~ CDN_WAF
+Admin    ~~~ CDN_WAF
 
-    Speculative_Models --> Model_Training
-    Business_Models --> Model_Training
-    Actual_Data --> Model_Training
+CDN_WAF ~~~ Mobile_App
+CDN_WAF ~~~ Staff_App
+CDN_WAF ~~~ Admin_App
 
-    Forecast_Data --> Model_Simulation
-    Model_Simulation -- uses --> AI_Fleet_Demand_Prediction_Model
+Mobile_App  ~~~ Services_Tier
+Staff_App   ~~~ Services_Tier
+Admin_App   ~~~ Services_Tier
 
-    Model_Training("Model Training") --> AI_Fleet_Demand_Prediction_Model
+Services_Tier ~~~ Data_Warehouse
+%% Services_Tier -- sends data --> AI_Analytics_Tier
 
+%% AI_Analytics_Tier -- sends data --> Data_Warehouse
+Data_Warehouse ~~~ AI_Analytics_Tier
+
+Services_Tier ~~~ AI_Analytics_Tier
+
+%% Styling
+style Customer fill:#0075bdff,color:#fff
+style Admin fill:#009dffff,color:#fff
+style Staff fill:#009dffff,color:#fff
+
+%% Styling - AI Analytics Tier
+style AI_Analytics_Tier fill:#e6f3ff
+
+%% Styling - AI Components
+style AI_Vision_Service fill:#f0e6ffff
+style Digital_Twin fill:#f0e6ffff
+style Demand_AI fill:#f0e6ffff
+style Maint_AI fill:#f0e6ffff
+style AI_Gen_Service fill:#f0e6ffff
 ```
 
-Using predictive demand to support demand-generation or incentives.
+## System Context
 
-* Incentive user to Dropping at a hub with demand
+### Customer
 
 ```{mermaid}
-flowchart TB
-    %% Realtime AI
-    FOO
-```
+graph TD
+Customer[Customer]
+Mobile_App["Mobile App"]
 
-Using Fleet status analysis to drive efficient servicing and reblancing.
+subgraph Services_Tier["Services Tier"]
+    Booking_Service["Booking Service"]
+    Incentive_Service["Incentive Service"]
+    Fleet_Service["Fleet Service"]
+    Analytics_Service["Analytics Service"]
+    AI_Vision_Service["AI Vision Service"]
+    AI_Gen_Service["GenAI Service*"]
+end
 
-As MobilityCorp, we would like to ensure vechiles (supply) are avaiable where they are needed (demand).
 
-As MobilityCorp, we would like to optimize of our service technicians routes in order to maximize the efficiency of service runs.
+Customer --> Mobile_App
 
-```{mermaid}
-flowchart TB
-    %% Predictive Indicators
-    %% Confidence == 1.0 is Acutal in Stock
-    %% Confidence == 0.85 is Likely Actual
-    Supply -- has --> Confidence_Score
-    Potential_Supply -- has --> Confidence_Score
+Mobile_App -- uses --> Booking_Service
+Mobile_App -- uses --> Incentive_Service
+Booking_Service -- uses --> Fleet_Service
 
-    %% Actual Reservations
-    Demand
-    
-    %% 
-    Hub_Capacity -- has --> Hub_Available_Capacity
-```
+Mobile_App -- sends data --> Analytics_Service
+Mobile_App -. uses and embeds .-> AI_Vision_Service
+Mobile_App -. uses or embeds .-> AI_Gen_Service
 
-Fleet rebalancing mechanisms
+%% Styling
+style Customer fill:#0075bdff,color:#fff
 
-* User incentivies to get customers to return vehicles to point with high demand
-* User disincentive, surcharges when returned to points with low demand
-* Service technician route optimization / task optimization
-    - Increase the weighting of the destination to be serviced based on n-criteria or multiple-goals to be achieved
-    - Optimal distance or multi-stop routing
-
-```{mermaid}
-flowchart TB
-    %% Realtime AI
-    Vehicle_Availability_Status
-    Vehicle_Availability_Status -- has --> Vechile_Charge_Status
-    Vehicle_Availability_Status -- has --> Vehicle_Fault_Status
-    Vehicle_Availability_Status -- has --> Vehicle_Servicing_Status
-
-    %% Where it's from
-    Vehicle_Hub_of_Origin
-    %% Forecast - WHere it is going -- might not always know this
-    Vehicle_Hub_InTransit_Destination
-    Vehicle_InTransit_Start_Time
-    Vehicle_InTransit_Approximate_Return_Time
-
-    %% Actual Inventory
-
-```
-
-?? Can they cross state boundaries ?? Ans:  Depends on the operating laws of the areas.  U.S. right to travel would mean they can cross boudnaires.  In other areas it may be different.
-
-### Optimized Battery Management: A system to prioritize battery swaps and route maintenance staff efficiently.
-
-- Incentivise return of a charged vehicle
-- Disincnetive with a service charge for charge-ups
-
-?? Will all vehicles have the same type of battery?  How interchangeable are batteries between different types of vehicles or models?
-
-?? How portable can battery management be made?  Anything that can only happen in a specifci physical location?
-
-AI use cases
-
-- Predicitive maintenance
-- Usage data analysis / changes in stats
-- Contextual modeling of environmental conditions
-- Real-time data analysis / monitoring / alerting
-    - Matching nearby technicians to maintenance need
-
-```{mermaid}
-flowchart TB
-    Realtime_Battery_Data
-
-    %% Key info for when the battery will need to be serviced, efficiency or degradation of battery over time, idle time
-    Vehicle_Battery_Usage_Model
-
-    %% COnditions that affect battery usage
-    Environmental_Conditions
-        Temperature
-        Weather
-    Battery_Usage_Load
-    %% Electronic Sensor Computer
-    ESC
-
-    Vehcile_Type
-    Vechicle_Configuration_Energy_Capacity
+%% Styling - AI Components
+style AI_Vision_Service fill:#f0e6ffff
+style AI_Gen_Service fill:#f0e6ffff
 ```
 
 
-### Smart Return Verification: Using image analysis to confirm proper vehicle returns and charging connections.
 
-Is to create a system which provides multiple-data poitns, checks and balances and different levels of details in order to increase resolution of the information available about the vechile condition at the point of return.   The burden of informaiton is distributed across actors in order to reduce gaming of the system, provide different data points and reduce burden on any one actor.
+# Footnotes & References
 
-**Customer Return**
-
-- Onboard help / agentic/real-time/embodied AI to get the vehcile to the right spot.
-- Opporutnity for gamification
-
-**Customer Intake/Outake Vehicle Condition Check**
-```{mermaid}
-flowchart TD
-    Customer -- uses --> App("Vehicle Rental App")
-    Customer --> App_Vehicle_Pickup("Picksup Vehicle")
-    Customer --> App_Vehicle_Dropoff("Drops off Vehicle")
-    App_Vehicle_Pickup --> Scan_Condition("Scan Condition of Vehcile")
-    App_Vehicle_Dropoff --> Scan_Condition("Scan Condition of Vehcile")
-    Scan_Condition --> AI_CV_Analyze_Intake
-    Scan_Condition --> AI_CV_Analyze_Location_Correctness
-    Scan_Condition --> Scan_Condition_Has_Error
-    Scan_Condition --> AI_CV_Analyze_Location_Realtime_Context
-    %% NOTE:  Ths is not quite right, readjust the conditions and processes
-    %% Realtime COntext is meant ot look for issues like traffic conditions, emergencies, etc.
-    AI_CV_Analyze_Location_Realtime_Context --> Scan_Condition_Has_Error{"Location_Error"}
-    Scan_Condition_Has_Error -- yes --> FOO
-    Scan_Condition_Has_Error -- no --> BAR
-    AI_CV_Analyze_Intake --> Logs_And_Sends_Report
-    Logs_And_Sends_Report --> Customer
-    Logs_And_Sends_Report --> Office_Staff
-    Logs_And_Sends_Report --> Maintenance_Staff
-    Office_Staff --> Register_Vehicle_Availability
-    Maintenance_Staff --> Perform_Maintnenace
-    Perform_Maintnenace --> Register_Vehicle_Availability
-
-    %% TODO expand on this whith the vehcile also rpeorting.
-    Identified_Vechile --> Connects_to_Network
-    %% GIS position data
-    %% OBDI output
-    %% Network attached device
-    %% Scans information and reports back
-
-    %% Vechile_Dropoff("Vehic)
-```
-
-Nomenclature -- use Equipment instead of Vehcile.
-A Vehcile is a type of Rentable Equipment
-
-?? Naming is hard.  Staff distinctions need clarification ??
-
-?? All self-service or staff-serviced ??
-
-```{mermaid}
-flowchart TD
-%% TODO moe
-    Staff --> Vehicle_Intake("Vehicle Intake App")
-    Vehicle_Intake --> Scan_Condition("Scan Condition of Vehcile")
-    Scan_Condition --> AI_CV_Analyze_Intake 
-```
-
-
-### Personalized Commuter Experience: A GenAI-powered assistant for regular users.
-
-- Altruistic incentivization
-    - Track your carbon impact / savings
-- Efficiency of route __timeliness__
-- Attraction of route __smell the roses__
-
-Personal interest matching to destinations nearby. 
-- Suggestion coffee shops, delis, vegan restuarants
-
-Gamification of the experience.  
-- Points collection
-- N-destinations visited
-- Tour guide
-
-Onboard help and troubleshooting.
-
-Personalized experience
-- Voice + tone
-- Spoken Language
-- Driving directions / personalized responses
-
-Research - optimize destinations based on personal interests and our own fleet demand models (pulling in the incentives to return to our preferred desitnations)
-
-GenAi - targeted messages to return vehicle on time.  Or to extend the rental.
-
-Match destination to reservation data.  Upsells, etc.
-
-Personalized Photo Albums of their route. Feed the picture of the vehcile into AI to create a video greeting of the vehcile animated based on user profile.  "Thanks... So & so.. .was a blast!"  think Pixar aniamtion-sytle.
-
-Prompt to share on social media to bump up the brand.
-
-# Architectural Decisions & Rationale
-
-## Architectural Decision Records (ADRs)
-
-### ADR-001: Choice of Event-Driven Architecture
-
-### ADR-002: Selection of AI/ML Platform for Demand Forecasting
-
-### ADR-003: Strategy for Handling AI Model Uncertainty and Validation
-
-### ADR-004: Approach to NFC-based Vehicle Interaction
-
-## Technology Stack Choices
-
-# Productionizing the AI-Powered System
-
-## Dealing with Uncertainty & Non-Determinism
-
-## Monitoring, Observability, and Fitness Functions
-
-## Phased Implementation Roadmap
-
-# Final Thoughts
-
-## How We Used Generative AI as a Collaborator
-
-## Known Limitations & Future Enhancements
-
-##  Our Learnings
-
-# Appendix
-
-## Full Deliverables Checklist
-
-## Detailed Data Schema
+[^ai-customer]: We used WPP Open to create an AI agent to speak as the voice of the customer.

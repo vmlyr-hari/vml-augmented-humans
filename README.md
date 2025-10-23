@@ -10,95 +10,285 @@
 
 ------------------------------------------------------------------------
 
+<!-- 
+Colors for C4 diagrams
+#0075bdff
+#009dffff
+#00c3ffff 
+&#10;-->
+
+![VML Augmented Humans](assets/vml_augmented_humans_2.png)
+
+**Note: This is effectively a Solution Design Sprint 0. Lot’s of
+conceptual ideas that need more detail and proving out.**
+
 # Introduction
 
 <!-- Add intro here -->
 
 ## Executive Summary
 
-**Our Vision for MobilityCorp** …
+<!-- **Our Vision for MobilityCorp** ... -->
 
 <!-- Add summary here -->
 
 ## Team
+
+We are a team made up of people who make software for immersive
+experiences of all sizes. Our invididual roles use words like Solution
+Architect, DevOps Engineer, Creative Technologist, Immersive Developer,
+Full-Stack Developer, etcetera.
 
 - Hari Khalsa
 - Navya Bikkasani
 - Brandon Sweatman
 - Eric Black
 
+## Methodology
+
+Our approach was to conduct a series of collaborative brainstorms,
+working effectively as a solution design sprint.
+
+- Collaborative Brainstroms
+- Discuss real-world examples of similar models
+- AI used to parse our notes, generate starter diagrams and syntehsize
+  information
+- AI used to check our work for consistency
+- Human brains used for creative ideation and solution design
+
+We didn’t get as far as hoped for the formal documentation. You can see
+the more raw outputs of our work and thinking in the
+[Sketches](sketches/index.qmd).
+
+## Diagrams
+
+Our diagrams are created in a markdown-friendly format at this stage.
+While not perfect for diagramming, as developers this allows us to shif
+ideas more nimbly.
+
+Broadly speaking, we are using the C4 model for software diagrams. You
+may see some differences for expedience of writing in MermaidJS and
+Quarto-flavored markdown.
+
+``` mermaid
+flowchart TD
+
+%% Users
+User["End User"]
+Staff["Business User"]
+
+%% Components
+Data_Compute["Compute Artifact"]
+AI_Component["AI Component"]
+
+subgraph Boundary_or_Group["Boundary or Group"]
+    Component
+end
+
+style User fill:#0075bdff,color:#fff
+style Staff fill:#009dffff,color:#fff
+style Data_Compute fill:#e6f3ff
+style AI_Component fill:#f0e6ffff
+```
+
+<!-- #0075bdff
+#009dffff
+#00c3ffff 
+#f0e6ffff
+ -->
+
 ## Glossary
 
-<!-- Add any terms or defintions here -->
+# MobilityCorp
 
-# Problem Analysis
+MobilityCorp is a growing provider of short-term, “last-mile” transport
+solutions. They operate a fleet of electric vehicles, including
+scooters, e-bikes, cars, and vans. Their primary market is dense city
+locations, but they are expanding their car and van rental services into
+more suburban areas.
 
-## Problem Definition & Context
+MobilityCorp currently operates in the European Union (EU), but it’s
+safe to say the business model is intended to grow. Solutions should be
+locally effective and globally scaleable.
 
-## Key Business Challenges
+<!-- Their current operational model is as follows:
+&#10;Customer Interaction: Customers use an NFC-capable smartphone app to sign up, locate, book, and operate the vehicles.
+Booking & Rental:
+Cars and vans can be booked up to 7 days in advance for a specific duration.
+Bikes and scooters can be booked up to 30 minutes in advance for an open-ended rental, with a maximum duration of 12 hours.
+Vehicle Management: All vehicles are equipped with GPS trackers for location monitoring. Cars and vans can be remotely disabled if necessary.
+Payment: Customers are charged on a per-minute basis. Fines are automatically issued for late returns or for returning a vehicle to an incorrect location.
+Return Process: Vehicles must be returned to designated parking spots. Cars and vans need to be plugged into an EV charger. Customers are required to submit a photo of the returned vehicle as proof of return and can provide feedback on its condition.
+Logistics and Maintenance: The company employs staff to manually swap out batteries for bikes and scooters and to redistribute vehicles across the network to meet demand. -->
 
-### Vehicle Availability & Distribution
+# Ask
 
-### Fleet Charging & Maintenance
+MobilityCorp has asked us to come up with a new architecture,
+incorporating AI functionality where appropriate to address business
+challenges:
 
-### Customer Retention & Commuter Adoption
+> Our customers can’t find a vehicle when they need one, and our service
+> crews are struggling to keep everything charged and maintained. We
+> need a smarter system that tells us where to place our vehicles and
+> how to run our operations more efficiently, so we can stop losing
+> money and make our service reliable enough for daily use. [^1]
 
-## Key Objectives & Success Metrics
+The solution should allow the business to:
 
-## Business & Technical Constraints
+- Know when customers will want to use vehicles
+- Anticipate customer needs
+- Anticiapte and optimize maintenance needs
+- Grow our business
+  - Increase use by existing customers
+  - Add new customers
 
-# Proposed Solution & Architecture
+# Solution
 
-## Architectural Vision & Guiding Principles
+MobilityCorp’s core challenge is not a lack of data, but a lack of
+actionable data and forward-looking insight. To solve this, we propose
+an architecture enhanced with AI at key touchpoints in business
+processes and overall experience.
 
-## Architecture Characteristics (The “-ilities”)
+## Approach
 
-## System Context Diagram (C1)
+First, we will look at the overally systems to ensure they are setup in
+a API-forward, service-oriented approach that allows for evolution,
+portability and change over time. We aren’t showing the whole system,
+but the parts most pertinent to our current problem scope.
 
-## Container Diagram (C2)
+### A Tiered Architecture
 
-## Detailed Architecture for AI Use Cases
+- Our Users enage with our MobilityCorp through applications focused on
+  their particular needs
+  - Customer use a mobile app
+  - Staff or service technitions use a mobile app
+  - Administrative or office staff use an app
+- Our Apps interface with services or APIs
+  - Booking service
+  - Incentive service
+  - Fleet service
+  - Analytics service
+  - AI Vision Service *Used at multiple layers in the stack*
+  - GenAI Service *Used in content creation workflows or, optionally,
+    real-time for gamified elements.*
+- Data is collected in our data warehouse
+- MobilityCorp’s Digital Twin is used as part of the Insights &
+  Analytics Tier
 
-### Predictive Demand & Fleet Rebalancing: An AI model to forecast demand and optimize vehicle placement.
+``` mermaid
+graph TD
+subgraph Users
+    Customer[Customer]
+    Staff["Maintenance Staff"]
+    Admin["Admin Staff"]
+end
 
-### Optimized Battery Management: A system to prioritize battery swaps and route maintenance staff efficiently.
+CDN_WAF["Proxy"]
 
-### Smart Return Verification: Using image analysis to confirm proper vehicle returns and charging connections.
+subgraph MobiltyCorpSystems["MobiltyCorp Platform"]
 
-### Personalized Commuter Experience: A GenAI-powered assistant for regular users.
+    subgraph Engagement_Tier["Engagement Layer"]
+        Mobile_App["Mobile App"]
+        Staff_App["Staff App"]
+        Admin_App["Admin App"]
+    end
 
-# Architectural Decisions & Rationale
+    subgraph Services_Tier["Services Tier"]
+        Booking_Service["Booking Service"]
+        Incentive_Service["Incentive Service"]
+        Fleet_Service["Fleet Service"]
+        Analytics_Service["Analytics Service"]
+        AI_Vision_Service["AI Vision Service"]
+        AI_Gen_Service["GenAI Service*"]
+    end
 
-## Architectural Decision Records (ADRs)
+    subgraph Data_Insights_Tiers["Data Warehouse & Insights"]
+        direction LR
+        subgraph Data_Warehouse
+        end
 
-### ADR-001: Choice of Event-Driven Architecture
+        subgraph AI_Analytics_Tier["Insights & Analytics Tier"]
+            Digital_Twin["`Digital Twin<br>(Simulation Engine)`"]
+            Demand_AI["Demand Forecasting AI"]
+            Maint_AI["Maintenance Optimization AI"]
+        end
+    end
+end
 
-### ADR-002: Selection of AI/ML Platform for Demand Forecasting
+Customer ~~~ CDN_WAF
+Staff    ~~~ CDN_WAF
+Admin    ~~~ CDN_WAF
 
-### ADR-003: Strategy for Handling AI Model Uncertainty and Validation
+CDN_WAF ~~~ Mobile_App
+CDN_WAF ~~~ Staff_App
+CDN_WAF ~~~ Admin_App
 
-### ADR-004: Approach to NFC-based Vehicle Interaction
+Mobile_App  ~~~ Services_Tier
+Staff_App   ~~~ Services_Tier
+Admin_App   ~~~ Services_Tier
 
-## Technology Stack Choices
+Services_Tier ~~~ Data_Warehouse
+%% Services_Tier -- sends data --> AI_Analytics_Tier
 
-# Productionizing the AI-Powered System
+%% AI_Analytics_Tier -- sends data --> Data_Warehouse
+Data_Warehouse ~~~ AI_Analytics_Tier
 
-## Dealing with Uncertainty & Non-Determinism
+Services_Tier ~~~ AI_Analytics_Tier
 
-## Monitoring, Observability, and Fitness Functions
+%% Styling
+style Customer fill:#0075bdff,color:#fff
+style Admin fill:#009dffff,color:#fff
+style Staff fill:#009dffff,color:#fff
 
-## Phased Implementation Roadmap
+%% Styling - AI Analytics Tier
+style AI_Analytics_Tier fill:#e6f3ff
 
-# Final Thoughts
+%% Styling - AI Components
+style AI_Vision_Service fill:#f0e6ffff
+style Digital_Twin fill:#f0e6ffff
+style Demand_AI fill:#f0e6ffff
+style Maint_AI fill:#f0e6ffff
+style AI_Gen_Service fill:#f0e6ffff
+```
 
-## How We Used Generative AI as a Collaborator
+## System Context
 
-## Known Limitations & Future Enhancements
+### Customer
 
-## Our Learnings
+``` mermaid
+graph TD
+Customer[Customer]
+Mobile_App["Mobile App"]
 
-# Appendix
+subgraph Services_Tier["Services Tier"]
+    Booking_Service["Booking Service"]
+    Incentive_Service["Incentive Service"]
+    Fleet_Service["Fleet Service"]
+    Analytics_Service["Analytics Service"]
+    AI_Vision_Service["AI Vision Service"]
+    AI_Gen_Service["GenAI Service*"]
+end
 
-## Full Deliverables Checklist
 
-## Detailed Data Schema
+Customer --> Mobile_App
+
+Mobile_App -- uses --> Booking_Service
+Mobile_App -- uses --> Incentive_Service
+Booking_Service -- uses --> Fleet_Service
+
+Mobile_App -- sends data --> Analytics_Service
+Mobile_App -. uses and embeds .-> AI_Vision_Service
+Mobile_App -. uses or embeds .-> AI_Gen_Service
+
+%% Styling
+style Customer fill:#0075bdff,color:#fff
+
+%% Styling - AI Components
+style AI_Vision_Service fill:#f0e6ffff
+style AI_Gen_Service fill:#f0e6ffff
+```
+
+# Footnotes & References
+
+[^1]: We used WPP Open to create an AI agent to speak as the voice of
+    the customer.

@@ -4,6 +4,13 @@ title: "About"
 
 This is a proposed solution for the O'Reilly Architectural Katas (Q4 2025).
 
+This work was done in a short series of lunches and some homework.
+
+## Team
+
+We are a team made up of people who make software for immersive expereinces of all sizes.  
+
+Our titles might use words like Solution Architect, DevOps Engineer, Creative Technologist, Immersive Developer, Full-Stack Developer, etcetera.  
 
 Our team is:
 

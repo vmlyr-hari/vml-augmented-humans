@@ -3,20 +3,6 @@
 
 <!-- README.md is generated from README.qmd -->
 
-- Hari Khalsa
-- Navya Bikkasani
-- Brandon Sweatman
-- Eric Black
-
-------------------------------------------------------------------------
-
-<!-- 
-Colors for C4 diagrams
-#0075bdff
-#009dffff
-#00c3ffff 
-&#10;-->
-
 ![VML Augmented Humans](assets/vml_augmented_humans_2.png)
 
 **Note: This is effectively a Solution Design Sprint 0. Lot’s of

@@ -4,8 +4,5 @@ format: gfm
 
 <!-- README.md is generated from README.qmd -->
 
-{{< include _team.qmd >}}
-
----
 
 {{< include index.qmd >}}

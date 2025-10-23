@@ -1,0 +1,335 @@
+---
+title: "Working Session Notes"
+date-modified: 2025-10-22
+---
+
+_Note: For our working session we used this outline to frame our thinking.  Diagrams and notes are rough._
+
+# Introduction
+
+<!-- Add intro here -->
+
+## Executive Summary
+
+**Our Vision for MobilityCorp** ...
+
+<!-- Add summary here -->
+
+## Team
+
+<!-- {{< include _team.qmd >}} -->
+
+## Methodology
+
+Our approach was to conduct a series of collaborative brainstorms as a team. 
+
+## Glossary
+
+<!-- Add any terms or defintions here -->
+
+# Problem Analysis
+
+## Problem Definition & Context
+
+## Key Business Challenges
+
+### Vehicle Availability & Distribution
+
+### Fleet Charging & Maintenance
+
+### Customer Retention & Commuter Adoption
+
+## Key Objectives & Success Metrics
+
+## Business & Technical Constraints
+
+# Proposed Solution & Architecture
+
+## Architectural Vision & Guiding Principles
+
+## Architecture Characteristics (The "-ilities")
+
+## System Context Diagram (C1)
+
+## Container Diagram (C2)
+
+## Detailed Architecture for AI Use Cases
+
+### Predictive Demand & Fleet Rebalancing: An AI model to forecast demand and optimize vehicle placement.
+
+As a Customer, I would like a Bike, in order to commute to work.
+
+?? Overflow partnerships for customer service -- how to model this out ??
+
+```{mermaid}
+flowchart TB
+    subgraph Speculative_Models
+        Speculative_Inventroy
+        Speculative_Reservations
+        Speculative_Reservation_Events
+        Speculative_Inventory
+    end
+
+    %% What our business model supports
+    subgraph Business_Models
+        Hub_Size
+        Hub_Demand
+        Hub_Capcity
+        Actual_Inventory
+    end
+    
+    %% Historical Actuals
+    subgraph Actual_Data
+        Actual_Inventroy
+        Actual_Reservations
+        Actual_Reservation_Events
+        Actual_Inventory
+        Actual_Booked_Returns
+    end
+
+    %% Forecast
+    subgraph Forecast_Data
+        Forecast_Inventroy
+        Forecast_Reservations
+        Forecast_Reservation_Events
+        Forecast_Inventory
+    end
+
+    Realtime_Context_Demand_Impacters
+
+    Speculative_Models --> Model_Training
+    Business_Models --> Model_Training
+    Actual_Data --> Model_Training
+
+    Forecast_Data --> Model_Simulation
+    Model_Simulation -- uses --> AI_Fleet_Demand_Prediction_Model
+
+    Model_Training("Model Training") --> AI_Fleet_Demand_Prediction_Model
+
+```
+
+Using predictive demand to support demand-generation or incentives.
+
+* Incentive user to Dropping at a hub with demand
+
+```{mermaid}
+flowchart TB
+    %% Realtime AI
+    FOO
+```
+
+Using Fleet status analysis to drive efficient servicing and reblancing.
+
+As MobilityCorp, we would like to ensure vechiles (supply) are avaiable where they are needed (demand).
+
+As MobilityCorp, we would like to optimize of our service technicians routes in order to maximize the efficiency of service runs.
+
+```{mermaid}
+flowchart TB
+    %% Predictive Indicators
+    %% Confidence == 1.0 is Acutal in Stock
+    %% Confidence == 0.85 is Likely Actual
+    Supply -- has --> Confidence_Score
+    Potential_Supply -- has --> Confidence_Score
+
+    %% Actual Reservations
+    Demand
+    
+    %% 
+    Hub_Capacity -- has --> Hub_Available_Capacity
+```
+
+Fleet rebalancing mechanisms
+
+* User incentivies to get customers to return vehicles to point with high demand
+* User disincentive, surcharges when returned to points with low demand
+* Service technician route optimization / task optimization
+    - Increase the weighting of the destination to be serviced based on n-criteria or multiple-goals to be achieved
+    - Optimal distance or multi-stop routing
+
+```{mermaid}
+flowchart TB
+    %% Realtime AI
+    Vehicle_Availability_Status
+    Vehicle_Availability_Status -- has --> Vechile_Charge_Status
+    Vehicle_Availability_Status -- has --> Vehicle_Fault_Status
+    Vehicle_Availability_Status -- has --> Vehicle_Servicing_Status
+
+    %% Where it's from
+    Vehicle_Hub_of_Origin
+    %% Forecast - WHere it is going -- might not always know this
+    Vehicle_Hub_InTransit_Destination
+    Vehicle_InTransit_Start_Time
+    Vehicle_InTransit_Approximate_Return_Time
+
+    %% Actual Inventory
+
+```
+
+?? Can they cross state boundaries ?? Ans:  Depends on the operating laws of the areas.  U.S. right to travel would mean they can cross boudnaires.  In other areas it may be different.
+
+### Optimized Battery Management: A system to prioritize battery swaps and route maintenance staff efficiently.
+
+- Incentivise return of a charged vehicle
+- Disincnetive with a service charge for charge-ups
+
+?? Will all vehicles have the same type of battery?  How interchangeable are batteries between different types of vehicles or models?
+
+?? How portable can battery management be made?  Anything that can only happen in a specifci physical location?
+
+AI use cases
+
+- Predicitive maintenance
+- Usage data analysis / changes in stats
+- Contextual modeling of environmental conditions
+- Real-time data analysis / monitoring / alerting
+    - Matching nearby technicians to maintenance need
+
+```{mermaid}
+flowchart TB
+    Realtime_Battery_Data
+
+    %% Key info for when the battery will need to be serviced, efficiency or degradation of battery over time, idle time
+    Vehicle_Battery_Usage_Model
+
+    %% COnditions that affect battery usage
+    Environmental_Conditions
+        Temperature
+        Weather
+    Battery_Usage_Load
+    %% Electronic Sensor Computer
+    ESC
+
+    Vehcile_Type
+    Vechicle_Configuration_Energy_Capacity
+```
+
+
+### Smart Return Verification: Using image analysis to confirm proper vehicle returns and charging connections.
+
+Is to create a system which provides multiple-data poitns, checks and balances and different levels of details in order to increase resolution of the information available about the vechile condition at the point of return.   The burden of informaiton is distributed across actors in order to reduce gaming of the system, provide different data points and reduce burden on any one actor.
+
+**Customer Return**
+
+- Onboard help / agentic/real-time/embodied AI to get the vehcile to the right spot.
+- Opporutnity for gamification
+
+**Customer Intake/Outake Vehicle Condition Check**
+```{mermaid}
+flowchart TD
+    Customer -- uses --> App("Vehicle Rental App")
+    Customer --> App_Vehicle_Pickup("Picksup Vehicle")
+    Customer --> App_Vehicle_Dropoff("Drops off Vehicle")
+    App_Vehicle_Pickup --> Scan_Condition("Scan Condition of Vehcile")
+    App_Vehicle_Dropoff --> Scan_Condition("Scan Condition of Vehcile")
+    Scan_Condition --> AI_CV_Analyze_Intake
+    Scan_Condition --> AI_CV_Analyze_Location_Correctness
+    Scan_Condition --> Scan_Condition_Has_Error
+    Scan_Condition --> AI_CV_Analyze_Location_Realtime_Context
+    %% NOTE:  Ths is not quite right, readjust the conditions and processes
+    %% Realtime COntext is meant ot look for issues like traffic conditions, emergencies, etc.
+    AI_CV_Analyze_Location_Realtime_Context --> Scan_Condition_Has_Error{"Location_Error"}
+    Scan_Condition_Has_Error -- yes --> FOO
+    Scan_Condition_Has_Error -- no --> BAR
+    AI_CV_Analyze_Intake --> Logs_And_Sends_Report
+    Logs_And_Sends_Report --> Customer
+    Logs_And_Sends_Report --> Office_Staff
+    Logs_And_Sends_Report --> Maintenance_Staff
+    Office_Staff --> Register_Vehicle_Availability
+    Maintenance_Staff --> Perform_Maintnenace
+    Perform_Maintnenace --> Register_Vehicle_Availability
+
+    %% TODO expand on this whith the vehcile also rpeorting.
+    Identified_Vechile --> Connects_to_Network
+    %% GIS position data
+    %% OBDI output
+    %% Network attached device
+    %% Scans information and reports back
+
+    %% Vechile_Dropoff("Vehic)
+```
+
+Nomenclature -- use Equipment instead of Vehcile.
+A Vehcile is a type of Rentable Equipment
+
+?? Naming is hard.  Staff distinctions need clarification ??
+
+?? All self-service or staff-serviced ??
+
+```{mermaid}
+flowchart TD
+%% TODO moe
+    Staff --> Vehicle_Intake("Vehicle Intake App")
+    Vehicle_Intake --> Scan_Condition("Scan Condition of Vehcile")
+    Scan_Condition --> AI_CV_Analyze_Intake 
+```
+
+
+### Personalized Commuter Experience: A GenAI-powered assistant for regular users.
+
+- Altruistic incentivization
+    - Track your carbon impact / savings
+- Efficiency of route __timeliness__
+- Attraction of route __smell the roses__
+
+Personal interest matching to destinations nearby. 
+- Suggestion coffee shops, delis, vegan restuarants
+
+Gamification of the experience.  
+- Points collection
+- N-destinations visited
+- Tour guide
+
+Onboard help and troubleshooting.
+
+Personalized experience
+- Voice + tone
+- Spoken Language
+- Driving directions / personalized responses
+
+Research - optimize destinations based on personal interests and our own fleet demand models (pulling in the incentives to return to our preferred desitnations)
+
+GenAi - targeted messages to return vehicle on time.  Or to extend the rental.
+
+Match destination to reservation data.  Upsells, etc.
+
+Personalized Photo Albums of their route. Feed the picture of the vehcile into AI to create a video greeting of the vehcile animated based on user profile.  "Thanks... So & so.. .was a blast!"  think Pixar aniamtion-sytle.
+
+Prompt to share on social media to bump up the brand.
+
+# Architectural Decisions & Rationale
+
+## Architectural Decision Records (ADRs)
+
+### ADR-001: Choice of Event-Driven Architecture
+
+### ADR-002: Selection of AI/ML Platform for Demand Forecasting
+
+### ADR-003: Strategy for Handling AI Model Uncertainty and Validation
+
+### ADR-004: Approach to NFC-based Vehicle Interaction
+
+## Technology Stack Choices
+
+# Productionizing the AI-Powered System
+
+## Dealing with Uncertainty & Non-Determinism
+
+## Monitoring, Observability, and Fitness Functions
+
+## Phased Implementation Roadmap
+
+# Final Thoughts
+
+## How We Used Generative AI as a Collaborator
+
+## Known Limitations & Future Enhancements
+
+##  Our Learnings
+
+# Appendix
+
+## Full Deliverables Checklist
+
+## Detailed Data Schema
+

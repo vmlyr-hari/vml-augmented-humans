@@ -1,0 +1,154 @@
+---
+title: "Notes from Kata Kickoff"
+date-modified: 2025-10-12
+---
+
+<!-- _**Raw running notes from O'Reilly Architecture Katas Kickoff**_ -->
+
+Notes from O'Reilly kickoff.
+
+Customers can cancel anytime
+
+?? dbl check ~15:00 how much of architecture to build out ??
+
+eu
+gdpr
+multiple languages
+
+city license constraints
+parking vs drop-off
+speed
+othe rules
+
+bike and scooters still work if without a charge
+should alert users to get to parking bay
+
+cars, vans booking should not be allowed to go ahead without charge
+
+total customers, avg rentals
+every EU country
+ea. country 5,000 bikes, 5,000 scooters, 200 cars, 200 vans
+
+have hardware in vehicles that allows you to collect specific telemetry.
+you can define interface for hardware on vechile itelsf. e.g. smaple rate of gps.
+
+assume going up
+assume all across europe
+looking to grow
+
+subscriptions - not main focus for us at the moment
+
+would like to scale-up
+
+capital investment is in vehciles
+ongoing cost to maintain
+
+would like more vehicles to be used more often before we expand fleet
+
+use more frequentyl, 
+
+assume at any point can find a range on an ev charge
+
+vans and cars stop operating while you run out of charge
+
+can suggest business model changes, such as incentives
+
+vans - 2-3 people
+mostly about carrying oround large items
+
+bikes + scooters -- can be swapped onsite, no special locations
+
+customers book with a mobile app
+
+google maps, wazyze - not neccesarily scope for us
+
+GPS used for tracking, not dependent on cell
+
+at the moment theft of vehcile is not the major issue
+
+only worry about vehicle theft if it will solve these business problems
+
+assume you get sent a GPS sample rate at least every 30s
+
+have to book a certain time
+
+communication is done via the mobile app, not via the vehicle
+
+pay for time, not duration
+
+trip sharing - out of scope, not focusing on now
+
+EU-only.  Not in UK or Ireland.
+
+multiple langes
+multiple currency
+
+no info about economic models (not made up).
+
+cost should come into play for the solution.
+esp. costs that could change in the future. 
+
+b2c business
+
+ai - patent violation concerns
+
+can use a cloud provider or be model/cloud agnostic
+
+Deliverables
+
+- [ ] Overview
+- [ ] Diagrams - comprehensive and targeted view
+- [ ] ADRs for AI-related implementations, including trade-off analysis 
+    - [ ] Risks - esp. related to AI
+
+Dealing with uncertainty in AI - how are you building for change in the future,
+
+- [ ] Changing provider
+- [ ] Price flucutation
+- [ ] Provider shutting down
+
+Does it work
+
+- [ ] How will you know if it is working
+- [ ] Verifying functionality - GenAi is non-deterministic
+- [ ] How will you know if AI starts mis-behaving
+
+---
+
+_Andrew - Judge_
+
+really looking for is seeing train of thought, showing thinking.
+
+knowing why pickded it.
+
+book facilitating software architecture
+
+---
+
+_Guyathri - Judge_
+
+looking forward to interesting AI solutions.
+
+looking to add AI in meaningful ways for clients.
+
+assumptions being clearly called out
+callin gout risks
+protect business revenue
+pricing and practicalities
+
+book fullstack testing
+
+---
+
+? can we use genai to come up with architecture?
+
+not going to judge, but purpose of this kata is to come up with ideas and practice.
+
+might use genai to prep some of deliverables.
+
+note methodology.
+
+ADR should call out risks like vendor lock-in, risks of portability
+
+Should not be submitting proprietary info.  Submission is a public repo.
+
